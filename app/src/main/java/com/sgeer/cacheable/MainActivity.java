@@ -13,25 +13,19 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
-
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
 
-public class MainActivity extends Activity
-{
+public class MainActivity extends Activity{
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         LocationManager milocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         LocationListener milocListener = new MiLocationListener();
         milocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, milocListener);
-
-        setContentView(R.layout.activity_main);
 
         WebView webview = (WebView)findViewById(R.id.webView);
         webview.setWebChromeClient(new WebChromeClient());
@@ -42,7 +36,7 @@ public class MainActivity extends Activity
         webview.addJavascriptInterface(new WebAppInterface(this), "Android");
         webview.loadUrl("file:///android_asset/encuesta.html");
     }
-    
+
     public class WebAppInterface {
         Context mContext;
 
@@ -53,12 +47,9 @@ public class MainActivity extends Activity
         @JavascriptInterface
         public void guardar(String texto) {
 
-            String ingreso = texto;
-
-            String[] fragmento = ingreso.split(";");
+            String[] fragmento = texto.split(";");
 
             String usuario = fragmento[1];
-
 
             IngresaRespuestas(texto + '\n', usuario);
 
@@ -131,9 +122,6 @@ public class MainActivity extends Activity
         public void onProviderEnabled(String provider){
             Toast.makeText( getApplicationContext(),"Gps Activo", Toast.LENGTH_SHORT ).show();
         }
-
         public void onStatusChanged(String provider, int status, Bundle extras){}
     }
-
-
 }
