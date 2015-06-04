@@ -1,4 +1,4 @@
-package com.sgeer.cacheable;
+package com.sgeer.encuestas;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
