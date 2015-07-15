@@ -69,7 +69,7 @@ public class MainActivity extends Activity{
                 location.getLongitude();
                 String coordenadas = ";" + location.getLatitude()+ "," + location.getLongitude();
                 IngresaCoordenadas(coordenadas, usuario);
-                Toast.makeText( getApplicationContext(),"Guardando posición y respuesta ...", Toast.LENGTH_LONG ).show();
+                Toast.makeText( getApplicationContext(),"Guardando posicion y respuesta ...", Toast.LENGTH_LONG ).show();
 
             }
         }
