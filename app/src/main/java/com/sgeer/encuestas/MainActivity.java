@@ -51,6 +51,8 @@ public class MainActivity extends Activity{
 
             String usuario = fragmento[1];
 
+            String coordenadas = "";
+
             IngresaRespuestas(texto + '\n', usuario);
 
             String bestProvider;
@@ -62,22 +64,22 @@ public class MainActivity extends Activity{
             Location location = lm.getLastKnownLocation(bestProvider);
 
             if(location == null){
-                Toast.makeText(getApplicationContext(), "No localizado",Toast.LENGTH_LONG ).show();
+                    Toast.makeText(getApplicationContext(), "Guardando respuesta",Toast.LENGTH_LONG ).show();
+                    coordenadas = ";0,0";
+
             }else{
-
-                location.getLatitude();
-                location.getLongitude();
-                String coordenadas = ";" + location.getLatitude()+ "," + location.getLongitude();
-                IngresaCoordenadas(coordenadas, usuario);
-                Toast.makeText( getApplicationContext(),"Guardando posicion y respuesta ...", Toast.LENGTH_LONG ).show();
-
+                    Toast.makeText( getApplicationContext(),"Guardando posicion y respuesta", Toast.LENGTH_LONG ).show();
+                    location.getLatitude();
+                    location.getLongitude();
+                    coordenadas = ";" + location.getLatitude()+ "," + location.getLongitude();
             }
+            IngresaCoordenadas(coordenadas, usuario);
         }
     }
 
     private void IngresaRespuestas(String respuestas, String usuario){
 
-        String nombre_archivo = usuario + "_respuestas.txt";
+        String nombre_archivo = usuario + "_bocaurna.txt";
 
         try {
             FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo,true);
