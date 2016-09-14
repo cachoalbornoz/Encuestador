@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Relevamiento - Movil</title>
+	
+	    <link type="text/css" rel="stylesheet" href="/bootstrap-3.3.3-dist/css/bootstrap.css">
+        <script type="text/javascript" src="/jd/jquery.js"></script>
+	    <script type="text/javascript" src="/bootstrap-3.3.3-dist/js/bootstrap.js"></script>
+    
+	<script type="text/javascript">	
+	
+	$(document).ready(function(){
+
+	});
+
+
+	function Guardar_Android(texto){
+            Android.guardar(texto);
+            window.location.reload();
+	}
+		
+	function obtenerDatos() {
+            var sAux="";
+            var frm = document.getElementById("relevamiento");
+            for (i=0;i<frm.elements.length;i++){
+                sAux += frm.elements[i].value + "," ;
+            }
+
+            var sAux = sAux.substring(0, sAux.length-1); // LE QUITO LA ULTIMA COMA 
+            sAux = sAux + ';' ;
+            Guardar_Android(sAux);	
+	} 
+		
+	function ver_funcionamiento(id){
+            if(id == 1){ // SIGUE FUNCIONANDO
+                $("#div_continua").show();
+                $("#div_abandona").hide();
+                $("#5").select();
+            }else{       // NO FUNCIONA MAS !! 
+                $("#div_abandona").show();
+                $("#div_continua").hide();
+                $("#3").select();
+            }
+	}
+	
+	function ver_comercializacion(id){
+            if(id == 2){
+                $("#div_comercializacion").show();	
+            }else{
+                $("#div_comercializacion").hide();
+            }		
+	}
+	
+	function ver_trabajo(id){
+            if(id == 0){
+                $("#div_trabajo").show();	
+            }else{
+                $("#div_trabajo").hide();
+            }
+	}    
+	</script>
+    
+    <style>
+    body {
+	  margin: 0;
+	  padding-top: 0px;
+	  padding-bottom:0px; 
+	}    
+    </style>
+    
+</head>
+
+<body>
+
+<div class="container-fluid">	    
+	
+    <form id="relevamiento">
+    
+    <div class="form-group">
+    	<div class="col-xs-12" style="background-color:#5bc0de; text-align:center; color:#FFF; border-color: #46b8da;"><h3>Relevamiento Móvil - V.14.09.16</h3></div>
+    </div>
+    <div class="form-group">
+    	<div class="col-xs-12"><hr></div>
+    </div>
+    
+    <div class="form-group">
+    	<div class="col-xs-12"><b>Responsable encuesta </b></div>
+    </div>
+    <div class="form-group">	
+            <div class="col-xs-12">
+            <select id="0" class="form-control" tabindex="0">
+                <option value=15>ANABELS</option>
+                <option value=8>ARDILESE</option>
+                <option value=5>BUSTAMANTEO</option>
+                <option value=6>CRISTIANK</option>
+                <option value=13>DANTEMAR</option>
+                <option value=16>IVANSOLARO</option>
+                <option value=17>JMLAMILLA</option>
+                <option value=10>MICAELAS</option>
+                <option value=12>MTISLER</option>
+                <option value=7>RITACHAVES</option>
+                <option value=14>ROSASVICOC</option>
+                <option value=9>TOMASOSORIO</option>             
+            </select>
+        </div>
+    </div> 
+    <div class="form-group">
+    	<div class="col-xs-12"><b>Proyecto a Relevar</b></div>
+    </div>
+    <div class="form-group">	
+            <div class="col-xs-12">
+            <select id="1" class="form-control" tabindex="1">
+                        <option value=122>ABIRAD , MARCIO EZEQUIEL(20357177252) CITRICOLA</option>
+                        <option value=32>ABREU, AUGUSTO(20362195498) VACUNOS</option>
+                        <option value=474>ABREU, AUGUSTO(20362195498) CRIA/OTRO</option>
+                        <option value=511>ACOSTA, BRUNO(20357715327) APICOLA</option>
+                        <option value=315>ACOSTA, CELSO DANILO(20286781102) APICOLA</option>
+                        <option value=112>ACOSTA , EDGARDO EXEQUIEL(20320253188) APICOLA</option>
+                        <option value=78>ACOSTA, JOSE JORGE(20325094037) AVICOLA</option>
+                        <option value=571>Acosta , Noelia Elizabeth(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=173>ACUÑA, ELSA MABEL(27267150570) SIEMBRA</option>
+                        <option value=110>ADROVE, VERONICA ANDRES(27264600346) HORTICOLA</option>
+                        <option value=339>AGUIRRE, BERNABE EXEQUIEL(20365471836) APICOLA</option>
+                        <option value=402>AGUIRRE, JUAN DOMINGO(23236132129) FORESTACION</option>
+                        <option value=572>Aispuru, Victoria (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=290>ALDECOA, MARIA PIA(27363809265) VACUNOS</option>
+                        <option value=267>ALDERETE, CECILIA BELEN(23338112874) HORTICOLA</option>
+                        <option value=506>ALE, MIGUEL LUCIANO(20358827765) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=13>ALEGRE, FRANCO MAURICIO(20264081425) AVICOLA</option>
+                        <option value=127>ALI , SERGIO MARTIN(20246799785) PORCINOS</option>
+                        <option value=495>ALMADA , JUAN(20307971500) APICOLA</option>
+                        <option value=527>ALMADA GALVEZ, FERMIN(20372902850) PORCINOS</option>
+                        <option value=186>ALONSO, ABEL AMILCAR(20348088190) APICOLA</option>
+                        <option value=59>ALTAMIRANO, MARIA LORENA(27249424191) AVICOLA</option>
+                        <option value=246>ALTAMIRANO, NICOLAS(20268627295) HORTICOLA</option>
+                        <option value=19>ALVAREZ DIMOTTA, MARIO RAUL(20302433853) AVICOLA</option>
+                        <option value=326>ANDRADE, MARIA VICTORIA(27375430466) SERVICIO</option>
+                        <option value=324>APAZ, NICOLAS(20328336023) VACUNOS</option>
+                        <option value=396>APAZ, PEDRO JULIAN(20316232338) VACUNOS</option>
+                        <option value=234>ARANDA, LUCAS MAXIMILIANO(20341255806) PORCINOS</option>
+                        <option value=118>ARANDA, RODRIGO NICOLAS(20295748223) SIEMBRA</option>
+                        <option value=321>ARAUJO, ISMAEL EDUARDO(20284530579) APICOLA</option>
+                        <option value=359>ARCE, MATIAS EMANUEL(20365640212) PORCINOS</option>
+                        <option value=245>ARGUELLO, MARIA ROSA(27278370599) AVICOLA</option>
+                        <option value=280>ARIZA, MATEO SEBASTIAN(20326690628) AVICOLA</option>
+                        <option value=394>ARREDONDO, ANDRES MAURICIO(20294472070) VACUNOS</option>
+                        <option value=375>ASUETA, FRANCISCO JOSE(20286500898) SIEMBRA</option>
+                        <option value=264>AYALA NOGUEIRA, JORGE ALBERTO(23345816089) APICOLA</option>
+                        <option value=573>Bahl, Fernando(0) INDUSTRIA METALICA BASICA</option>
+                        <option value=157>BARBOSA, JOSE(20273588443) AVICOLA</option>
+                        <option value=270>BARBOZA , DARIO ALEJANDRO(20348461673) AVICOLA</option>
+                        <option value=216>BAROLI, LUCAS OMAR(23315392489) APICOLA</option>
+                        <option value=215>BAROLI, MATIAS EMANUEL(20325805707) VACUNOS</option>
+                        <option value=387>BARRERA, JOSE ANTONIO(20256261171) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=281>BARRERA, MARIA CELINA(27328307575) HORTICOLA</option>
+                        <option value=328>BARRETO, NILDA GRACIELA(27278398264) APICOLA</option>
+                        <option value=330>BARRETO, REYNALDO OMAR(20300949585) APICOLA</option>
+                        <option value=220>BARRETO, TAMARA(27335640484) AVICOLA</option>
+                        <option value=542>BARRIOS, ALEJANDRA LORENA(27320778536) VACUNOS</option>
+                        <option value=95>BARRIOS, MIGUEL ANGEL(20324859846) AVICOLA</option>
+                        <option value=66>BARRIOS, SANTO RAMIRO(20352178676) APICOLA</option>
+                        <option value=517>BASGALL, CARLOS DANIEL(20325307162) SERVICIO</option>
+                        <option value=179>BATTAUZ, MARIA LAURA(27325808581) PORCINOS</option>
+                        <option value=613>Battisti, RAÚL(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=77>BAUER, ALBERTO ALEJANDRO(20248996294) AVICOLA</option>
+                        <option value=26>BAZZANA , LEANDRO(20332680529) VACUNOS</option>
+                        <option value=475>BAZZANA , LEANDRO(20332680529) SIEMBRA</option>
+                        <option value=99>BEJARANO , Patricia Alejandra(27268587336) APICOLA</option>
+                        <option value=534>BEL, JUAN PABLO(23322758219) VACUNOS</option>
+                        <option value=545>BELLO, IVAN(20362091072) VACUNOS</option>
+                        <option value=272>BENEDETTI, MARIA EUGENIA(27318665872) SIEMBRA</option>
+                        <option value=437>BENEDETTI, MARIANO GABRIEL(20344673978) SERVICIO</option>
+                        <option value=263>BENEDETTI, MIGUEL(20311999576) APICOLA</option>
+                        <option value=548>BENITEZ, CRISTIAN BENJAMIN(23338258119) VACUNOS</option>
+                        <option value=282>BENITEZ, JUAN OMAR JESUS(20278336450) APICOLA</option>
+                        <option value=171>BENITEZ, MARTIN ALEJANDRO(20300869662) APICOLA</option>
+                        <option value=132>BENITEZ, PABLO JAVIER(20242184557) HORTICOLA</option>
+                        <option value=137>BERDUN, LUIS ALEJANDRO(23295747269) HORTICOLA</option>
+                        <option value=145>BERGARA, CARLOS JAVIER(20357181934) AVICOLA</option>
+                        <option value=526>BERNHARDT, MARTIN EZEQUIEL(20392558404) APICOLA</option>
+                        <option value=25>BERTOCHI, LUCAS(20294720384) PORCINOS</option>
+                        <option value=566>Besel, Laura(0) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=335>BESEL, MONICA RAQUEL(27260334145) APICOLA</option>
+                        <option value=497>BEVILACQUA, NICOLAS(20354408776) HORTICOLA</option>
+                        <option value=298>BLASICH, NADIA VANESA(27304504418) CRIA/OTRO</option>
+                        <option value=169>BLASON , WILTON JAVIER(20268586629) APICOLA</option>
+                        <option value=481>BONELLI, JORGE GERMAN(20320252629) FORESTACION</option>
+                        <option value=214>BORGE, MARCOS(20284548869) APICOLA</option>
+                        <option value=327>BORGETTO, GIULIANO(20375685036) CRIA/OTRO</option>
+                        <option value=199>BORGETTO, GRISELDA ELENA(27248173179) APICOLA</option>
+                        <option value=256>BOTTGES, CECILIA GABRIELA(27339925912) APICOLA</option>
+                        <option value=414>BOTTGES, CRISTIAN(20341105510) APICOLA</option>
+                        <option value=262>BOTTGES, SEBASTIAN(20304853426) VACUNOS</option>
+                        <option value=487>BOUJON, FACUNDO JAVIER(20294904264) CRIA/OTRO</option>
+                        <option value=198>BRAMBILLA, GABRIEL DAMIAN(20250624795) FORESTACION</option>
+                        <option value=544>BRELLIZ, GUSTAVO HORACIO(20265380035) VACUNOS</option>
+                        <option value=84>BRITES, HÉCTOR JAVIER(20306912799) VACUNOS</option>
+                        <option value=135>BRONDI, PATRICIO MATIAS (20278047319) PORCINOS</option>
+                        <option value=311>BROWN , DANIEL LUIS MARIA(20269195119) SIEMBRA</option>
+                        <option value=369>BRUMATTI, CAROLINA MARIA PIA(27277731253) HORTICOLA</option>
+                        <option value=21>BRUNINI, ANA MARIA(27312110305) FORESTACION</option>
+                        <option value=30>BRUNINI, ANTONIO FEDERICO(20318491292) APICOLA</option>
+                        <option value=635>bURIONE, SUSANA(0) FABRICACION DE INSTR MEDICOS, OPTICOS Y DE PRECISI</option>
+                        <option value=358>CABAÑA, MAURICIO(20354442230) APICOLA</option>
+                        <option value=427>CABUCHE, MARCOS GABRIEL(20256844029) CRIA/OTRO</option>
+                        <option value=421>CABUCHE, MARIA MERCEDES(27313515864) VACUNOS</option>
+                        <option value=130>CACERES, IRINEO RAMON(20244883703) APICOLA</option>
+                        <option value=252>CACERES, MARIA ESTER(27243872176) APICOLA</option>
+                        <option value=332>CACERES , PABLO ROQUE(20326594378) HORTICOLA</option>
+                        <option value=143>CALLEBAUT, CLAUDIA(27281363366) OVINOS</option>
+                        <option value=417>CALLERO, ALEXIS DAMIAN(20383866023) CRIA/OTRO</option>
+                        <option value=128>CAMBRE, TAMARA BETSABE(27333824626) HORTICOLA</option>
+                        <option value=373>CAMINO, AGUSTINA(27326190646) CRIA/OTRO</option>
+                        <option value=449>CAMOZZI, RAMON ALCIDES(20297605721) APICOLA</option>
+                        <option value=254>CANTUNI, MANUEL ALEJANDRO(20307836239) HORTICOLA</option>
+                        <option value=73>CARABALLO, ALEJANDRO MARTIN ANTONIO(20291694641) APICOLA</option>
+                        <option value=64>CARDOZO, ANA ESTHER(27259273728) AVICOLA</option>
+                        <option value=602>Cardozo, MARIANA (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=14>CARLAZARA, LEONARDO GUSTAVO(20298565626) HORTICOLA</option>
+                        <option value=470>CARLAZARA, LEONARDO GUSTAVO(20298565626) HORTICOLA</option>
+                        <option value=535>CARNERO, PABLO(23341769299) FORESTACION</option>
+                        <option value=560>Carreño , Francisco Agustin(0) IMPRESION, SERIGRAFIA Y GRABACIONES</option>
+                        <option value=591>Castaño, MARÍA ALEJANDRA(0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=53>CASTELLARO, MAXIMILIANO DANIEL(20331301702) VACUNOS</option>
+                        <option value=233>CAVALLO, FABRICIO ENRIQUE(20281359895) APICOLA</option>
+                        <option value=221>CAVALLO, RUBEN DARIO(20307646081) APICOLA</option>
+                        <option value=75>CECCO, WALDEMAR EZEQUIEL(20270647503) VACUNOS</option>
+                        <option value=596>Cedermaz, ANALIA (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=251>CEPARO, SILVIA BEATRIZ(27247768934) HORTICOLA</option>
+                        <option value=520>CERGNEUX , ERCI FACUNDO(20370813419) CRIA/OTRO</option>
+                        <option value=570>Challol, Daiana (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=261>CHAMUSSY, LEANDRO DAIAN(20357177651) VACUNOS</option>
+                        <option value=182>CHIARDOLA, MARIO JOSE(20312775450) APICOLA</option>
+                        <option value=536>CHOZZA MOREIRA, MARGARET(27188231751) CRIA/OTRO</option>
+                        <option value=509>CLARIA, LEONARDO(20357072779) SERVICIO</option>
+                        <option value=622>clauss, alan(0) INDUSTRIA METALICA BASICA</option>
+                        <option value=450>CONSTANTINI, CIIRO MAURICIO(20322311320) APICOLA</option>
+                        <option value=250>CORBALAN, NICOLAS MARIA(20337136436) PORCINOS</option>
+                        <option value=101>CORDOBA , LIANA VANINA(27252612357) SERVICIO</option>
+                        <option value=429>CORREA, FELICIANO JAVIER(20324817949) HORTICOLA</option>
+                        <option value=190>CORTIANA, SUSANA CARINA(27254812760) HORTICOLA</option>
+                        <option value=578>Costa, JOSÉ IGNACIO (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=461>CRETTAZ, JAVIER AURELIO(20262483623) APICOLA</option>
+                        <option value=310>CRETTAZ, WALTER DANIEL(20312774470) PORCINOS</option>
+                        <option value=493>CRUDO, DIEGO HERNAN(20285230072) FABRICACION DE PRODUCTOS METALES, MAQUINARIAS Y EQ</option>
+                        <option value=33>CURBELO, CARLOS HUMBERTO(23244693369) APICOLA</option>
+                        <option value=242>DA PORTA, MARCOS(20244875654) VACUNOS</option>
+                        <option value=278>DALINGER, GUIDO EMILIO(20344676004) VACUNOS</option>
+                        <option value=568>Dalpra, Franco Sebastián (0) INDUSTRIA METALICA BASICA</option>
+                        <option value=423>DALZOTTO, ALEJANDRO RAMON(20354453763) CITRICOLA</option>
+                        <option value=10>DALZOTTO, NATALIA M CAMILA(27349728848) HORTICOLA</option>
+                        <option value=301>DANDEU, GERARDO RAMON(20253655519) APICOLA</option>
+                        <option value=163>DAPORTA, BELEN ELIANA(27366514592) PORCINOS</option>
+                        <option value=193>DARCHEZ, MARCELO RUBEN(23278329739) APICOLA</option>
+                        <option value=213>DASSO, MATIAS HERNAN(20325807432) APICOLA</option>
+                        <option value=111>DE ANGELI , EXEQUIEL ANDRES(23261624729) PORCINOS</option>
+                        <option value=370>DE ANGELIS, MARTIN ESTEBAN (20307647649) VACUNOS</option>
+                        <option value=279>DE LA SOTA, VANESA FLORENCIA(27259320858) HORTICOLA</option>
+                        <option value=496>DECUYPER, CLARISA MARIEL(27308636491) APICOLA</option>
+                        <option value=619>Deharbe , LEANDRO ARIEL(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=223>DEL RIO, SILVANA(27271410625) APICOLA</option>
+                        <option value=293>DEL VALLE, DAVID(20287166193) VACUNOS</option>
+                        <option value=349>DENING, GUILLERMO EMILIO(20306952065) VACUNOS</option>
+                        <option value=55>DENING, GUSTAVO RUBEN(20333492033) VACUNOS</option>
+                        <option value=237>DENING, LUCAS MATIAS(20357715181) SIEMBRA</option>
+                        <option value=615>deppen, anabella(0) FABRICACION DE INSTR MEDICOS, OPTICOS Y DE PRECISI</option>
+                        <option value=103>DERFLER, JORGE ALEXIS(20268955101) APICOLA</option>
+                        <option value=187>DERFLER, OSCAR ALEJANDRO(20372242230) APICOLA</option>
+                        <option value=390>DEWALD, DANIEL BERNABE(23270661289) CRIA/OTRO</option>
+                        <option value=562>Díaz, Claudio Agustin (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=446>DIAZ, JIMENA MARIEL(20365896314) APICOLA</option>
+                        <option value=28>DIAZ LONDRA , FACUNDO NICOLÁS (20340148836) APICOLA</option>
+                        <option value=611>Diederle, YANINA (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=590>Dietrich, DAMIaN (0) PRODUCCION DE MADERA Y PRODUCTOS DE MADERA, EXCEPT</option>
+                        <option value=523>DIMIER, GUSTAVO IVAN(20294904140) SIEMBRA</option>
+                        <option value=549>DOMINGUEZ , Dario Diego Daniel(20349727286) VACUNOS</option>
+                        <option value=104>DOMINGUEZ , Dario Diego Daniel(20349727286) PORCINOS</option>
+                        <option value=45>DONDA , CARLOS JAVIER(23330838019) VACUNOS</option>
+                        <option value=294>DOSSO DE CASTAGNANI, ANA LORENA(27281258937) APICOLA</option>
+                        <option value=494>DUARTE, GUSTAVO ALDALBERTO(20281363221) PORCINOS</option>
+                        <option value=188>DUARTE, MARCELO JULIAN(20355592996) VACUNOS</option>
+                        <option value=50>DUERTO, MIGUEL MAXIMILIANO GONZALO(20260486609) SERVICIO</option>
+                        <option value=603>Duttler , MARÍA DEL CARMEN(0) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=42>EICHMANN , RAFAEL ALEJANDRO (20295196999) TAMBO</option>
+                        <option value=598>Elizalde, AGUSTÍN (0) FABRICACION DE MUEBLES</option>
+                        <option value=463>ELLEMBERGER, IVANA PAOLA(27278366079) CRIA/OTRO</option>
+                        <option value=490>ELUA, IGNACIO(20274455552) VACUNOS</option>
+                        <option value=386>EMERI, ARIEL SEBASTIAN(20318187739) APICOLA</option>
+                        <option value=345>EMERI, CRISTIAN JAVIER(20281366840) APICOLA</option>
+                        <option value=473>EMERI , DAMIAN A.(20301123311) APICOLA</option>
+                        <option value=22>EMERI , DAMIAN A.(20301123311) APICOLA</option>
+                        <option value=29>ENRIQUE, ALEJANDRA MARÍA(27248172695) VACUNOS</option>
+                        <option value=400>ENRIQUE, NICOLAS ANIBAL(23325071699) APICOLA</option>
+                        <option value=406>ESCAIOLA, MARIANA VIRGINIA(27281101434) PORCINOS</option>
+                        <option value=170>ESQUIVEL, IGNACIO BENJAMIN(20313334784) APICOLA</option>
+                        <option value=307>EZPELETA, MARIA VANINA(27263211486) HORTICOLA</option>
+                        <option value=236>FAES, RAUL GASTON(20347881105) VACUNOS</option>
+                        <option value=347>FARRALL, MARIANO YAMIL(23322754329) FORESTACION</option>
+                        <option value=434>FELDMAN, JUAN GABRIEL(20315211191) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=269>FELTES, WALTER MAXIMILIANO(20323962120) APICOLA</option>
+                        <option value=484>FERNANDEZ , CHRISTIAN HUMERTO(20274250209) VACUNOS</option>
+                        <option value=594>Fernández agasse, LISANDRO (0) MANUFACTURAS N.C.P.</option>
+                        <option value=482>FERREYRA, EDUARDO MARTIN(20259073600) CRIA/OTRO</option>
+                        <option value=351>FIGUEROA, HERNAN ARIEL(20256820510) CRIA/OTRO</option>
+                        <option value=367>FIRPO, NATALIA RAQUEL(27266494101) VACUNOS</option>
+                        <option value=507>FLOREAN, JUAN GUILLERMO(20291209409) FABRICACION DE PRODUCTOS METALES, MAQUINARIAS Y EQ</option>
+                        <option value=600>Florentin, SERGIO (0) FABRICACION DE MUEBLES</option>
+                        <option value=514>FLORES, JORGE LUIS(2033594748) CITRICOLA</option>
+                        <option value=47>FOLMER, MARCELO JULIÁN(20252812971) VACUNOS</option>
+                        <option value=131>FONTANA , BRUNO MARTIN(20272933821) APICOLA</option>
+                        <option value=152>FRABOTTA, DUILIO RENZO(20304321920) AVICOLA</option>
+                        <option value=445>FRANCO, ARIEL(23265515959) APICOLA</option>
+                        <option value=462>FRANCO, DANIEL(23248345829) APICOLA</option>
+                        <option value=412>FRANICEVICH , MARIANO JOSE(20261245362) APICOLA</option>
+                        <option value=411>FRASCHETTI , ROBERTO A(20297681983) CRIA/OTRO</option>
+                        <option value=85>FRIAS, DARIO GUILLERMO(23294895159) VACUNOS</option>
+                        <option value=612>Fuchs, JONATHAN (0) INDUSTRIA METALICA BASICA</option>
+                        <option value=299>FUENTES, RAMON IGNACIO(20320254613) OVINOS</option>
+                        <option value=561>Fumaneri, Leandro Roman(0) FABRICACION DE MUEBLES</option>
+                        <option value=377>FURLAN , FABRICIO MARIO(20281367901) TAMBO</option>
+                        <option value=464>FURLAN, URIEL ROBERTO(20258776624) APICOLA</option>
+                        <option value=584>GAIER, Sonia (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=79>GALARRAGA, LEANDRO ARIEL(20274922355) APICOLA</option>
+                        <option value=125>GALARRAGA, WALTER ESTEBAN(20318665169) APICOLA</option>
+                        <option value=581>Galarza, SIOMARA (0) HOTELES Y RESTAURANTES</option>
+                        <option value=67>GALEANO, RICARDO DANIEL(20274922584) PORCINOS</option>
+                        <option value=68>GALEANO, YANINA BEATRIZ(27287600815) AVICOLA</option>
+                        <option value=389>GALLEGOS, JESICA VALERIA(2735586604) CRIA/OTRO</option>
+                        <option value=96>GALVANI , Cesar Andres(20354459842) APICOLA</option>
+                        <option value=119>GALVEZ , ERNESTO FABIAN(20278371167) VACUNOS</option>
+                        <option value=319>GALVEZ, GRISELDA ANAHI(27368486103) AVICOLA</option>
+                        <option value=105>GALVEZ, RAMON(20365270091) PORCINOS</option>
+                        <option value=253>GALVEZ, ROSA ELENA(23278371174) VACUNOS</option>
+                        <option value=200>GAMARRA, WALTER RAUL(20363114335) APICOLA</option>
+                        <option value=72>GARCIA, CAROLINA ELIZABETH(23326590444) APICOLA</option>
+                        <option value=302>GARCIA, GABRIEL ALEJANDRO(20322753110) APICOLA</option>
+                        <option value=371>GARCIA , JOSE LUIS(23356108019) TAMBO</option>
+                        <option value=595>Garcia , LUCIANO RAFAEL(0) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=605>Garéis, ESTEBAN MATÍAS (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=564>Gareis, Héctor Manuel (0) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=478>GARNIER, JONATHAN HERNAN(20363011072) CRIA/OTRO</option>
+                        <option value=521>GARNIER, NICOLAS(20346559331) VACUNOS</option>
+                        <option value=147>GATTI, SANTIAGO(20298551919) VACUNOS</option>
+                        <option value=89>GAYNOR, AGUSTIN(20328020123) HORTICOLA</option>
+                        <option value=340>GEIST, DANIEL GUSTAVO(20257731120) HORTICOLA</option>
+                        <option value=318>GENERO, MATIAS GERMAN(20290863083) APICOLA</option>
+                        <option value=46>GEUNA, DIEGO ESTEBAN(20285275351) HORTICOLA</option>
+                        <option value=274>GEUNA, JOSE MARIA(20299801978) CRIA/OTRO</option>
+                        <option value=248>GIACOPUZZI, JOSE MARIA(20301564113) HORTICOLA</option>
+                        <option value=150>GIECO, MATEO EDUARDO(20340386354) PORCINOS</option>
+                        <option value=93>GILBERTO, JUAN TAHIEL (20361986068) APICOLA</option>
+                        <option value=303>GILES, HERNAN MATIAS(20341212546) PISCICULTURA</option>
+                        <option value=397>GILLESPIE ODWYER, TOMAS(20300947523) TAMBO</option>
+                        <option value=346>GIMENEZ, CESAR ANDRES(23299451429) APICOLA</option>
+                        <option value=333>GIMENEZ, EMILIANO GASTON(23341643279) APICOLA</option>
+                        <option value=140>GIMENEZ BELSUN, LUCRECIA CATALINA(27357139614) APICOLA</option>
+                        <option value=398>GIRARD MARINO, MARIA JESUS(27354444211) AVICOLA</option>
+                        <option value=471>GODOY, ANGEL RAMON ANDRES(20317062711) APICOLA</option>
+                        <option value=49>GODOY, ANGEL RAMON ANDRES(20317062711) APICOLA</option>
+                        <option value=205>GOMEZ, DIEGO ALBERTO(20321050647) VACUNOS</option>
+                        <option value=372>GOMEZ, RAMIRO IVAN(20281366492) APICOLA</option>
+                        <option value=585>GÓMEZ, Silvia (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=604>Gonzales, MATÍAS ANDRÉS (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=300>GONZALEZ, ANALIA BEATRIZ(27272728084) HORTICOLA</option>
+                        <option value=354>GONZALEZ, CARLA ARACELI(27365999371) APICOLA</option>
+                        <option value=285>GONZALEZ, JUAN PABLO(20326506908) PORCINOS</option>
+                        <option value=559>GONZÁLEZ , María Eugenia(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=456>GONZALEZ, PAOLA GISELA(27340389951) AGROINDUSTRIA</option>
+                        <option value=422>GONZALEZ, PRISCILA BEATRIZ(27334249722) FORESTACION</option>
+                        <option value=441>GONZALEZ, RAQUEL(27347610319) APICOLA</option>
+                        <option value=486>GONZALEZ, ROCIO BELEN(27276091900) CRIA/OTRO</option>
+                        <option value=323>GOROSITO, PRISCILA RAQUEL(27379264676) AVICOLA</option>
+                        <option value=48>GOYA, LEANDRO LUIS(20326590585) VACUNOS</option>
+                        <option value=515>GRIEVE, VALERIA LETICIA(27301667901) VACUNOS</option>
+                        <option value=65>GRINOVERO, ESTEFANIA SOLEDAD(27352958188) PORCINOS</option>
+                        <option value=209>GRINOVERO, GONZALO(23303935029) APICOLA</option>
+                        <option value=498>GROSS, CLAUDIO EDGARDO(20358827315) VACUNOS</option>
+                        <option value=338>GUARASCIO, HOMERO MARCOS JEREMIAS(20281368339) SERVICIO</option>
+                        <option value=524>HABRINGER, CARLOS MATIAS(20272218227) PRODUCCION DE MADERA Y PRODUCTOS DE MADERA, EXCEPT</option>
+                        <option value=212>HEINZE, SILVIO MAURICIO(20293709239) PORCINOS</option>
+                        <option value=624>heinzenknecht, matias roman(0) PRODUCCION DE MADERA Y PRODUCTOS DE MADERA, EXCEPT</option>
+                        <option value=623>Hernández, MARÍA LUCRECIA (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=374>HERNANDEZ, SABRINA CLARISA(27368124244) FORESTACION</option>
+                        <option value=38>HERR, MARTA CRISTINA(27278350520) VACUNOS</option>
+                        <option value=376>HILLAIRET, CARLOS JAVIER(20307309409) CRIA/OTRO</option>
+                        <option value=297>HOET AVALLE, MARIANO(20282577306) PORCINOS</option>
+                        <option value=183>HOFSTETTER, DARIO ALBERTO(20315392900) SIEMBRA</option>
+                        <option value=174>HUCALO, JUAN JOSE(20335484402) CRIA/OTRO</option>
+                        <option value=428>HUCK, LUIS MARIA(20335968043) APICOLA</option>
+                        <option value=343>HUCK, MARIA DEL HUERTO(27286477122) OVINOS</option>
+                        <option value=240>IBARRA, ERICA MARIANELA(27282575642) VACUNOS</option>
+                        <option value=23>IENO, FLAVIA ERIKA GISEL(27333131973) AVICOLA</option>
+                        <option value=235>INDELANGELO, NICOLAS(20289593803) APICOLA</option>
+                        <option value=616>Insaurralde, MARÍA LORENA (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=15>IRIJIMOVICH, ALEJANDRO GERMAN(20301314079) HORTICOLA</option>
+                        <option value=208>JACOB, PABLO MARIA JOSE(20278329284) TAMBO</option>
+                        <option value=522>JACOBI, ANA MARIA(27266156419) CRIA/OTRO</option>
+                        <option value=35>JACOBI, CLAUDIO SEBASTIAN(20327221745) HORTICOLA</option>
+                        <option value=172>JAUREGUIBERRY , MARIA FIORELLA(27354461116) APICOLA</option>
+                        <option value=533>JEANDET , EMILIO NICOLAS ANTONIO(20375622875) APICOLA</option>
+                        <option value=39>JOANNAS, EMMANUEL JESUS(20341163014) APICOLA</option>
+                        <option value=634>Juan, romero(0) SERVICIOAS ASOCIADOS A LA PRODUCCION INDUSTRIAL</option>
+                        <option value=76>JUDICHE , TERESA DE JESUS (27283034106) VACUNOS</option>
+                        <option value=257>KACHINSKY, FACUNDO(23344188483) AVICOLA</option>
+                        <option value=312>KAHLERT, ERNESTO WALTER(20271573503) VACUNOS</option>
+                        <option value=457>KAIER, PABLO EMANUEL(20367260948) VACUNOS</option>
+                        <option value=219>KEINER, ALINA ROMANELA(25318356537) AVICOLA</option>
+                        <option value=530>KLOSTER, ARIEL ALEJANDRO(20272936022) SERVICIO</option>
+                        <option value=426>KNEETEMAN, EXEQUIEL(20344673048) APICOLA</option>
+                        <option value=567>Kollman, Carlos (0) INDUSTRIA METALICA BASICA</option>
+                        <option value=288>KOLMANN, CARLA MARIA ELIZABETH(27345496985) VACUNOS</option>
+                        <option value=599>Korb, RICARDO (0) FABRICACION DE PRODUCTOS MINERALES Y NO METALICOS</option>
+                        <option value=504>KRENZ, WALTER EDUARDO(20328868769) FABRICACION DE PRODUCTOS METALES, MAQUINARIAS Y EQ</option>
+                        <option value=305>KRUNFLI, JUAN CARLOS(20318158143) APICOLA</option>
+                        <option value=177>KUHN, LEANDRO ARIEL ANGEL(20351027100) APICOLA</option>
+                        <option value=162>LAGGIARD, VERONICA(27301638103) PORCINOS</option>
+                        <option value=368>LAGORIO, MARIANO ERNESTO(20268097725) SERVICIO</option>
+                        <option value=204>LARREA, CARLOS GASTON(20251971030) APICOLA</option>
+                        <option value=601>Leguizamón, JUAN RAMÓN (0) INDUSTRIA METALICA BASICA</option>
+                        <option value=610>Leichner, MAXIMILIANO (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=292>LEIKAN, RODRIGO(20372891212) APICOLA</option>
+                        <option value=433>LEIVA, GUSTAVO JAVIER(20294457861) APICOLA</option>
+                        <option value=97>LEIVA, LISANDRO NICOLAS(20356994281) APICOLA</option>
+                        <option value=206>LEIVA, MIRIAM DEL CARMEN(27259273906) HORTICOLA</option>
+                        <option value=403>LELL, CAROLINA GRACIELA(27303172187) PORCINOS</option>
+                        <option value=379>LELL, DANIEL ANTONIO(23287230109) SIEMBRA</option>
+                        <option value=582>Leon, GABRIEL (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=37>LERCH, MARCELO EDUARDO(20269413868) SERVICIO</option>
+                        <option value=80>LESCANO , ALEXANDER OMAR(23320253969) APICOLA</option>
+                        <option value=555>LIZZI, Leandro(0) INDUSTRIA QUIMICA</option>
+                        <option value=121>LOCASO, SEBASTIAN(20336847606) HORTICOLA</option>
+                        <option value=357>LOCASO, VALERIA(27303581583) HORTICOLA</option>
+                        <option value=485>LOHRMAN , CRISTIAN DANIEL(20284439075) PISCICULTURA</option>
+                        <option value=502>LONGHI, DIEGO PABLO(20371527045) APICOLA</option>
+                        <option value=537>LOPEZ, SEBASTIAN ROBERTO(20354450365) PORCINOS</option>
+                        <option value=352>LOPEZ CEROLENI, ROBERTO ALEJANDRO(20293417408) SERVICIO</option>
+                        <option value=628>lopez van oosternon, pablo(0) MANUFACTURAS N.C.P.</option>
+                        <option value=201>LORENZON, HERNAN ATILIO(20259074321) AVICOLA</option>
+                        <option value=181>LORENZON, JUAN JOSE(20311964535) PORCINOS</option>
+                        <option value=16>LOWER, MARCOS ANDRES(20357160279) VACUNOS</option>
+                        <option value=207>LUGGREN, MARIA BELEN(27348053812) VACUNOS</option>
+                        <option value=419>LUJAN, EDGARDO ANTONIO(20252889184) CRIA/OTRO</option>
+                        <option value=314>LUNA DE LUCA, LISANDRO EMANUEL(20268099221) CRIA/OTRO</option>
+                        <option value=546>LUTZ, DAIANA VERONICA(27308694149) VACUNOS</option>
+                        <option value=528>MACAUDIERE, LORENA MARIA SILVINA(27357166395) SERVICIOAS ASOCIADOS A LA PRODUCCION INDUSTRIAL</option>
+                        <option value=579>Maciel, MARÍA ESPERANZA (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=238>MAGALLAN, DARIO GERMAN(20331274551) APICOLA</option>
+                        <option value=632>magnin, sebastian(0) MANUFACTURAS N.C.P.</option>
+                        <option value=439>MAIDANA, CARLA ROXANA(27336793950) CRIA/OTRO</option>
+                        <option value=558>Maldonado, Ismael Omar(0) FABRICACION DE MUEBLES</option>
+                        <option value=88>MALENICA , MARTÍN ALEJANDRO (20253537559) SIEMBRA</option>
+                        <option value=432>MANUEL, ANALIA MONICA(27267014782) APICOLA</option>
+                        <option value=133>MAQUIAVELO, MARCELO ALEJANDRO(24263947823) HORTICOLA</option>
+                        <option value=557>Marcon, Edhit (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=353>MARCUZZI, CAROLINA CELESTE(27256848843) CRIA/OTRO</option>
+                        <option value=159>MARIGNAC, JOEL SILVESTRE(20333127645) APICOLA</option>
+                        <option value=554>MARQUEZ, Napoleón(0) IMPRESION, SERIGRAFIA Y GRABACIONES</option>
+                        <option value=18>MARTIN, ALFONSO EDUARDO(20341764506) VACUNOS</option>
+                        <option value=525>MARTINEZ, CARINA NORALI(27306219222) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=160>MARTINEZ, ELIAS FIDEL(20368566005) APICOLA</option>
+                        <option value=631>martinez, lucas(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=440>MARTINEZ , MATIAS FEDERICO(23361042549) CRIA/OTRO</option>
+                        <option value=418>MARTINEZ, MIRIAM ANDREA(27283588403) CRIA/OTRO</option>
+                        <option value=477>MARTINEZ, OSCAR NICOLAS(20392623508) HORTICOLA</option>
+                        <option value=69>MASCHIO, GINO ANDRES(20357134030) APICOLA</option>
+                        <option value=308>MASETTO, EDGARDO(20244672621) APICOLA</option>
+                        <option value=86>MASETTO , MARTÍN MIGUEL(20325052350) APICOLA</option>
+                        <option value=588>Masetto , OSCAR ARIEL(0) INDUSTRIA METALICA BASICA</option>
+                        <option value=350>MASINE, ALEJANDRO GABRIEL(20303225138) VACUNOS</option>
+                        <option value=393>MAURO, LEONARDO MARTIN(23293256799) APICOLA</option>
+                        <option value=203>MAYDANA, ORLANDO CLAUDIO(20312678234) APICOLA</option>
+                        <option value=366>MAYR, MARIA ALICIA(27289443091) CRIA/OTRO</option>
+                        <option value=141>MENDIENTA, SANTUCHI JUAN(20339597910) SERVICIO</option>
+                        <option value=273>MENDIETA SANTUCHI, MARIA SOL(27352966679) PISCICULTURA</option>
+                        <option value=348>MENDOZA, ALFONSO MATIAS(20332711084) APICOLA</option>
+                        <option value=309>MENDOZA, CLAUDIO GABRIEL(20340515545) PORCINOS</option>
+                        <option value=167>MENDOZA, JOSE FELICIANO(20255331702) VACUNOS</option>
+                        <option value=629>mendoza, patricia(0) MANUFACTURAS N.C.P.</option>
+                        <option value=547>MENDOZA, ROBERTO ANTONIO(20316895868) CRIA/OTRO</option>
+                        <option value=36>MERELES , MELISA(27321550245) HORTICOLA</option>
+                        <option value=363>MESQUIDA, MATIAS OMAR(20367261790) VACUNOS</option>
+                        <option value=134>MINGONERA, FABIAN MARCELO(23244672469) HORTICOLA</option>
+                        <option value=479>MIÑO, ANIBAL JESUS(23320719259) VACUNOS</option>
+                        <option value=580>Miño, MATÍAS (0) MANUFACTURAS N.C.P.</option>
+                        <option value=355>MIÑO, MAXIMILIANO(20348462025) APICOLA</option>
+                        <option value=291>MIORELLI, AYELEN MARILIN(27321037882) APICOLA</option>
+                        <option value=620>Miraglio , MARTÍN HERNÁN(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=195>MISTRORIGO, DARIO(20267848468) OVINOS</option>
+                        <option value=541>MOHR, DANIEL ALEJANDRO(23320257239) TAMBO</option>
+                        <option value=44>MOHR, GONZALO SEBASTIAN(23363802079) TAMBO</option>
+                        <option value=469>MOHR, GONZALO SEBASTIAN(23363802079) SERVICIO</option>
+                        <option value=341>MOHR, HUGO EDGARDO(23264078989) SERVICIO</option>
+                        <option value=431>MOLINA, ALFREDO GASTON(20257028667) VACUNOS</option>
+                        <option value=592>Mondoteguy , ALEJANDRA LORENA(0) PRODUCCION DE MADERA Y PRODUCTOS DE MADERA, EXCEPT</option>
+                        <option value=404>MONETTA, FEDERICO JOSE(20365479926) APICOLA</option>
+                        <option value=552>MONTI, Santiago(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=587>Montiel, MARIANELA (0) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=405>MONZON, DANIEL ALEJANDRO(20252459317) FORESTACION</option>
+                        <option value=364>MONZON, MARTIN ANASTASIO(20300155422) VACUNOS</option>
+                        <option value=480>MONZON, MATEO DAIAN(20354442516) PORCINOS</option>
+                        <option value=225>MORALES, CARLOS RODOLFO(20312113970) VACUNOS</option>
+                        <option value=395>MORALES, CESAR ROBERTO(20301883812) CRIA/OTRO</option>
+                        <option value=226>MORALES, JUAN CARLOS(23263037529) APICOLA</option>
+                        <option value=70>MORENO, JUAN RAMON WALDEMAR(20357181225) OVINOS</option>
+                        <option value=316>MORETTI, ALCIDES ANDRES(20338112239) APICOLA</option>
+                        <option value=74>MORETTI, PABLO ANDRES(20283334334) HORTICOLA</option>
+                        <option value=40>MOREYRA , CARLOS MARCELO(20257897959) APICOLA</option>
+                        <option value=608>moreyra, SERGIO (0) PRODUCCION DE MADERA Y PRODUCTOS DE MADERA, EXCEPT</option>
+                        <option value=329>MORINIGO ROJAS, FLORENCIA MAGALI(27381727071) APICOLA</option>
+                        <option value=458>MORISON, MARIANELA NOEMI(27339233026) AVICOLA</option>
+                        <option value=407>MORRISON, CAROLINA ELIZABETH(27284547026) PORCINOS</option>
+                        <option value=224>MUCHIUTTI, MAURICIO RENE(23268776699) APICOLA</option>
+                        <option value=20>MULLER, JULIO MARTIN(20352178595) SIEMBRA</option>
+                        <option value=621>murador , cecilia noemi(0) BLANQUERIA</option>
+                        <option value=165>NAIVIAT, JOAQUIN EMANUEL(23322756429) SIEMBRA</option>
+                        <option value=61>NARVAEZ , JORGE ENRIQUE(20294722654) PORCINOS</option>
+                        <option value=138>NARVAY, JOSE SEBASTIAN (20333226937) SERVICIO</option>
+                        <option value=189>NEIFERT, MARIA CRISTINA(27268667836) CRIA/OTRO</option>
+                        <option value=589>NETTO, alexis RAMÓN (0) INDUSTRIA METALICA BASICA</option>
+                        <option value=149>NIEVAS, ALBERTO ISMAEL(23348089889) PORCINOS</option>
+                        <option value=126>NOGUERA, DANIELA NOEMI(27299723815) APICOLA</option>
+                        <option value=87>NONINO, FEDERICO NICOLAS(20256946298) PORCINOS</option>
+                        <option value=146>NONINO, MARIA MANUELA(27301883957) APICOLA</option>
+                        <option value=120>NORES, HECTOR JAVIER(20259372098) VACUNOS</option>
+                        <option value=229>NORIEGA, MARIA ALEJANDRA(27301072711) APICOLA</option>
+                        <option value=516>NOTALIBERTO, GISELA YANINA(27305496249) VACUNOS</option>
+                        <option value=413>NUÑEZ , NOE GABRIEL(20286675434) OVINOS</option>
+                        <option value=381>NUZ, HECTOR MATIAS(20335630395) APICOLA</option>
+                        <option value=583>OBREGON, Daniel Alberto (0) CONSTRUCCION</option>
+                        <option value=633>Odriozola, desiree(0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=320>OJEDA, NIDIA EDIT(23274921714) AVICOLA</option>
+                        <option value=71>OROÑO, CRISTIAN OSCAR(20347877256) APICOLA</option>
+                        <option value=109>OVANDO , LAURA SEBASTIANA(27345447380) OVINOS</option>
+                        <option value=108>OVANDO, MARIA HAYDEE(27365270096) OVINOS</option>
+                        <option value=577>Pandiani , Sergio(0) MANUFACTURAS N.C.P.</option>
+                        <option value=289>PANOZZO, PABLO BERNARDINO(20275006972) FORESTACION</option>
+                        <option value=425>PANOZZO GALMARELLO, WILLIAM HERNAN(20370797413) APICOLA</option>
+                        <option value=211>PAUTASSO, BEATRIZ DE LOS ANGELES(27281367892) APICOLA</option>
+                        <option value=453>PAVON, CESAR MARIANO(20373955729) APICOLA</option>
+                        <option value=196>PAYER, CLAUDIO MIGUEL(20255331680) VACUNOS</option>
+                        <option value=191>PAYER, GUSTAVO DARIO(23245132549) APICOLA</option>
+                        <option value=227>PEDEMONTE, GUSTAVO(20249588521) APICOLA</option>
+                        <option value=57>PELLEGRINI, ALEJANDRO ANDRÉS(20281301633) APICOLA</option>
+                        <option value=258>PEQUERA, JESUS RAFAEL ALBERTO(20301714476) PORCINOS</option>
+                        <option value=259>PEREIRA, JUAN JOSE(20293258016) VACUNOS</option>
+                        <option value=356>PEREYRA ILARDO , MATIAS MARTIN(20344955755) APICOLA</option>
+                        <option value=144>PEREZ, MARINO FABIAN(20246308714) APICOLA</option>
+                        <option value=92>PEREZ, SEBASTIAN GABRIEL(20356996985) SERVICIO</option>
+                        <option value=488>PERRON, GONZALO FACUNDO(20322206659) CRIA/OTRO</option>
+                        <option value=247>PESSARINI, DANIEL ALEJANDRO(20242819617) HORTICOLA</option>
+                        <option value=82>PESSARINI , MIGUEL AGUSTIN(20370797170) APICOLA</option>
+                        <option value=501>PEZZARINI, ROBERTO ANTONIO(20259560102) CRIA/OTRO</option>
+                        <option value=153>PINTOS, DAMIAN ERNESTO(20286764135) APICOLA</option>
+                        <option value=117>POHL, GUSTAVO GABRIEL(23244874649) PORCINOS</option>
+                        <option value=540>PONCE, GASTON NICOLAS(20375440858) APICOLA</option>
+                        <option value=360>POSADAS, DAMIAN(20285822948) CITRICOLA</option>
+                        <option value=380>POSTAN, GABRIEL(20327954068) VACUNOS</option>
+                        <option value=460>PRESA, ROCIO INES(27281309345) SIEMBRA</option>
+                        <option value=271>PRETTE, ALICIA GRISELDA(27290863789) APICOLA</option>
+                        <option value=459>QUINODOZ, RAFAEL NICOLAS(20315165025) APICOLA</option>
+                        <option value=549>QUINTANA, CRISTIAN ADRIAN(23324516239) VACUNOS</option>
+                        <option value=408>QUINTEROS, RODRIGO MARTIN(20273964984) CRIA/OTRO</option>
+                        <option value=296>RAMAT, MARIANA(27229061254) HORTICOLA</option>
+                        <option value=499>RAMEL, JOSE ALBANO(20271327413) APICOLA</option>
+                        <option value=265>RAMIREZ, JONATAN FABRICIO(20335688954) HORTICOLA</option>
+                        <option value=334>RAU, GONZALO EXEQUIEL(20312017424) CRIA/OTRO</option>
+                        <option value=260>RAVALLI, JUAN DIEGO(20246991694) APICOLA</option>
+                        <option value=136>REGGI, EMILIANO JESUS(20404092651) VACUNOS</option>
+                        <option value=344>RESTANO, DAMIAN NICOLAS(20331300595) PORCINOS</option>
+                        <option value=287>RETAMAR, MARIA CECILIA(27269966772) CRIA/OTRO</option>
+                        <option value=336>RETAMAR , NICOLAS MARTIN(20339405221) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=500>RIEDEL, OSCAR HORACIO(20348856481) TAMBO</option>
+                        <option value=231>RIERA, CARLOS YAMIL(20322569085) PORCINOS</option>
+                        <option value=342>RIERA, GEORGINA MARIEL(27340389382) TAMBO</option>
+                        <option value=438>RIGANTI, MELISA(27335341789) OVINOS</option>
+                        <option value=98>RÍOS , LOURDES MARIA JOSÉ(27357151266) AVICOLA</option>
+                        <option value=283>RIOS, MARIANA PAOLA(27288093615) APICOLA</option>
+                        <option value=178>RIOS, MARTIN SEBASTIAN(20260488857) PORCINOS</option>
+                        <option value=435>RIOS, PABLO SEBASTIAN(20301642815) SERVICIOAS ASOCIADOS A LA PRODUCCION INDUSTRIAL</option>
+                        <option value=331>RIVAS, OSCAR JESUS(20333136649) AGROINDUSTRIA</option>
+                        <option value=81>RIVERO, JAVIER OSCAR(20258065817) APICOLA</option>
+                        <option value=17>RODRIGUEZ, DIEGO(20250320389) SIEMBRA</option>
+                        <option value=243>RODRIGUEZ, ELIZABETH(27247094631) HORTICOLA</option>
+                        <option value=483>RODRIGUEZ, JUAN PABLO(20295951622) HORTICOLA</option>
+                        <option value=317>RODRIGUEZ, LUCAS(20365639982) VACUNOS</option>
+                        <option value=626>Rodríguez, MARTIN (0) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=232>RODRIGUEZ, ROCIO SOLEDAD(27331839871) APICOLA</option>
+                        <option value=625>rodriguez troc , nanci maria laura(0) MANUFACTURAS N.C.P.</option>
+                        <option value=322>ROHRER, MARIA LAURA(27286501733) PORCINOS</option>
+                        <option value=538>ROMANO, MARIA FERNANDA(23357177294) OVINOS</option>
+                        <option value=565>Rome, Lorena Mabel (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=617>Romero, ATILIO (0) CONSTRUCCION</option>
+                        <option value=155>ROMERO, JESICA DANIELA(27332396531) TAMBO</option>
+                        <option value=154>ROMERO , JORGE PABLO(20361740794) AVICOLA</option>
+                        <option value=382>ROMERO, MARCELINO(20312694485) APICOLA</option>
+                        <option value=424>RONCAGLIA, MARIO JOSE(20315697752) APICOLA</option>
+                        <option value=184>ROSALES, HECTOR OSCAR(20320778469) OVINOS</option>
+                        <option value=436>ROSARIGO, JOSE ANTONIO(20268023101) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=448>ROSTAN, MAXIMILIANO CARLOS(23327041959) VACUNOS</option>
+                        <option value=593>Rougge, LEONEL (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=618>Rougier, JUAN MANUEL (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=286>RUIZ, ETELVINA VANESA(27324516560) OVINOS</option>
+                        <option value=94>RUIZ , SERGIO ANTONIO(24317539866) VACUNOS</option>
+                        <option value=123>SABAS, FRANCISCO PIO(20318665010) SIEMBRA</option>
+                        <option value=194>SACKS, ALEJANDRO RUBEN(20333225264) APICOLA</option>
+                        <option value=451>SALOMON, ALBERTO ARIEL(2313333222) PISCICULTURA</option>
+                        <option value=166>SALUD , Fabio Oscar(20296784096) APICOLA</option>
+                        <option value=115>SANABRIA , NAHIR(27356320110) CRIA/OTRO</option>
+                        <option value=129>SANCHEZ , MATIAS EZEQUIEL(20372927853) OVINOS</option>
+                        <option value=586>Sandoval, LEONARDO DAVID (0) FABRICACION DE MUEBLES</option>
+                        <option value=156>SANTUCCI , Hernan Erardo(20343358327) TAMBO</option>
+                        <option value=452>SANTUCHO, LEANDRO ARIEL(20339224367) PORCINOS</option>
+                        <option value=563>Schemberger, Mauro Omar (0) INDUSTRIA METALICA BASICA</option>
+                        <option value=275>SCHENBERGER , MARIO JAVIER(23268628509) APICOLA</option>
+                        <option value=284>SCHIRO, DIEGO HERNAN(20296160475) OVINOS</option>
+                        <option value=100>SCHMIDT, LUCAS CARLOS(20275238237) AVICOLA</option>
+                        <option value=505>SCHMIDT, MARIO ALBERTO(20390359382) PORCINOS</option>
+                        <option value=217>SCHNEIDER, DANIEL HERNAN(20346780305) APICOLA</option>
+                        <option value=609>Schneider, JONATHAN (0) TICs(TECNOLOGIA DE LA INFORMACION Y LA COMUNICACIO</option>
+                        <option value=230>SCHNEIDER, VICTOR(20278392709) APICOLA</option>
+                        <option value=385>SCHVARTZMAN, MAURICIO ALEXIS(20252884956) APICOLA</option>
+                        <option value=218>SCHVINDT , LEANDRO JONATAN(20366917943) APICOLA</option>
+                        <option value=444>SEGOVIA, JUAN IGNACIO(2310915379) AVICOLA</option>
+                        <option value=454>SEGOVIA, JUAN PEDRO(20274285762) AVICOLA</option>
+                        <option value=176>SEGOVIA, PABLO HECTOR ALBERTO(20295281767) PISCICULTURA</option>
+                        <option value=83>SEPOLD, LUIS SANTIAGO(20335631626) VACUNOS</option>
+                        <option value=447>SERRANO, LUCIANO NAZARENO(20299708692) VACUNOS</option>
+                        <option value=512>SIAN, MARIANO IVAN(20315391246) VACUNOS</option>
+                        <option value=60>SIGOT, DANIEL ARIEL(20361986025) APICOLA</option>
+                        <option value=337>SILVA, MAURO JAVIER(20320877688) APICOLA</option>
+                        <option value=491>SINNER, MAILLEN CECILIA(27345860113) HORTICOLA</option>
+                        <option value=391>SOLDINI, ARIEL ADRIAN(20345495011) APICOLA</option>
+                        <option value=569>Sosa, KARINA(0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
+                        <option value=266>SOSA, MIGUEL ALEJANDRO(20243875014) HORTICOLA</option>
+                        <option value=306>SOSA, YAMILE NATALIA(27276742618) HORTICOLA</option>
+                        <option value=304>SOTO, JUAN CARLOS(20262410871) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=442>SOTO, VALERIA SOLEDAD(20298644135) HORTICOLA</option>
+                        <option value=627>spretz , hernan cesar (0) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=630>stock, exequiel(0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=606>Stock, MARÍA EUGENIA (0) FABRICACION DE INSTR MEDICOS, OPTICOS Y DE PRECISI</option>
+                        <option value=244>TABORDA, SILVIO SEBASTIAN(20368486338) VACUNOS</option>
+                        <option value=31>TAFFAREL, SERGIO EMILIO(20294058444) OVINOS</option>
+                        <option value=416>TAMAY, DIEGO JAVIER(20340150679) APICOLA</option>
+                        <option value=513>TAVASANI, SERGIO(20295954125) VACUNOS</option>
+                        <option value=543>TESURI, LEYLEN MARISEL(27368135491) VACUNOS</option>
+                        <option value=455>TISOCCO, LUCAS BERNARDO(20317583878) APICOLA</option>
+                        <option value=503>TODERO, YANINA NOEMI(23380546124) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=430>TOLOSA, ROQUE NAZARENO(20274671689) APICOLA</option>
+                        <option value=378>TOMASINI, FABIAN ANTONIO(20281367251) VACUNOS</option>
+                        <option value=472>TOMASINI, SILVIO ARIEL(20298408415) VACUNOS</option>
+                        <option value=43>TOMASINI, SILVIO ARIEL(20298408415) TAMBO</option>
+                        <option value=51>TOMASSI, MIRKO ALEJANDRO(23247768319) VACUNOS</option>
+                        <option value=202>TONIOLO, OSCAR(20268627392) APICOLA</option>
+                        <option value=180>TORRE, PABLO ALEXIS(20359889241) APICOLA</option>
+                        <option value=241>TORRES, MARIO DAMIAN(20281563336) VACUNOS</option>
+                        <option value=12>TRABA, MODESTO JOSE(20324540157) VACUNOS</option>
+                        <option value=574>Udrizard, José Luis (0) AGROINDUSTRIA</option>
+                        <option value=510>UGALDE, BRUNO ANTONIO(20284712561) SERVICIOAS ASOCIADOS A LA PRODUCCION INDUSTRIAL</option>
+                        <option value=476>UHRIG, LUIS ALBERTO(23357059569) APICOLA</option>
+                        <option value=34>UHRIG, LUIS ALBERTO(23357059569) APICOLA</option>
+                        <option value=158>UJEDA , AGUSTINA(27336563521) APICOLA</option>
+                        <option value=222>UJEDA, FACUNDO(20357075131) APICOLA</option>
+                        <option value=139>URDAPILLETA, GABRIEL AGUSTIN(20370796824) HORTICOLA</option>
+                        <option value=62>URIONDO, JUANA PAOLA(27269000800) APICOLA</option>
+                        <option value=465>VACAFLOR, GONZALO JORGE(20328339189) CRIA/OTRO</option>
+                        <option value=388>VALDEZ, LAUTARO EZEQUIEL(20375626137) APICOLA</option>
+                        <option value=27>VALLEJOS, NICOLAS JOSE(20281100433) APICOLA</option>
+                        <option value=197>VAN AKEN, EDUARDO(20300793666) APICOLA</option>
+                        <option value=124>VAN DERDONCKT, NELSON MARIANO(20258493231) APICOLA</option>
+                        <option value=401>VARGAS, BALTAZAR(20301648732) APICOLA</option>
+                        <option value=415>VARGAS, VERONICA VANESA(27283583053) AVICOLA</option>
+                        <option value=384>VEGA, CRISTIAN GUALBERTO(20299713963) APICOLA</option>
+                        <option value=443>VEGA, SILVANA TERESITA(27274679471) VACUNOS</option>
+                        <option value=295>VEGA, TERESA(27296349920) AVICOLA</option>
+                        <option value=399>VELEK, ALEJANDRO DANIEL(20281581121) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=210>VELEZ, JAIME(20260729463) APICOLA</option>
+                        <option value=492>VERA, DAVID EDGARDO(20275075826) CRIA/OTRO</option>
+                        <option value=539>VERCHELLI, JONATAN FABIAN(20355587534) SERVICIOAS ASOCIADOS A LA PRODUCCION INDUSTRIAL</option>
+                        <option value=185>VERNHET, MIGUEL ANGEL(20271583479) APICOLA</option>
+                        <option value=410>VERSALLI, CLAUDIO FABIAN(20256945151) APICOLA</option>
+                        <option value=239>VERSALLI, DIEGO(20278367119) APICOLA</option>
+                        <option value=531>VICENTIN, MARIO ADRIAN(20310172341) HORTICOLA</option>
+                        <option value=519>VIGANONI, FERNANDO RUBEN(20328979307) CRIA/OTRO</option>
+                        <option value=420>VILAR, FACUNDO FEDERICO(20291705783) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=148>VILLALBA, JORGE RAFAEL(20338638729) APICOLA</option>
+                        <option value=362>VILLALBA, JOSE LEONARDO(20328346177) VACUNOS</option>
+                        <option value=383>VILLANOVA , ARISTIDES ATUEL(20251731331) SERVICIO</option>
+                        <option value=518>VINSON, JONATHAN ALBERTO(20301666358) HORTICOLA</option>
+                        <option value=597>Vittor, FABIÁN ANTONIO (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
+                        <option value=365>VIVAS, ANSELMO DAVID(20332632699) CRIA/OTRO</option>
+                        <option value=489>WAGNER, LUIS ALFREDO(20330807211) VACUNOS</option>
+                        <option value=361>WAIGANDT , ADIEL(20373679837) APICOLA</option>
+                        <option value=228>WARINET, EUGENIO RAMON(20286750835) APICOLA</option>
+                        <option value=276>WEGLIN, PABLO SEBASTIAN(20312775140) APICOLA</option>
+                        <option value=192>WEISS, MATIAS EMMANUEL(20338706023) APICOLA</option>
+                        <option value=249>WERNER, DAMIAN ROBERTO(23362482429) APICOLA</option>
+                        <option value=24>YACOB , CLAUDIO(20273964097) APICOLA</option>
+                        <option value=529>YACOB, JOSE MARIA(20358826076) ACT ENCUADERNACION, IMPRESION, EDICION Y REPRODUCC</option>
+                        <option value=91>YACOB, NEREO MAXIMILIANO(20333492467) HORTICOLA</option>
+                        <option value=161>ZALAZAR, ETHEL GRISEL(23284609354) APICOLA</option>
+                        <option value=532>ZAMERO, MAURICIO NICOLAS(20339190977) HORTICOLA</option>
+                        <option value=508>ZAMORA, LEANDRO MIGUEL(20294457845) APICOLA</option>
+                        <option value=52>ZAPATA, CIRO FERNANDO(20357160937) APICOLA</option>
+                        <option value=54>ZAPATA, DIEGO FERNANDO(20357160929) SERVICIO</option>
+                        <option value=90>ZEBALLOS, HECTOR FACUNDO(20298408040) PORCINOS</option>
+             
+            </select>
+        </div>
+    </div> 
+    
+    <div class="form-group">
+    	<div class="col-xs-12"><b>Situación Actual</b></div>
+    </div>     
+    <div class="form-group">	
+        <div class="col-xs-12">
+            <select id="2" class="form-control" tabindex="2" onChange="ver_funcionamiento(this.value)">
+                <option value="-1" disabled selected>Funciona actualmente ?</option>
+                <option value="1">SI</option>
+                <option value="0">NO</option>            
+            </select>
+        </div>
+    </div>
+    <div id="div_abandona" style="display:none">
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <input type="text" id="3" class="form-control" tabindex="3" placeholder="Mencione porqué abandonó el mismo ?">          
+            </div>
+        </div>
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <select id="4" class="form-control" tabindex="4">
+                	<option value="-1" disabled selected>Volverá a funcionar ?</option>
+                    <option value="1">SI</option>
+                    <option value="0">NO</option>
+                </select>                         
+            </div>
+        </div>  
+    </div> 
+    <div class="form-group">	
+		<div class="col-xs-12"><hr></div>
+    </div>
+    <div id="div_continua" style="display:none">
+    	 <div class="form-group">
+            <div class="col-xs-12"><b>Producción</b></div>
+         </div>
+         <div class="form-group">	
+            <div class="col-xs-12">
+                <input type="text" id="5" class="form-control" tabindex="5" placeholder="PRODUCTO/SERVICIO creado?">          
+            </div>
+        </div>
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <input type="text" id="6" class="form-control" tabindex="6" placeholder="CANTIDAD producida">          
+            </div>
+        </div>
+        <div class="form-group">	
+            <div class="col-xs-12"><hr></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12"><b>Comercialización</b></div>
+        </div>
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <input type="text" id="7" class="form-control" tabindex="7" placeholder="MERCADO donde ubica su producción (Local, regional, provincial, nacional)">          
+            </div>
+        </div>
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <input type="text" id="8" class="form-control" tabindex="8" placeholder="PRINCIPAL COMPRADOR?">          
+            </div>
+        </div>
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <select id="9" class="form-control" tabindex="9" onChange="ver_comercializacion(this.value)">
+                	<option value="-1" disabled selected>Forma de Comercialización</option>
+                    <option value="0">Directa</option>
+                    <option value="1">Indirecta</option>
+                    <option value="2">Otra</option>
+                </select>                
+            </div>
+            <div class="col-xs-12">
+                <div id="div_comercializacion" style="display:none">
+                	<input type="text" id="10" class="form-control" tabindex="10" placeholder="Otro tipo comercialización">
+                </div>                
+            </div>            
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-6">
+                <select id="11" class="form-control" tabindex="11">
+                	<option value="-1" disabled selected>Tiene INTERES en Exportar ?</option>
+                    <option value="0">NO</option>
+                    <option value="1">SI</option>
+                </select>                
+            </div>
+            <div class="col-xs-6">
+                	<input type="text" id="12" class="form-control" tabindex="12" placeholder="Porqué ?">              
+            </div>            
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <select id="13" class="form-control" tabindex="13">
+                	<option value="-1" disabled selected>Conoce los REQUISITOS para exportar ?</option>
+                    <option value="0">NO</option>
+                    <option value="1">SI</option>
+                </select>                
+            </div>            
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <select id="14" class="form-control" tabindex="14">
+                	<option value="-1" disabled selected>Desea CAPACITARSE para exportar y formas de hacerlo ?</option>
+                    <option value="0">NO</option>
+                    <option value="1">SI</option>
+                </select>                
+            </div>            
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-12"><hr></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12"><b>Empleo</b></div>
+        </div>
+        <div class="form-group">	
+            <div class="col-xs-6">
+                <select id="15" class="form-control" tabindex="15">
+                <option value="-1" disabled selected>Cuántos EMPLEADOS posee ?</option>
+				   
+                    <option value="0">0</option>
+                   
+                    <option value="1">1</option>
+                   
+                    <option value="2">2</option>
+                   
+                    <option value="3">3</option>
+                   
+                    <option value="4">4</option>
+                   
+                    <option value="5">5</option>
+                   
+                    <option value="6">6</option>
+                   
+                    <option value="7">7</option>
+                   
+                    <option value="8">8</option>
+                   
+                    <option value="9">9</option>
+                   
+                    <option value="10">10</option>
+                   
+                    <option value="11">11</option>
+                   
+                    <option value="12">12</option>
+                   
+                    <option value="13">13</option>
+                   
+                    <option value="14">14</option>
+                   
+                    <option value="15">15</option>
+                   
+                    <option value="16">16</option>
+                   
+                    <option value="17">17</option>
+                   
+                    <option value="18">18</option>
+                   
+                    <option value="19">19</option>
+                   
+                    <option value="20">20</option>
+                                	<option value="21">más</option>
+                </select>                
+            </div> 
+            <div class="col-xs-6">
+                <select id="16" class="form-control" tabindex="16">
+                <option value="-1" disabled selected>Cuántas pertenecen FAMILIA ?</option>
+				   
+                    <option value="0">0</option>
+                   
+                    <option value="1">1</option>
+                   
+                    <option value="2">2</option>
+                   
+                    <option value="3">3</option>
+                   
+                    <option value="4">4</option>
+                   
+                    <option value="5">5</option>
+                   
+                    <option value="6">6</option>
+                   
+                    <option value="7">7</option>
+                   
+                    <option value="8">8</option>
+                   
+                    <option value="9">9</option>
+                   
+                    <option value="10">10</option>
+                   
+                    <option value="11">11</option>
+                   
+                    <option value="12">12</option>
+                   
+                    <option value="13">13</option>
+                   
+                    <option value="14">14</option>
+                   
+                    <option value="15">15</option>
+                   
+                    <option value="16">16</option>
+                   
+                    <option value="17">17</option>
+                   
+                    <option value="18">18</option>
+                   
+                    <option value="19">19</option>
+                   
+                    <option value="20">20</option>
+                                	<option value="21">más</option>
+                </select>                
+            </div>            
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-6">
+            <select id="17" class="form-control" tabindex="17" onChange="ver_trabajo(this.value)">
+            <option value="-1" disabled selected>Cuántas personas están INSCRIPTAS en Relación Dependencia ?</option>
+               
+                <option value="0">0</option>
+               
+                <option value="1">1</option>
+               
+                <option value="2">2</option>
+               
+                <option value="3">3</option>
+               
+                <option value="4">4</option>
+               
+                <option value="5">5</option>
+               
+                <option value="6">6</option>
+               
+                <option value="7">7</option>
+               
+                <option value="8">8</option>
+               
+                <option value="9">9</option>
+               
+                <option value="10">10</option>
+               
+                <option value="11">11</option>
+               
+                <option value="12">12</option>
+               
+                <option value="13">13</option>
+               
+                <option value="14">14</option>
+               
+                <option value="15">15</option>
+               
+                <option value="16">16</option>
+               
+                <option value="17">17</option>
+               
+                <option value="18">18</option>
+               
+                <option value="19">19</option>
+               
+                <option value="20">20</option>
+                            <option value="21">más</option>
+            </select>                
+            </div>
+            <div class="col-xs-6">
+                <div id="div_trabajo" style="display:none">
+                    <input type="text" id="18" class="form-control" tabindex="18" placeholder="Porqué motivo no posee personal registrado ?">               
+                </div>            
+            </div>
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-12"><hr></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12"><b>Capacitación / Asesoramiento</b></div>
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <input type="text" id="19" class="form-control" tabindex="19" placeholder="Cree que necesita CAPACITACION o ASESORAMIENTO en algún area o tema particular ?">                       
+            </div>
+        </div>        
+        
+        <div class="form-group">	
+            <div class="col-xs-12"><hr></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12"><b>Forma Jurídica</b></div>
+        </div>
+        
+        <div class="form-group">	
+            <div class="col-xs-12">
+                <select id="20" class="form-control" tabindex="20">
+                    <option value="-1" disabled selected>FORMA JURIDICA?</option>
+                    <option value="1">No Inscripto</option>
+                    <option value="13">Responsable Inscripto</option>  
+                    <option value="2">Monotributista</option>
+                    <option value="3">Soc. Responsab Limitada</option>
+                    <option value="4">Sociedad Anonima</option>
+                    <option value="5">Cooperativa</option>
+                    <option value="6">Sociedad Hecho</option>
+                    <option value="7">Sociedad Colectiva</option>
+                    <option value="8">Empresa u organismo del Estado</option>
+                    <option value="9">Union Transitoria de Empresas</option>
+                    <option value="10">Otro tipo de Sociedad</option>
+                    <option value="11">Suc de Empresa Extranjera</option>
+                    <option value="12">Otra forma Indeterminada</option>                    
+                </select> 
+        	</div>
+        </div>
+        
+        
+        <div class="form-group">	
+            <div class="col-xs-12"><hr></div>
+        </div>
+    
+    </div>
+    
+    </form>
+    
+    <div class="form-group">
+       	<div class="col-xs-12">
+        	<div id="estado"></div>
+        </div>        
+    </div>
+    <div class="form-group">
+       	<div class="col-xs-12">
+            <button onClick="obtenerDatos()" class="btn btn-info">GUARDAR</button>
+        </div>        
+    </div>
+    
+    
+       
+</div>
+
+</body>
+</html>
