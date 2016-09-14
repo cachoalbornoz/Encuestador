@@ -79,7 +79,7 @@ public class MainActivity extends Activity{
 
     private void IngresaRespuestas(String respuestas, String usuario){
 
-        String nombre_archivo = usuario + "_respuestas.txt";
+        String nombre_archivo = "respuestas.txt";
 
         try {
             FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo,true);
