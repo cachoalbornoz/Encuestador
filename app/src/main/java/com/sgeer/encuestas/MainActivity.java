@@ -56,9 +56,9 @@ public class MainActivity extends Activity{
         @JavascriptInterface
         public void guardar(String texto) {
 
-            String[] fragmento = texto.split(",");
+            String[] fragmento = texto.split(";");
 
-            String emprendedor = fragmento[0] + ",";
+            String emprendedor = fragmento[0] + ";";
 
             String bestProvider;
             LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
@@ -69,13 +69,13 @@ public class MainActivity extends Activity{
 
             if(location == null){
                 Toast.makeText(getApplicationContext(), "Guardando respuesta",Toast.LENGTH_LONG ).show();
-                coordenadas = "0,0,";
+                coordenadas = "0;0;";
 
             }else{
                 Toast.makeText( getApplicationContext(),"Guardando posicion y respuesta", Toast.LENGTH_LONG ).show();
                 location.getLatitude();
                 location.getLongitude();
-                coordenadas = location.getLatitude()+ "," + location.getLongitude() + ",";
+                coordenadas = location.getLatitude()+ ";" + location.getLongitude() + ";";
             }
 
             String cadena = coordenadas + texto + '\n';
