@@ -25,19 +25,22 @@
 <div data-role="page" data-theme="a" id="pagina0">
 
     <div data-role="header">
-        <h1>Gestion Encuestas - Versión 1.1</h1>
+        <h1>Sgeer - Versión 1.1</h1>
     </div>
 
-    <div data-role="main" style="background-color: darkseagreen; color:#FFF;text-align: center">
+    <div data-role="main">
         <div class="ui-content">
             <input type="hidden"  name="id_encuesta" id="id_encuesta" value="91"/>
 
             <label for="usuario">Usuario</label>
             <input type="text" value="1" name="usuario" id="usuario" placeholder="Nro de Usuario" size="2" style="text-align:center">
-
-            <label for="total_total">Guardadas</label>
-            <input type="text" value="0" name="total_total" id="total_total" size="2" style="text-align:center">
-
+            <br>
+            Recuerde:
+            <br>
+            <ul>
+                <li>Verificar GPS activo.</li>
+                <li>Descativar Rotacion pantalla.</li>
+            </ul>
         </div>
     </div>
 
@@ -58,7 +61,7 @@
 
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina1">Iniciar</a>
+                    <a href="#pagina1">&vartriangleright;</a>
                 </div>
             </div>
 
@@ -102,18 +105,18 @@
         <div class="ui-content">
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina0">Atrás   </a>
+                    <a href="#pagina0">&vartriangleleft;</a>
                 </div>
             </div>
 
             <div style="float: left;width: 17%">
                 <div style="text-align:center">
-                    Pregunta 1 de 5                    </div>
+                    1 de 5                    </div>
             </div>
 
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina2">Adelante</a>
+                    <a href="#pagina2">&vartriangleright;</a>
                 </div>
             </div>
 
@@ -218,18 +221,18 @@
         <div class="ui-content">
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina1">Atrás   </a>
+                    <a href="#pagina1">&vartriangleleft;</a>
                 </div>
             </div>
 
             <div style="float: left;width: 17%">
                 <div style="text-align:center">
-                    Pregunta 2 de 5                    </div>
+                    2 de 5                    </div>
             </div>
 
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina3">Adelante</a>
+                    <a href="#pagina3">&vartriangleright;</a>
                 </div>
             </div>
 
@@ -278,18 +281,18 @@
         <div class="ui-content">
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina2">Atrás   </a>
+                    <a href="#pagina2">&vartriangleleft;</a>
                 </div>
             </div>
 
             <div style="float: left;width: 17%">
                 <div style="text-align:center">
-                    Pregunta 3 de 5                    </div>
+                    3 de 5                    </div>
             </div>
 
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina4">Adelante</a>
+                    <a href="#pagina4">&vartriangleright;</a>
                 </div>
             </div>
 
@@ -337,18 +340,18 @@
         <div class="ui-content">
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina3">Atrás   </a>
+                    <a href="#pagina3">&vartriangleleft;</a>
                 </div>
             </div>
 
             <div style="float: left;width: 17%">
                 <div style="text-align:center">
-                    Pregunta 4 de 5                    </div>
+                    4 de 5                    </div>
             </div>
 
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina5">Adelante</a>
+                    <a href="#pagina5">&vartriangleright;</a>
                 </div>
             </div>
 
@@ -390,18 +393,18 @@
         <div class="ui-content">
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina4">Atrás   </a>
+                    <a href="#pagina4">&vartriangleleft;</a>
                 </div>
             </div>
 
             <div style="float: left;width: 17%">
                 <div style="text-align:center">
-                    Pregunta 5 de 5                    </div>
+                    5 de 5                    </div>
             </div>
 
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina6">Adelante</a>
+                    <a href="#pagina6">&vartriangleright;</a>
                 </div>
             </div>
 
@@ -441,7 +444,7 @@
 
             <div style="float: left;width: 33%">
                 <div style="text-align:center">
-                    <a href="#pagina5">Atrás   </a>
+                    <a href="#pagina5">&vartriangleleft;</a>
                 </div>
             </div>
 
@@ -467,10 +470,9 @@
 <script type="text/javascript">
 
     function Guardar_Android(texto) {
-        var total = parseInt(document.getElementById('total_total').value) + 1;
         Android.guardar(texto);
         window.location.reload();
-        document.getElementById('total_total').value = total;
+        location.href="#pagina0";
     }
 
 
