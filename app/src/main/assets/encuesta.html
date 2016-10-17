@@ -393,9 +393,13 @@
 <script type="text/javascript">
 
     function Guardar_Android(texto) {
+
         var total       = parseInt(document.getElementById('total_total').value) + 1;
+
         Android.guardar(texto);
+
         window.location.reload();
+
         document.getElementById('total_total').value = total;
     }
 
