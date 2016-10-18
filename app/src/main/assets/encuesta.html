@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,30 +38,33 @@
 
 <div data-role="page" id="pagina0">
 
-    <div data-role="header">
-        <h1>Sgeer - V1.1</h1>
+    <div data-role="header" style="text-align: center">
+        <h5>
+            &COPY; Sgeer - Versión 1.1
+        </h5>
+        <label>Pregunta 0 de 9</label>
     </div>
 
-    <div data-role="main">
+    <div data-role="content">
         <div class="ui-content">
-            <input type="hidden"  name="id_encuesta" id="id_encuesta" value="91"/>
+            <input type="hidden"  name="id_encuesta" id="id_encuesta" value="88"/>
 
             <label for="usuario">Nro de Usuario</label>
             <input type="text" value="1" name="usuario" id="usuario" placeholder="Nro de Usuario" size="2" style="text-align:center">
             <br>
             Consideraciones Generales
             <div data-role="collapsible">
-                <h3>Verificar GPS activo.</h3>
+                <h6>Verificar GPS activo.</h6>
                 <p>Las respuestas siempre se almacenarán, pero si el <strong>GPS</strong> se encuentra desactivado, no almacenará la georreferencia.</p>
             </div>
 
             <div data-role="collapsible">
-                <h3>Comprobar Nro Usuario Asignado.</h3>
+                <h6>Comprobar Nro Usuario Asignado.</h6>
                 <p>Al finalizar una encuesta, puede modificar esta variable, y relacionar las respuestas a otro Usuario.</p>
             </div>
 
             <div data-role="collapsible">
-                <h3>Desactivar Rotacion pantalla.</h3>
+                <h6>Desactivar Rotacion pantalla.</h6>
                 <p>Al rotar la pantalla las respuestas en curso se blanquean y vuelve a lanzarse desde la pregunta y/o consigna Nro 1.</p>
             </div>
 
@@ -70,23 +74,50 @@
 
     <div data-role="footer" data-position="fixed">
 
-        <a href="#pagina0" data-icon="home">Home</a>
-        <a href="#pagina0" data-icon="arrow-l">Atras</a>
-        0 de 5            <a href="#pagina1" data-icon="arrow-r">Adelante</a>
-
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#acerca" data-iconpos="bottom" data-icon="star"  data-rel="dialog">Acerca de</a></li>
+            </ul>
+        </div>
 
     </div>
 
 </div>
 
+<div data-role="page" id="acerca">
+    <div data-role="header">
+        <h1>
+            Sgeer-Versión 1.1
+        </h1>
+
+    </div>
+    <div data-role="content" class="ui-content">
+        <p>Guillermo E. Albornoz</p>
+        <br>
+        <p>cachoalbornoz@gmail.com</p>
+    </div>
+
+    <div data-role="footer">
+        <h5>
+            Telefono: 343 4586951  - Paraná - E.Rios
+        </h5>
+    </div>
+
+</div>
 
 
 <div data-role="page" data-theme="a" id="pagina1">
 
     <div data-role="header" style="text-align: center">
-        <h3>
+
+        <h5>
             &COPY; Sgeer - Versión 1.1
-        </h3>
+        </h5>
+        <label>Pregunta 1 de 9</label>
+
     </div>
 
     <div data-role="main">
@@ -106,10 +137,14 @@
 
     <div data-role="footer" data-position="fixed">
 
-        <a href="#pagina0" data-icon="home">Home</a>
-        <a href="#pagina0" data-icon="arrow-l">Atras</a>
-        1 de 5            <a href="#pagina2" data-icon="arrow-r">Siguiente</a>
-        <a href="#pagina6">Ir cierre</a>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
 
     </div>
 
@@ -119,9 +154,12 @@
 <div data-role="page" data-theme="a" id="pagina2">
 
     <div data-role="header" style="text-align: center">
-        <h3>
+
+        <h5>
             &COPY; Sgeer - Versión 1.1
-        </h3>
+        </h5>
+        <label>Pregunta 2 de 9</label>
+
     </div>
 
     <div data-role="main">
@@ -204,10 +242,14 @@
 
     <div data-role="footer" data-position="fixed">
 
-        <a href="#pagina0" data-icon="home">Home</a>
-        <a href="#pagina1" data-icon="arrow-l">Atras</a>
-        2 de 5            <a href="#pagina3" data-icon="arrow-r">Siguiente</a>
-        <a href="#pagina6">Ir cierre</a>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina3" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
 
     </div>
 
@@ -217,15 +259,18 @@
 <div data-role="page" data-theme="a" id="pagina3">
 
     <div data-role="header" style="text-align: center">
-        <h3>
+
+        <h5>
             &COPY; Sgeer - Versión 1.1
-        </h3>
+        </h5>
+        <label>Pregunta 3 de 9</label>
+
     </div>
 
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                3 - NIVEL FORMACION                </h4>
+                3 - NIVEL DE INSTRUCCION                </h4>
             <br>
             <select id="3" name="3" size="1" data-native-menu="false">
                 <option value="0">...</option>
@@ -246,10 +291,14 @@
 
     <div data-role="footer" data-position="fixed">
 
-        <a href="#pagina0" data-icon="home">Home</a>
-        <a href="#pagina2" data-icon="arrow-l">Atras</a>
-        3 de 5            <a href="#pagina4" data-icon="arrow-r">Siguiente</a>
-        <a href="#pagina6">Ir cierre</a>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina4" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
 
     </div>
 
@@ -259,9 +308,12 @@
 <div data-role="page" data-theme="a" id="pagina4">
 
     <div data-role="header" style="text-align: center">
-        <h3>
+
+        <h5>
             &COPY; Sgeer - Versión 1.1
-        </h3>
+        </h5>
+        <label>Pregunta 4 de 9</label>
+
     </div>
 
     <div data-role="main">
@@ -287,10 +339,14 @@
 
     <div data-role="footer" data-position="fixed">
 
-        <a href="#pagina0" data-icon="home">Home</a>
-        <a href="#pagina3" data-icon="arrow-l">Atras</a>
-        4 de 5            <a href="#pagina5" data-icon="arrow-r">Siguiente</a>
-        <a href="#pagina6">Ir cierre</a>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina3" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina5" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
 
     </div>
 
@@ -300,19 +356,24 @@
 <div data-role="page" data-theme="a" id="pagina5">
 
     <div data-role="header" style="text-align: center">
-        <h3>
+
+        <h5>
             &COPY; Sgeer - Versión 1.1
-        </h3>
+        </h5>
+        <label>Pregunta 5 de 9</label>
+
     </div>
 
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                5 - ESTA DE ACUERDO                </h4>
+                5 - ¿CREE QUE LA ECONOMIA VA POR EL BUEN O MAL CAMINO?                </h4>
             <br>
             <select id="5" name="5" size="1" onchange="5" data-native-menu="false">
                 <option value="0">...</option>
-                <option value="12">MUY DE ACUERDO</option>
+                <option value="1">BUEN CAMINO</option>
+                <option value="2">MAL CAMINO</option>
+                <option value="3">NS/NC </option>
             </select>
 
 
@@ -322,10 +383,14 @@
 
     <div data-role="footer" data-position="fixed">
 
-        <a href="#pagina0" data-icon="home">Home</a>
-        <a href="#pagina4" data-icon="arrow-l">Atras</a>
-        5 de 5            <a href="#pagina6" data-icon="arrow-r">Siguiente</a>
-        <a href="#pagina6">Ir cierre</a>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina4" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina6" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
 
     </div>
 
@@ -334,6 +399,183 @@
 
 <div data-role="page" data-theme="a" id="pagina6">
 
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer - Versión 1.1
+        </h5>
+        <label>Pregunta 6 de 9</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                6 - ¿UD. ESTÁ MEJOR, PEOR O IGUAL QUE HACE UN AÑO?                </h4>
+            <br>
+            <select id="6" name="6" size="1" onchange="6" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="4">MEJOR</option>
+                <option value="5">PEOR</option>
+                <option value="6">IGUAL</option>
+                <option value="7">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina5" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina7" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina7">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer - Versión 1.1
+        </h5>
+        <label>Pregunta 7 de 9</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                7 - ¿QUE PERIODISTAS VE, LEE O ESCUCHA HABITUALMENTE?                </h4>
+            <br>
+            <input id="7" name="7" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina6" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina8" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina8">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer - Versión 1.1
+        </h5>
+        <label>Pregunta 8 de 9</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                8 - ¿COMO EVALUA LA GESTION DE MAURICIO MACRI?                </h4>
+            <br>
+            <select id="8" name="8" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="9">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina7" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina9" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina9">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer - Versión 1.1
+        </h5>
+        <label>Pregunta 9 de 9</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                9 - ¿COMO EVALUA LO QUE ESTA HACIENDO LA GESTION MUNICIPAL DE GUALEGUAYCHU EN CULTURA Y DEPORTES?                </h4>
+            <br>
+            <select id="9" name="9" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="9">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina8" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina10">
+
     <div data-role="header">
         <h3>
             &COPY; Sgeer - Versión 1.1
@@ -341,26 +583,24 @@
     </div>
 
     <div data-role="main">
-
         <div class="ui-content">
             <h4 style="text-align:center">
                 FIN DE LA ENCUESTA
             </h4>
 
-            <br>
-
-            <div id="estado" data-role="popup">
-                <a href="#" data-rel="back" data-role="button" data-transition="pop" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-            </div>
-
+            <div id="estado" data-role="popup"> </div>
         </div>
     </div>
 
     <div data-role="footer" data-position="fixed">
 
-        <a href="#pagina0" data-icon="home">Home</a>
-        <a href="#pagina4" data-icon="arrow-l">Atras</a>
-        <a href="#" data-icon="check" onClick="no_vacio(5)">Guardar resultado</a>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina8" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#" onClick="no_vacio(9)" data-iconpos="bottom" data-icon="check">Guardar</a></li>
+            </ul>
+        </div>
 
     </div>
 
@@ -432,8 +672,12 @@
                 var sel_c 	= document.getElementById('C_' + i); // Buscar valores en columnas
 
                 if(sel_f.children.length == 0 & sel_c.children.length == 0){
-                    $("#estado").show();
-                    document.getElementById("estado").innerHTML= " Respuesta " + i + " sin responder"  ;
+
+                    var html = "<p> <a href='#pagina"+ i +"'>Respuesta " + i + " sin responder</a> </p>";
+
+                    $("#estado").html(html);
+                    $("#estado").popup("open");
+
                     error = 1;
                     break;
                 }
@@ -515,3 +759,4 @@
 </body>
 
 </html>
+
