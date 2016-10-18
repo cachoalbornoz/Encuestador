@@ -2,18 +2,32 @@
 <html>
 <head>
 
-    <title>Relevamiento - Movil</title>
+    <title>Sgeer Movil</title>
 
     <meta charset=UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="mi_estilo.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
 
-    <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
     <script src="jquery.js" type="text/javascript"></script>
-    <script src="bootstrap.js" type="text/javascript"></script>
+    <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
     <script src="jquery.mobile-1.4.5.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(document).on("pagecreate","#pageone",function(){
+
+            // jQuery events go here...
+
+        });
+
+    </script>
+
+    <style>
+        .ui-page { -webkit-backface-visibility: hidden; }
+    </style>
 
 </head>
 
@@ -21,34 +35,46 @@
 <body>
 
 
-<div data-role="page" data-theme="a" id="pagina0">
+<div data-role="page" id="pagina0">
 
-    <div data-role="header" style="background-color: darkseagreen; color:#FFF;text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
+    <div data-role="header">
+        <h1>Sgeer - V1.1</h1>
     </div>
 
     <div data-role="main">
         <div class="ui-content">
-            <input type="hidden"  name="id_encuesta" id="id_encuesta" value="88"/>
+            <input type="hidden"  name="id_encuesta" id="id_encuesta" value="91"/>
 
-            <label for="usuario">Usuario</label>
+            <label for="usuario">Nro de Usuario</label>
             <input type="text" value="1" name="usuario" id="usuario" placeholder="Nro de Usuario" size="2" style="text-align:center">
+            <br>
+            Consideraciones Generales
+            <div data-role="collapsible">
+                <h3>Verificar GPS activo.</h3>
+                <p>Las respuestas siempre se almacenarán, pero si el <strong>GPS</strong> se encuentra desactivado, no almacenará la georreferencia.</p>
+            </div>
 
-            <label for="total_total">Guardadas</label>
-            <input type="text" value="0" name="total_total" id="total_total" size="2" style="text-align:center">
+            <div data-role="collapsible">
+                <h3>Comprobar Nro Usuario Asignado.</h3>
+                <p>Al finalizar una encuesta, puede modificar esta variable, y relacionar las respuestas a otro Usuario.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Desactivar Rotacion pantalla.</h3>
+                <p>Al rotar la pantalla las respuestas en curso se blanquean y vuelve a lanzarse desde la pregunta y/o consigna Nro 1.</p>
+            </div>
+
 
         </div>
     </div>
 
-    <div data-role="footer">
-        <div class="ui-content">
-            <div style="float: left">
+    <div data-role="footer" data-position="fixed">
 
-            </div>
-            <div style="float: right">
-                <a href="#pagina1">Iniciar</a>
-            </div>
-        </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina0" data-icon="arrow-l">Atras</a>
+        0 de 5            <a href="#pagina1" data-icon="arrow-r">Adelante</a>
+
+
     </div>
 
 </div>
@@ -58,7 +84,9 @@
 <div data-role="page" data-theme="a" id="pagina1">
 
     <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
+        <h3>
+            &COPY; Sgeer - Versión 1.1
+        </h3>
     </div>
 
     <div data-role="main">
@@ -73,28 +101,16 @@
             </select>
 
         </div>
+
     </div>
 
-    <div data-role="footer">
-        <div class="ui-content">
+    <div data-role="footer" data-position="fixed">
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina0">Atrás   </a>
-                </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina0" data-icon="arrow-l">Atras</a>
+        1 de 5            <a href="#pagina2" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 1 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina2">Adelante</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -103,7 +119,9 @@
 <div data-role="page" data-theme="a" id="pagina2">
 
     <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
+        <h3>
+            &COPY; Sgeer - Versión 1.1
+        </h3>
     </div>
 
     <div data-role="main">
@@ -181,28 +199,16 @@
             </select>
 
         </div>
+
     </div>
 
-    <div data-role="footer">
-        <div class="ui-content">
+    <div data-role="footer" data-position="fixed">
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina1">Atrás   </a>
-                </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina1" data-icon="arrow-l">Atras</a>
+        2 de 5            <a href="#pagina3" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 2 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina3">Adelante</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -211,13 +217,15 @@
 <div data-role="page" data-theme="a" id="pagina3">
 
     <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
+        <h3>
+            &COPY; Sgeer - Versión 1.1
+        </h3>
     </div>
 
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                3 - NIVEL DE INSTRUCCION                </h4>
+                3 - NIVEL FORMACION                </h4>
             <br>
             <select id="3" name="3" size="1" data-native-menu="false">
                 <option value="0">...</option>
@@ -233,28 +241,16 @@
             </select>
 
         </div>
+
     </div>
 
-    <div data-role="footer">
-        <div class="ui-content">
+    <div data-role="footer" data-position="fixed">
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina2">Atrás   </a>
-                </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina2" data-icon="arrow-l">Atras</a>
+        3 de 5            <a href="#pagina4" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 3 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina4">Adelante</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -263,7 +259,9 @@
 <div data-role="page" data-theme="a" id="pagina4">
 
     <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
+        <h3>
+            &COPY; Sgeer - Versión 1.1
+        </h3>
     </div>
 
     <div data-role="main">
@@ -284,28 +282,16 @@
             </select>
 
         </div>
+
     </div>
 
-    <div data-role="footer">
-        <div class="ui-content">
+    <div data-role="footer" data-position="fixed">
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina3">Atrás   </a>
-                </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina3" data-icon="arrow-l">Atras</a>
+        4 de 5            <a href="#pagina5" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 4 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina5">Adelante</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -314,45 +300,33 @@
 <div data-role="page" data-theme="a" id="pagina5">
 
     <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
+        <h3>
+            &COPY; Sgeer - Versión 1.1
+        </h3>
     </div>
 
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                5 - ¿CREE QUE LA ECONOMIA VA POR EL BUEN O MAL CAMINO?                </h4>
+                5 - ESTA DE ACUERDO                </h4>
             <br>
             <select id="5" name="5" size="1" onchange="5" data-native-menu="false">
                 <option value="0">...</option>
-                <option value="1">BUEN CAMINO</option>
-                <option value="2">MAL CAMINO</option>
-                <option value="3">NS/NC </option>
+                <option value="12">MUY DE ACUERDO</option>
             </select>
 
 
         </div>
+
     </div>
 
-    <div data-role="footer">
-        <div class="ui-content">
+    <div data-role="footer" data-position="fixed">
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina4">Atrás   </a>
-                </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina4" data-icon="arrow-l">Atras</a>
+        5 de 5            <a href="#pagina6" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 5 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina6">Adelante</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -360,220 +334,34 @@
 
 <div data-role="page" data-theme="a" id="pagina6">
 
-    <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
-    </div>
-
-    <div data-role="main">
-        <div class="ui-content">
-            <h4>
-                6 - ¿UD. ESTÁ MEJOR, PEOR O IGUAL QUE HACE UN AÑO?                </h4>
-            <br>
-            <select id="6" name="6" size="1" onchange="6" data-native-menu="false">
-                <option value="0">...</option>
-                <option value="4">MEJOR</option>
-                <option value="5">PEOR</option>
-                <option value="6">IGUAL</option>
-                <option value="7">NS/NC</option>
-            </select>
-
-
-        </div>
-    </div>
-
-    <div data-role="footer">
-        <div class="ui-content">
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina5">Atrás   </a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 6 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina7">Adelante</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div data-role="page" data-theme="a" id="pagina7">
-
-    <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
-    </div>
-
-    <div data-role="main">
-        <div class="ui-content">
-            <h4>
-                7 - ¿QUE PERIODISTAS VE, LEE O ESCUCHA HABITUALMENTE?                </h4>
-            <br>
-            <input id="7" name="7" type="text" value="-" data-clear-btn="true"/>
-
-        </div>
-    </div>
-
-    <div data-role="footer">
-        <div class="ui-content">
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina6">Atrás   </a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 7 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina8">Adelante</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div data-role="page" data-theme="a" id="pagina8">
-
-    <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
-    </div>
-
-    <div data-role="main">
-        <div class="ui-content">
-            <h4>
-                8 - ¿COMO EVALUA LA GESTION DE MAURICIO MACRI?                </h4>
-            <br>
-            <select id="8" name="8" size="1" data-native-menu="false">
-                <option value="0">...</option>
-                <option value="1">MUY BUENA</option>
-                <option value="2">BUENA</option>
-                <option value="3">REGULAR BUENA</option>
-                <option value="4">REGULAR MALA</option>
-                <option value="5">MALA</option>
-                <option value="6">MUY MALA</option>
-                <option value="9">NS/NC</option>
-            </select>
-
-        </div>
-    </div>
-
-    <div data-role="footer">
-        <div class="ui-content">
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina7">Atrás   </a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 8 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina9">Adelante</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div data-role="page" data-theme="a" id="pagina9">
-
-    <div data-role="header" style="text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
-    </div>
-
-    <div data-role="main">
-        <div class="ui-content">
-            <h4>
-                9 - ¿COMO EVALUA LO QUE ESTA HACIENDO LA GESTION MUNICIPAL DE GUALEGUAYCHU EN CULTURA Y DEPORTES?                </h4>
-            <br>
-            <select id="9" name="9" size="1" data-native-menu="false">
-                <option value="0">...</option>
-                <option value="1">MUY BUENA</option>
-                <option value="2">BUENA</option>
-                <option value="3">REGULAR BUENA</option>
-                <option value="4">REGULAR MALA</option>
-                <option value="5">MALA</option>
-                <option value="6">MUY MALA</option>
-                <option value="9">NS/NC</option>
-            </select>
-
-        </div>
-    </div>
-
-    <div data-role="footer">
-        <div class="ui-content">
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina8">Atrás   </a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    Pregunta 9 de 9                    </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina10">Adelante</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div data-role="page" data-theme="a" id="pagina10">
-
-    <div data-role="header" style="background-color: darkseagreen;text-align: center">
-        &COPY; Sistema Gestor de Encuestas - Versión 1.4
+    <div data-role="header">
+        <h3>
+            &COPY; Sgeer - Versión 1.1
+        </h3>
     </div>
 
     <div data-role="main">
 
         <div class="ui-content">
-            <div style="float: left">
-                <button type="button" data-icon="alert" id="estado" style="display:none; background-color: red; color: white"></button>
-            </div>
+            <h4 style="text-align:center">
+                FIN DE LA ENCUESTA
+            </h4>
+
             <br>
-            <div style="float: right">
-                <button type="button" data-icon="check" onClick="no_vacio(9)">Guardar resultado</button>
+
+            <div id="estado" data-role="popup">
+                <a href="#" data-rel="back" data-role="button" data-transition="pop" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             </div>
+
         </div>
     </div>
 
-    <div data-role="footer">
-        <div class="ui-content">
-            <div style="float: right">
-                <div style="text-align:right">
-                    <a href="#pagina9">Atrás</a>
-                </div>
-            </div>
-        </div>
+    <div data-role="footer" data-position="fixed">
+
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina4" data-icon="arrow-l">Atras</a>
+        <a href="#" data-icon="check" onClick="no_vacio(5)">Guardar resultado</a>
+
     </div>
 
 </div>
@@ -584,6 +372,8 @@
 
     function Guardar_Android(texto) {
         Android.guardar(texto);
+        window.location.reload();
+        location.href="#pagina0";
     }
 
 
@@ -629,8 +419,11 @@
             var respuesta = document.getElementById(i);
             if(typeof respuesta !== 'undefined' && respuesta !== null) {
                 if(document.getElementById(i).value == 0){
-                    $("#estado").show();
-                    document.getElementById("estado").innerHTML= "Complete Respuesta "+ i ;
+
+                    var html = "<p> <a href='#pagina"+ i +"'>Respuesta " + i + " sin responder</a> </p>";
+
+                    $("#estado").html(html);
+                    $("#estado").popup("open");
                     error = 1;
                     break;
                 }
@@ -639,47 +432,19 @@
                 var sel_c 	= document.getElementById('C_' + i); // Buscar valores en columnas
 
                 if(sel_f.children.length == 0 & sel_c.children.length == 0){
-                    document.getElementById("estado").innerHTML= "Complete Respuesta "+ i ;
+                    $("#estado").show();
+                    document.getElementById("estado").innerHTML= " Respuesta " + i + " sin responder"  ;
                     error = 1;
                     break;
                 }
             }
         }
         //
-        if(error == 0){
+        if(error === 0){
 
-            var datos 		= 	obtenerDatos(cant_preg);
-
-            var nro_usuario = document.getElementById('usuario').value;
-            var nro_encuesta= document.getElementById('total_total').value;
+            var datos = obtenerDatos(cant_preg);
 
             Guardar_Android(datos);
-
-            // Limpia el formulario
-            for (i=1; i <= cant_preg ; i ++){
-                var respuesta = document.getElementById(i)
-                if(typeof respuesta !== 'undefined' && respuesta !== null) {
-                    if(isNaN(document.getElementById(i).value)){
-                        document.getElementById(i).value = '-';
-                    }else{
-                        document.getElementById(i).value = 0;
-                    }
-                }else{
-
-                    var fila = document.getElementById('F_' + i);
-                    var sel_parent = fila.parentNode;
-                    var nueva_fila = fila.cloneNode(false);
-                    sel_parent.replaceChild(nueva_fila,fila);
-
-                    var colu = document.getElementById('C_' + i);
-                    var sel_parent = colu.parentNode;
-                    var nueva_colu = colu.cloneNode(false);
-                    sel_parent.replaceChild(nueva_colu,colu);
-                }
-            }
-            document.getElementById('total_total').value = parseInt(document.getElementById('total_total').value) + 1;
-            location.href='#tablero';
-            document.getElementById("estado").innerHTML= " ";
         }
     }
 
@@ -750,4 +515,3 @@
 </body>
 
 </html>
-

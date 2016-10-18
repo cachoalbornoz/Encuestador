@@ -49,16 +49,10 @@ public class MainActivity extends Activity{
 
         WebAppInterface(Context c) {
             mContext = c;
-        }
-
-
+        };
 
         @JavascriptInterface
         public void guardar(String texto) {
-
-            String[] fragmento = texto.split(";");
-
-            String emprendedor = fragmento[0] + ";";
 
             String bestProvider;
             LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
