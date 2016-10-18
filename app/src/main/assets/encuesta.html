@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +8,26 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="themes/mi_estilo.css" rel="stylesheet" type="text/css"/>
+    <link href="themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
 
-    <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
     <script src="jquery.js" type="text/javascript"></script>
-    <script src="bootstrap.js" type="text/javascript"></script>
+    <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
     <script src="jquery.mobile-1.4.5.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(document).on("pagecreate","#pageone",function(){
+
+            // jQuery events go here...
+
+        });
+
+    </script>
+
+    <style>
+        .ui-page { -webkit-backface-visibility: hidden; }
+    </style>
 
 </head>
 
@@ -22,56 +35,46 @@
 <body>
 
 
-<div data-role="page" data-theme="a" id="pagina0">
+<div data-role="page" id="pagina0">
 
     <div data-role="header">
-        <h1>Sgeer - Versión 1.1</h1>
+        <h1>Sgeer - V1.1</h1>
     </div>
 
     <div data-role="main">
         <div class="ui-content">
             <input type="hidden"  name="id_encuesta" id="id_encuesta" value="91"/>
 
-            <label for="usuario">Usuario</label>
+            <label for="usuario">Nro de Usuario</label>
             <input type="text" value="1" name="usuario" id="usuario" placeholder="Nro de Usuario" size="2" style="text-align:center">
             <br>
-            Recuerde:
-            <br>
-            <ul>
-                <li>Verificar GPS activo.</li>
-                <li>Descativar Rotacion pantalla.</li>
-            </ul>
+            Consideraciones Generales
+            <div data-role="collapsible">
+                <h3>Verificar GPS activo.</h3>
+                <p>Las respuestas siempre se almacenarán, pero si el <strong>GPS</strong> se encuentra desactivado, no almacenará la georreferencia.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Comprobar Nro Usuario Asignado.</h3>
+                <p>Al finalizar una encuesta, puede modificar esta variable, y relacionar las respuestas a otro Usuario.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Desactivar Rotacion pantalla.</h3>
+                <p>Al rotar la pantalla las respuestas en curso se blanquean y vuelve a lanzarse desde la pregunta y/o consigna Nro 1.</p>
+            </div>
+
+
         </div>
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <div class="ui-content">
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina">&nbsp;</a>
-                </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina0" data-icon="arrow-l">Atras</a>
+        0 de 5            <a href="#pagina1" data-icon="arrow-r">Adelante</a>
 
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    &nbsp;
-                </div>
-            </div>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina1">&vartriangleright;</a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    <a href="#">&nbsp;</a>
-                </div>
-            </div>
-
-        </div>
     </div>
 
 </div>
@@ -102,30 +105,12 @@
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <div class="ui-content">
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina0">&vartriangleleft;</a>
-                </div>
-            </div>
 
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    1 de 5                    </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina0" data-icon="arrow-l">Atras</a>
+        1 de 5            <a href="#pagina2" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina2">&vartriangleright;</a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    <a href="#pagina6">Finalizar</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -218,30 +203,12 @@
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <div class="ui-content">
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina1">&vartriangleleft;</a>
-                </div>
-            </div>
 
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    2 de 5                    </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina1" data-icon="arrow-l">Atras</a>
+        2 de 5            <a href="#pagina3" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina3">&vartriangleright;</a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    <a href="#pagina6">Finalizar</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -278,30 +245,12 @@
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <div class="ui-content">
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina2">&vartriangleleft;</a>
-                </div>
-            </div>
 
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    3 de 5                    </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina2" data-icon="arrow-l">Atras</a>
+        3 de 5            <a href="#pagina4" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina4">&vartriangleright;</a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    <a href="#pagina6">Finalizar</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -337,30 +286,12 @@
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <div class="ui-content">
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina3">&vartriangleleft;</a>
-                </div>
-            </div>
 
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    4 de 5                    </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina3" data-icon="arrow-l">Atras</a>
+        4 de 5            <a href="#pagina5" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina5">&vartriangleright;</a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    <a href="#pagina6">Finalizar</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -390,30 +321,12 @@
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <div class="ui-content">
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina4">&vartriangleleft;</a>
-                </div>
-            </div>
 
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    5 de 5                    </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina4" data-icon="arrow-l">Atras</a>
+        5 de 5            <a href="#pagina6" data-icon="arrow-r">Siguiente</a>
+        <a href="#pagina6">Ir cierre</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina6">&vartriangleright;</a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 17%">
-                <div style="text-align:center">
-                    <a href="#pagina6">Finalizar</a>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
@@ -430,37 +343,25 @@
     <div data-role="main">
 
         <div class="ui-content">
-
-            <h4>
-                <button type="button" id="estado" style="display:none; background-color: red; color: white"></button>
+            <h4 style="text-align:center">
+                FIN DE LA ENCUESTA
             </h4>
+
             <br>
+
+            <div id="estado" data-role="popup">
+                <a href="#" data-rel="back" data-role="button" data-transition="pop" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            </div>
 
         </div>
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <div class="ui-content">
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#pagina5">&vartriangleleft;</a>
-                </div>
-            </div>
+        <a href="#pagina0" data-icon="home">Home</a>
+        <a href="#pagina4" data-icon="arrow-l">Atras</a>
+        <a href="#" data-icon="check" onClick="no_vacio(5)">Guardar resultado</a>
 
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#" data-icon="check" onClick="no_vacio(5)">Guardar resultado</a>
-                </div>
-            </div>
-
-            <div style="float: left;width: 33%">
-                <div style="text-align:center">
-                    <a href="#">&nbsp;</a>
-                </div>
-            </div>
-
-        </div>
     </div>
 
 </div>
@@ -518,11 +419,12 @@
             var respuesta = document.getElementById(i);
             if(typeof respuesta !== 'undefined' && respuesta !== null) {
                 if(document.getElementById(i).value == 0){
-                    $("#estado").show();
-                    document.getElementById("estado").innerHTML= " Respuesta " + i + " sin responder"  ;
-                    error = 1;
-                    $("#estado").toggle(8000);
 
+                    var html = "<p> <a href='#pagina"+ i +"'>Respuesta " + i + " sin responder</a> </p>";
+
+                    $("#estado").html(html);
+                    $("#estado").popup("open");
+                    error = 1;
                     break;
                 }
             }else{
@@ -532,7 +434,6 @@
                 if(sel_f.children.length == 0 & sel_c.children.length == 0){
                     $("#estado").show();
                     document.getElementById("estado").innerHTML= " Respuesta " + i + " sin responder"  ;
-                    $("#estado").toggle(8000);
                     error = 1;
                     break;
                 }
@@ -614,4 +515,3 @@
 </body>
 
 </html>
-
