@@ -1,0 +1,4007 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>SgeerMovil</title>
+
+    <meta charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="mi_estilo.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+
+    <script src="jquery.js" type="text/javascript"></script>
+    <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery.mobile-1.4.5.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(document).on("pagecreate","#pageone",function(){
+
+            // jQuery events go here...
+
+        });
+
+    </script>
+
+    <style>
+        .ui-page { -webkit-backface-visibility: hidden; }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div data-role="page" id="pagina0">
+
+    <div data-role="header" style="text-align: center">
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 0 de 80</label>
+    </div>
+
+    <div data-role="content">
+        <div class="ui-content">
+            <input type="hidden"  name="id_encuesta" id="id_encuesta" value="24"/>
+
+            <label for="usuario">Nro de Usuario</label>
+            <select id="usuario" name="usuario" size="1" data-native-menu="false" data-iconpos="left">
+                <option value="1" selected="selected">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+
+
+            <br>
+            Consideraciones Generales
+            <div data-role="collapsible">
+                <h6>Verificar GPS activo.</h6>
+                <p>Las respuestas siempre se almacenarán, pero si el <strong>GPS</strong> se encuentra desactivado, no almacenará la georreferencia.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h6>Comprobar Nro Usuario Asignado.</h6>
+                <p>Al finalizar una encuesta, puede modificar esta variable, y relacionar las respuestas a otro Usuario.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h6>Desactivar Rotacion pantalla.</h6>
+                <p>Al rotar la pantalla las respuestas en curso se blanquean y vuelve a lanzarse desde la pregunta y/o consigna Nro 1.</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#acerca" data-iconpos="bottom" data-icon="star"  data-rel="dialog">Acerca de</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<div data-role="page" id="acerca">
+    <div data-role="header">
+        <h1>
+            Sgeer-Versión 1.1
+        </h1>
+
+    </div>
+    <div data-role="content" class="ui-content">
+        <p>Guillermo E. Albornoz</p>
+        <br>
+        <p>cachoalbornoz@gmail.com</p>
+    </div>
+
+    <div data-role="footer">
+        <h5>
+            Telefono: 343 4586951  - Paraná - E.Rios
+        </h5>
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina1">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 1 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                1 - ZONA                </h4>
+            <br>
+            <select id="1" name="1" size="1" onchange="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="12">CENTRO</option>
+                <option value="13">CENTRO/SUD</option>
+                <option value="14">SUD</option>
+                <option value="15">CASINO</option>
+                <option value="16">SUDOESTE</option>
+                <option value="17">ALBERDI</option>
+                <option value="18">ARROYITO</option>
+                <option value="19">PICHINCHA-ECHESORTU</option>
+                <option value="20">BARRIO PARQUE</option>
+                <option value="21">TRIANGULO Y ZONA</option>
+                <option value="22">FISHERTON Y ANTES</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina2">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 2 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                2 - SEXO                </h4>
+            <br>
+            <select id="2" name="2" size="1" onchange="2" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="23">VARON</option>
+                <option value="24">MUJER</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina3" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina3">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 3 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                3 - EDAD                </h4>
+            <br>
+            <select id="3" name="3" size="1" onchange="3" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="25">ENTRE 16 Y 37 AñOS</option>
+                <option value="26">DE 38 A 60 AñOS</option>
+                <option value="28">CON 61 AñOS O MAS</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina4" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina4">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 4 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                4 - NIVEL DE INSTRUCCION                </h4>
+            <br>
+            <select id="4" name="4" size="1" onchange="4" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="29">SIN ESCOLARIDAD</option>
+                <option value="30">PRIMARIO INCOMPLETO</option>
+                <option value="31">PRIMARIO COMPLETO</option>
+                <option value="32">SECUNDARIO INCOMPLETO</option>
+                <option value="33">SECUNDARIO COMPLETO</option>
+                <option value="34">TERCIARIO/UNIVERSITARIO INC</option>
+                <option value="35">TERCIARIO/UNIVERSITARIO COMP</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina3" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina5" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina5">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 5 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                5 - OCUPACION PRINCIPAL                </h4>
+            <br>
+            <select id="5" name="5" size="1" onchange="5" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="36">JUBILADO/PENSIONADO</option>
+                <option value="37">AMA DE CASA</option>
+                <option value="38">ESTUDIANTE</option>
+                <option value="39">DESEMPLEADO</option>
+                <option value="40">CHANGAS/TRABAJO TEMPORAL</option>
+                <option value="41">TRABAJADOR PUBLICO</option>
+                <option value="42">TRABAJADOR PRIVADO</option>
+                <option value="43">CUENTAPROPISTA / AUTONOMO</option>
+                <option value="44">INACTIVO</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina4" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina6" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina6">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 6 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                6 - ¿VIAJA AL MENOS UNA VEZ POR SEMANA EN COLECTIVO? NO (PASA A 14)                </h4>
+            <br>
+            <select id="6" name="6" size="1" onchange="6" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="45">SI</option>
+                <option value="46">NO</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina5" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina7" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina7">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 7 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                7 - ¿ES SU PRINCIPAL MEDIO DE TRANSPORTE PARA IR A TRABAJAR, ESTUDIAR Y/O REALIZAR SUS PRINCIPALES ACTIVIDADES COTIDIANAS?                </h4>
+            <br>
+            <select id="7" name="7" size="1" onchange="7" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="47">SI</option>
+                <option value="48">NO</option>
+                <option value="49">-</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina6" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina8" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina8">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 8 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                8 - SIENDO 1 ABSOLUTAMENTE INSATISFECHO Y 10 TOTALMENTE SATISFECHO, LE PIDO CALIFIQUE LOS SIGUIENTES ASPECTOS RESPECTOS DEL COLECTIVO QUE USTED SUELE TOMAR: LIMPIEZA Y ESTADO GENERAL DE LOS COCHES                   </h4>
+            <br>
+            <select id="8" name="8" size="1" onchange="8" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="50">1</option>
+                <option value="51">2</option>
+                <option value="52">3</option>
+                <option value="53">4</option>
+                <option value="54">5</option>
+                <option value="55">6</option>
+                <option value="56">7</option>
+                <option value="57">8</option>
+                <option value="58">9</option>
+                <option value="59">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina7" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina9" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina9">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 9 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                9 - LO LLENO QUE VIENEN LAS UNIDADES/LO HACINADO QUE VIAJAMOS                </h4>
+            <br>
+            <select id="9" name="9" size="1" onchange="9" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="60">1</option>
+                <option value="61">2</option>
+                <option value="62">3</option>
+                <option value="63">4</option>
+                <option value="64">5</option>
+                <option value="65">6</option>
+                <option value="66">7</option>
+                <option value="67">8</option>
+                <option value="68">9</option>
+                <option value="69">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina8" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina10">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 10 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                10 - TIEMPO DE ESPERA/FRECUENCIA CON LA QUE PASAN LOS COLECTIVOS                </h4>
+            <br>
+            <select id="10" name="10" size="1" onchange="10" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="70">1</option>
+                <option value="71">2</option>
+                <option value="72">3</option>
+                <option value="73">4</option>
+                <option value="74">5</option>
+                <option value="75">6</option>
+                <option value="76">7</option>
+                <option value="77">8</option>
+                <option value="78">9</option>
+                <option value="79">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina9" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina11" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina11">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 11 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                11 - CORDIALIDAD/TRATO DE LOS CHOFERES                 </h4>
+            <br>
+            <select id="11" name="11" size="1" onchange="11" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="80">1</option>
+                <option value="81">2</option>
+                <option value="82">3</option>
+                <option value="83">4</option>
+                <option value="84">5</option>
+                <option value="85">6</option>
+                <option value="86">7</option>
+                <option value="87">8</option>
+                <option value="88">9</option>
+                <option value="89">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina10" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina12" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina12">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 12 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                12 - ¿CUALES SON LAS PRINCIPALES LINEAS QUE UTILIZA?                </h4>
+            <br>
+            <input id="12" name="12" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina11" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina13" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina13">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 13 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                13 - ¿CUALES SON LAS PRINCIPALES LINEAS QUE UTILIZA?                </h4>
+            <br>
+            <input id="13" name="13" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina12" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina14" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina14">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 14 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                14 - ¿ALGUNO DE LOS MIEMBROS DEL HOGAR ES PROPIETARIO DE UN AUTO Y/O MOTO?                </h4>
+            <br>
+            <select id="14" name="14" size="1" onchange="14" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="90">SI</option>
+                <option value="91">NO</option>
+                <option value="92">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina13" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina15" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina15">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 15 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                15 - ¿CUAL FUE LA ULTIMA GRAN OBRA DE INFRAESTRUCTURA REALIZADA EN EL BARRIO?                </h4>
+            <br>
+            <input id="15" name="15" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina14" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina16" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina16">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 16 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                16 - ¿CUAL CREE QUE ES LA PRINCIPAL CARENCIA DEL BARRIO EN OBRA PUBLICA Y/O SERVICIOS PUBLICOS?                </h4>
+            <br>
+            <input id="16" name="16" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina15" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina17" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina17">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 17 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                17 - ¿CREE QUE EL VECINO DEBE INVOLUCRARSE EN EL SEGUIMIENTO DE ESA OBRA? ¿LO HARIA?                </h4>
+            <br>
+            <select id="17" name="17" size="1" onchange="17" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="93">SI, Y LO HARIA</option>
+                <option value="94">SI, PERO NO LO HARIA</option>
+                <option value="95">NO</option>
+                <option value="96">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina16" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina18" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina18">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 18 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                18 - DE LAS SIGUIENTES PERSONALIDADES QUE LE VOY A MENCIONAR, LE PIDO QUE ME DIGA SI SABE QUIEN ES O NO Y EN CASO DE CONOCERLO, SI PUEDE EVALUAR QUE IMAGEN TIENE DE EL O ELLA: BEATRIZ PRIOTTI                </h4>
+            <br>
+            <select id="18" name="18" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina17" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina19" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina19">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 19 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                19 - LEO RICCIARDINO                </h4>
+            <br>
+            <select id="19" name="19" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina18" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina20" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina20">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 20 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                20 - MARTIN LUCERO                </h4>
+            <br>
+            <select id="20" name="20" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina19" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina21" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina21">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 21 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                21 - SONIA ALESSO                </h4>
+            <br>
+            <select id="21" name="21" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina20" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina22" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina22">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 22 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                22 - SEBASTIAN CHALE                </h4>
+            <br>
+            <select id="22" name="22" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina21" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina23" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina23">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 23 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                23 - MARIA EUGENIA SCHMUCK                </h4>
+            <br>
+            <select id="23" name="23" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina22" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina24" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina24">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 24 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                24 - MARTIN ROSUA                </h4>
+            <br>
+            <select id="24" name="24" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina23" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina25" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina25">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 25 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                25 - RENATA GIGLIOTTI                </h4>
+            <br>
+            <select id="25" name="25" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina24" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina26" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina26">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 26 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                26 - CHARLIE CARDOZO                </h4>
+            <br>
+            <select id="26" name="26" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina25" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina27" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina27">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 27 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                27 - MONICA FEIN                </h4>
+            <br>
+            <select id="27" name="27" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina26" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina28" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina28">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 28 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                28 - ¿SABE USTED SI LA PROVINCIA DE SANTA FE TIENE UNA LEY PROVINCIAL DE EDUCACION?                </h4>
+            <br>
+            <select id="28" name="28" size="1" onchange="28" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="97">SI SE, TIENE UNA LEY</option>
+                <option value="98">SI SE, NO TIENE UNA LEY</option>
+                <option value="99">NO</option>
+                <option value="100">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina27" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina29" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina29">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 29 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                29 - NO LA TIENE, PERO EN LOS ULTIMOS MESES SE COMENZO A TRABAJAR EN EL TEMA Y HAY VARIOS PROYECTOS. ¿CONOCE ALGUNO DE ELLOS?                </h4>
+            <br>
+            <select id="29" name="29" size="1" onchange="29" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="101">SI</option>
+                <option value="102">NO</option>
+                <option value="103">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina28" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina30" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina30">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 30 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                30 - ¿CONSIDERA QUE ES ESTE UN MOMENTO PROPICIO PARA TRABAJAR SOBRE ESTE TIPO DE LEYES?                </h4>
+            <br>
+            <select id="30" name="30" size="1" onchange="30" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="104">SI</option>
+                <option value="105">NO</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina29" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina31" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina31">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 31 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                31 - ¿CREE QUE LA EXISTENCIA DE LA LEY PUEDE MEJORAR EN ALGO EL SISTEMA EDUCATIVO PROVINCIAL ACTUAL?                </h4>
+            <br>
+            <select id="31" name="31" size="1" onchange="31" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="107">SI, MUCHO</option>
+                <option value="108">SI, POCO</option>
+                <option value="109">NO, NADA</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina30" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina32" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina32">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 32 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                32 - ¿COMO CALIFICA EL ESTADO ACTUAL DE LA EDUCACION EN GENERAL (EN SUS TRES NIVELES)?                </h4>
+            <br>
+            <select id="32" name="32" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina31" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina33" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina33">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 33 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                33 - PARA CADA UNO DE LOS SIGUIENTES ACTORES DEL SISTEMA EDUCATIVO, LE PEDIMOS QUE LO CALIFIQUE ENTRE APORTA POSITIVAMENTE, APORTA NEGATIVAMENTE O NO APORTA EN NINGUN SENTIDO: ESTADO                </h4>
+            <br>
+            <select id="33" name="33" size="1" onchange="33" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="110">APORTA POSITIVAMENTE</option>
+                <option value="111">APORTA NEGATIVAMENTE</option>
+                <option value="112">NO APORTA EN NINGUN SENTIDO</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina32" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina34" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina34">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 34 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                34 - PADRES                </h4>
+            <br>
+            <select id="34" name="34" size="1" onchange="34" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="113">APORTA POSITIVAMENTE</option>
+                <option value="114">APORTA NEGATIVAMENTE</option>
+                <option value="115">NO APORTA EN NINGUN SENTIDO</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina33" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina35" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina35">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 35 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                35 - DOCENTES                </h4>
+            <br>
+            <select id="35" name="35" size="1" onchange="35" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="116">APORTA POSITIVAMENTE</option>
+                <option value="117">APORTA NEGATIVAMENTE</option>
+                <option value="118">NO APORTA EN NINGUN SENTIDO</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina34" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina36" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina36">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 36 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                36 - ¿CREE QUE EL NUEVO GOBIERNO NACIONAL PRODUJO CAMBIOS A LA EDUCACION?                </h4>
+            <br>
+            <select id="36" name="36" size="1" onchange="36" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="119">SI, CAMBIOS POSITIVOS </option>
+                <option value="120">SI, CAMBIOS NEGATIVOS</option>
+                <option value="121">NINGUN CAMBIO AUN</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina35" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina37" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina37">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 37 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                37 - DE LAS SIGUIENTES PERSONALIDADES QUE LE VOY A MENCIONAR, LE PIDO QUE ME DIGA SI SABE QUIEN ES O NO, Y EN CASO DE CONOCERLO, SI PUEDE EVALUAR QUE IMAGEN TIENE DE EL O ELLA: EDUARDO TONIOLLI                </h4>
+            <br>
+            <select id="37" name="37" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina36" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina38" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina38">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 38 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                38 - FERNANDO CHINO ROSUA                </h4>
+            <br>
+            <select id="38" name="38" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina37" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina39" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina39">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 39 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                39 - SEBASTIAN ARTOLA                </h4>
+            <br>
+            <select id="39" name="39" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina38" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina40" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina40">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 40 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                40 - ROBERTO SUKERMAN                </h4>
+            <br>
+            <select id="40" name="40" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina39" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina41" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina41">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 41 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                41 - NORMA LOPEZ                </h4>
+            <br>
+            <select id="41" name="41" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina40" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina42" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina42">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 42 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                42 - JUAN MONTEVERDE                </h4>
+            <br>
+            <select id="42" name="42" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina41" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina43" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina43">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 43 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                43 - LORENA GIMENEZ                </h4>
+            <br>
+            <select id="43" name="43" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina42" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina44" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina44">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 44 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                44 - PARA LOS QUE SI CONOCEN A LORENA: ¿SABE QUE CARGO OCUPA?                </h4>
+            <br>
+            <select id="44" name="44" size="1" onchange="44" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="122">SI, Y LO DICE BIEN</option>
+                <option value="123">SI, Y LO DICE MAL </option>
+                <option value="124">NO</option>
+                <option value="125">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina43" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina45" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina45">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 45 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                45 - ¿LA VIO EN LA TELE?                 </h4>
+            <br>
+            <select id="45" name="45" size="1" onchange="45" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="126">SI</option>
+                <option value="127">NO</option>
+                <option value="128">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina44" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina46" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina46">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 46 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                46 - ¿LA ESCUCHA EN LA RADIO?                </h4>
+            <br>
+            <select id="46" name="46" size="1" onchange="46" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="129">SI</option>
+                <option value="130">NO</option>
+                <option value="131">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina45" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina47" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina47">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 47 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                47 - ¿LA VIO EN EL DIARIO?                 </h4>
+            <br>
+            <select id="47" name="47" size="1" onchange="47" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="132">SI</option>
+                <option value="133">NO</option>
+                <option value="134">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina46" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina48" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina48">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 48 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                48 - ¿SIGUE SU TRABAJO POR REDES SOCIALES?                </h4>
+            <br>
+            <select id="48" name="48" size="1" onchange="48" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="135">SI</option>
+                <option value="136">NO</option>
+                <option value="137">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina47" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina49" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina49">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 49 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                49 - ¿POR UNA INTERVENCION PARTICULAR EN EL BARRIO?                </h4>
+            <br>
+            <select id="49" name="49" size="1" onchange="49" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="138">SI</option>
+                <option value="139">NO</option>
+                <option value="140">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina48" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina50" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina50">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 50 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                50 - ¿CUALES CREE SON LAS 3 PRINCIPALES CAUSAS DE LA INSEGURIDAD? (ABIERTA, ESPONTANEA)                </h4>
+            <br>
+            <input id="50" name="50" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina49" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina51" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina51">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 51 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                51 - CAUSA 2                </h4>
+            <br>
+            <input id="51" name="51" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina50" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina52" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina52">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 52 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                52 - CAUSA 3                </h4>
+            <br>
+            <input id="52" name="52" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina51" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina53" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina53">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 53 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                53 - ¿HA NOTADO UN CAMBIO POSITIVO DESDE LA ULTIMA INTERVENCION DE GENDARMERIA EN SU BARRIO?                </h4>
+            <br>
+            <select id="53" name="53" size="1" onchange="53" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="141">SI</option>
+                <option value="142">NO</option>
+                <option value="143">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina52" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina54" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina54">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 54 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                54 - ENTRE NADA CORRUPTA, CASOS AISLADOS DE CORRUPCION, EXISTE UNA CORRUPCION CASI GENERALIZADA Y TOTALMENTE CORROMPIDA, CUAL ES SU EVALUACION DE: LA JUSTICIA                </h4>
+            <br>
+            <select id="54" name="54" size="1" onchange="54" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="144">NADA CORRUPTA</option>
+                <option value="145">CASOS AISLADOS DE CORRUPCION</option>
+                <option value="146">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
+                <option value="147">TOTALMENTE CORROMPIDA</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina53" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina55" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina55">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 55 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                55 - LA POLICIA                </h4>
+            <br>
+            <select id="55" name="55" size="1" onchange="55" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="148">NADA CORRUPTA</option>
+                <option value="149">CASOS AISLADOS DE CORRUPCION</option>
+                <option value="150">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
+                <option value="151">TOTALMENTE CORROMPIDA</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina54" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina56" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina56">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 56 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                56 - EL GOBIERNO MUNICIPAL                </h4>
+            <br>
+            <select id="56" name="56" size="1" onchange="56" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="152">NADA CORRUPTA</option>
+                <option value="153">CASOS AISLADOS DE CORRUPCION</option>
+                <option value="154">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
+                <option value="155">TOTALMENTE CORROMPIDA</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina55" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina57" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina57">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 57 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                57 - EL GOBIERNO NACIONAL                </h4>
+            <br>
+            <select id="57" name="57" size="1" onchange="57" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="156">NADA CORRUPTA</option>
+                <option value="157">CASOS AISLADOS DE CORRUPCION</option>
+                <option value="158">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
+                <option value="159">TOTALMENTE CORROMPIDA</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina56" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina58" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina58">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 58 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                58 - LA POLITICA EN GENERAL                </h4>
+            <br>
+            <select id="58" name="58" size="1" onchange="58" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="160">NADA CORRUPTA</option>
+                <option value="161">CASOS AISLADOS DE CORRUPCION</option>
+                <option value="162">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
+                <option value="163">TOTALMENTE CORROMPIDA</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina57" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina59" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina59">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 59 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                59 - SIENDO 1 ABSOLUTAMENTE EN DESACUERDO Y 10 TOTALMENTE DE ACUERDO, CALIFIQUE LAS SIGUIENTES FRASES RELACIONADAS CON COMO CREE QUE DEBERIA SER EL ACCIONAR DE UN CONCEJAL EN RELACION A LOS PROBLEMAS DE SEGURIDAD: INVOLUCRARSE MAS CON LA JUSTICIA SIGUIEND                </h4>
+            <br>
+            <select id="59" name="59" size="1" onchange="59" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="164">1</option>
+                <option value="165">2</option>
+                <option value="166">3</option>
+                <option value="167">4</option>
+                <option value="168">5</option>
+                <option value="169">6</option>
+                <option value="170">7</option>
+                <option value="171">8</option>
+                <option value="172">9</option>
+                <option value="173">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina58" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina60" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina60">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 60 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                60 - CONTROLAR AL PODER EJECUTIVO EN LA IMPLEMENTACION DE LOS DISTINTOS PROGRAMAS CONTRA LA INSEGURIDAD                </h4>
+            <br>
+            <select id="60" name="60" size="1" onchange="60" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="174">1</option>
+                <option value="175">2</option>
+                <option value="176">3</option>
+                <option value="177">4</option>
+                <option value="178">5</option>
+                <option value="179">6</option>
+                <option value="180">7</option>
+                <option value="181">8</option>
+                <option value="182">9</option>
+                <option value="183">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina59" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina61" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina61">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 61 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                61 - CONTROLAR AL PODER EJECUTIVO PARA QUE NO EXISTAN ACTOS DE CORRUPCION                </h4>
+            <br>
+            <select id="61" name="61" size="1" onchange="61" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="184">1</option>
+                <option value="185">2</option>
+                <option value="186">3</option>
+                <option value="187">4</option>
+                <option value="188">5</option>
+                <option value="189">6</option>
+                <option value="190">7</option>
+                <option value="191">8</option>
+                <option value="192">9</option>
+                <option value="193">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina60" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina62" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina62">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 62 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                62 - YENDO A LOS BARRIOS PARA ASISTIR EN LOS VECINOS EN SUS DENUNCIAS                </h4>
+            <br>
+            <select id="62" name="62" size="1" onchange="62" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="194">1</option>
+                <option value="195">2</option>
+                <option value="196">3</option>
+                <option value="197">4</option>
+                <option value="198">5</option>
+                <option value="199">6</option>
+                <option value="200">7</option>
+                <option value="201">8</option>
+                <option value="202">9</option>
+                <option value="203">10</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina61" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina63" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina63">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 63 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                63 - DE LAS SIGUIENTES PERSONALIDADES QUE LE VOY A MENCIONAR, LE PIDO QUE ME DIGA SI SABE QUIEN ES O NO Y EN CASO DE CONOCERLO, SI PUEDE EVALUAR QUE IMAGEN TIENE DE EL O ELLA: MIGUEL LIFSCHITZ                </h4>
+            <br>
+            <select id="63" name="63" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina62" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina64" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina64">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 64 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                64 - ANTONIO BONFATTI                </h4>
+            <br>
+            <select id="64" name="64" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina63" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina65" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina65">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 65 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                65 - ANITA MARTINEZ                </h4>
+            <br>
+            <select id="65" name="65" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina64" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina66" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina66">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 66 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                66 - FEDERICO ANGELINI                </h4>
+            <br>
+            <select id="66" name="66" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina65" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina67" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina67">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 67 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                67 - AGUSTIN ROSSI                </h4>
+            <br>
+            <select id="67" name="67" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina66" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina68" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina68">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 68 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                68 - ROY LOPEZ MOLINA                </h4>
+            <br>
+            <select id="68" name="68" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina67" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina69" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina69">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 69 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                69 - ¿COMO CONSIDERA SU SITUACION ECONOMICA HOY EN RELACION AL MISMO DIA DEL AñO ANTERIOR?                </h4>
+            <br>
+            <select id="69" name="69" size="1" onchange="69" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="204">MUCHO MEJOR</option>
+                <option value="205">MEJOR</option>
+                <option value="206">IGUAL</option>
+                <option value="207">PEOR</option>
+                <option value="208">MUCHO PEOR</option>
+                <option value="209">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina68" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina70" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina70">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 70 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                70 - ¿Y LA SITUACION ECONOMICA DEL PAIS (TAMBIEN COMPARADA CON EL AñO ANTERIOR)?                </h4>
+            <br>
+            <select id="70" name="70" size="1" onchange="70" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="210">MUCHO MEJOR</option>
+                <option value="211">MEJOR</option>
+                <option value="212">IGUAL</option>
+                <option value="213">PEOR</option>
+                <option value="214">MUCHO PEOR</option>
+                <option value="215">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina69" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina71" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina71">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 71 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                71 - ¿COMO PIENSA, CREE Y PROYECTA QUE SERA LA SITUACION ECONOMICA DEL PAIS EL AñO PROXIMO?                </h4>
+            <br>
+            <select id="71" name="71" size="1" onchange="71" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="216">MUCHO MEJOR</option>
+                <option value="217">MEJOR</option>
+                <option value="218">IGUAL</option>
+                <option value="219">PEOR</option>
+                <option value="220">MUCHO PEOR</option>
+                <option value="221">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina70" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina72" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina72">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 72 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                72 - ¿COMO CALIFICARIA LA GESTION DEL GOBIERNO MUNICIPAL?                </h4>
+            <br>
+            <select id="72" name="72" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina71" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina73" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina73">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 73 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                73 - ¿COMO CALIFICARIA LA GESTION DEL GOBIERNO PROVINCIAL?                </h4>
+            <br>
+            <select id="73" name="73" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina72" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina74" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina74">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 74 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                74 - ¿COMO CALIFICARIA LA GESTION DEL GOBIERNO NACIONAL?                </h4>
+            <br>
+            <select id="74" name="74" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina73" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina75" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina75">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 75 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                75 - DE LAS SIGUIENTES PERSONALIDADES QUE LE VOY A MENCIONAR, LE PIDO QUE ME DIGA SI SABE QUIEN ES O NO Y EN CASO DE CONOCERLO, SI PUEDE EVALUAR QUE IMAGEN TIENE DE EL O ELLA: MAURICIO MACRI                </h4>
+            <br>
+            <select id="75" name="75" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina74" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina76" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina76">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 76 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                76 - SERGIO MASSA                </h4>
+            <br>
+            <select id="76" name="76" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina75" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina77" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina77">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 77 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                77 - DANIEL SCIOLI                </h4>
+            <br>
+            <select id="77" name="77" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina76" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina78" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina78">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 78 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                78 - CRISTINA FERNANDEZ DE KIRCHNER                </h4>
+            <br>
+            <select id="78" name="78" size="1" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="1">MUY BUENA</option>
+                <option value="2">BUENA</option>
+                <option value="3">REGULAR BUENA</option>
+                <option value="4">REGULAR MALA</option>
+                <option value="5">MALA</option>
+                <option value="6">MUY MALA</option>
+                <option value="7">NO EVALUA</option>
+                <option value="99">NS/NC</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina77" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina79" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina79">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 79 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                79 - EN UNA PROXIMA ELECCION LOCAL Y NACIONAL DEL PROXIMO AñO, USTED CREE QUE TIENE MAS POSIBILIDADES DE ELEGIR A UN CANDIDATO DE (ACLARAR QUE PUEDE ELEGIR MAS DE UNA, Y LUEGO LEER TODAS; ANOTAR HASTA 3 DISTINTOS)                </h4>
+            <br>
+            <select id="79" name="79" size="1" onchange="79" data-native-menu="false">
+                <option value="0">...</option>
+                <option value="222">FRENTE CAMBIEMOS</option>
+                <option value="223">FRENTE RENOVADOR</option>
+                <option value="224">FRENTE PROGRESISTA CIVICO Y SOCIAL</option>
+                <option value="225">PERONISMO</option>
+                <option value="226">FRENTE PARA LA VICTORIA</option>
+                <option value="227">GIROS/CIUDAD FUTURA</option>
+                <option value="228">NINGUNO</option>
+                <option value="229">NS/NC</option>
+            </select>
+
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina78" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina80" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina80">
+
+    <div data-role="header" style="text-align: center">
+
+        <h5>
+            &COPY; Sgeer-V 1.1
+        </h5>
+        <label>Pregunta 80 de 80</label>
+
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4>
+                80 - TELEFONO                </h4>
+            <br>
+            <input id="80" name="80" type="text" value="-" data-clear-btn="true"/>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina79" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                <li><a href="#pagina81" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div data-role="page" data-theme="a" id="pagina81">
+
+    <div data-role="header">
+        <h3>
+            &COPY; Sgeer-V 1.1
+        </h3>
+    </div>
+
+    <div data-role="main">
+        <div class="ui-content">
+            <h4 style="text-align:center">
+                FIN DE LA ENCUESTA
+            </h4>
+
+            <div id="estado" data-role="popup"> </div>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
+                <li><a href="#pagina79" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                <li><a href="#" onClick="no_vacio(80)" data-iconpos="bottom" data-icon="check">Guardar</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+    function Guardar_Android(texto) {
+        Android.guardar(texto);
+        window.location.reload();
+        location.href="#pagina0";
+    }
+
+
+    function obtenerDatos(cant_preg) {
+        var cadena = '';
+        var id_encuesta = document.getElementById('id_encuesta').value;
+        var nro_usuario = document.getElementById('usuario').value;
+
+        for (i=1; i <= cant_preg ; i ++){
+            var nro = document.getElementById(i);
+            if(typeof nro !== 'undefined' && nro !== null) {
+
+                var nro = document.getElementById(i).value ;
+
+            }else{
+                var sel_f 	= document.getElementById('F_' + i); // Buscar valores en filas
+                var sel_c 	= document.getElementById('C_' + i); // Buscar valores en columnas
+
+                texto = '';
+
+                for(x=0; x < sel_f.children.length; x++){
+                    var child_f = sel_f.children[x];
+                    var child_c = sel_c.children[x];
+
+                    if(child_f.value > 0){
+                        var texto = texto + child_f.value + '_' + child_c.value + '.' ;
+                    }
+                }
+                var texto = texto.substring(0, texto.length-1);
+                var nro = texto;
+            }
+            cadena = cadena + nro + ';' ;
+        }
+        return id_encuesta + ';' + nro_usuario + ';' + cadena ;
+    }
+
+    function no_vacio(cant_preg){
+
+        var error = 0;
+
+        for (i=1; i <= cant_preg ; i ++){
+
+            var respuesta = document.getElementById(i);
+            if(typeof respuesta !== 'undefined' && respuesta !== null) {
+                if(document.getElementById(i).value == 0){
+
+                    var html = "<p> <a href='#pagina"+ i +"'>Respuesta " + i + " sin responder</a> </p>";
+
+                    $("#estado").html(html);
+                    $("#estado").popup("open");
+                    error = 1;
+                    break;
+                }
+            }else{
+                var sel_f 	= document.getElementById('F_' + i); // Buscar valores en filas
+                var sel_c 	= document.getElementById('C_' + i); // Buscar valores en columnas
+
+                if(sel_f.children.length == 0 & sel_c.children.length == 0){
+
+                    var html = "<p> <a href='#pagina"+ i +"'>Respuesta " + i + " sin responder</a> </p>";
+
+                    $("#estado").html(html);
+                    $("#estado").popup("open");
+
+                    error = 1;
+                    break;
+                }
+            }
+        }
+        //
+        if(error === 0){
+
+            var datos = obtenerDatos(cant_preg);
+
+            Guardar_Android(datos);
+        }
+    }
+
+
+    function agrega_valores(f,c,id){
+        var resf = document.getElementById(f).value;
+        var texto = document.getElementById(f);
+        var textof = texto.options[texto.selectedIndex].text;
+
+        var sel_f = document.getElementById('F_' + id);
+        var opt_f = document.createElement('option');
+        opt_f.appendChild( document.createTextNode(textof) );
+        opt_f.value = resf; // set value property of opt
+        sel_f.appendChild(opt_f);
+
+        for (i = 0; i < sel_f.length; i++) {
+          if (sel_f[i].value == resf) {
+             sel_f[i].selected = true;
+          }
+        }
+
+        var resc = document.getElementById(c).value;
+        var texto = document.getElementById(c);
+        var textoc = texto.options[texto.selectedIndex].text;
+
+        var sel_c = document.getElementById('C_' + id);
+        var opt_c = document.createElement('option');
+        opt_c.appendChild( document.createTextNode(textoc) );
+        opt_c.value = resc; // set value property of opt
+        sel_c.appendChild(opt_c);
+
+        for (i = 0; i < sel_c.length; i++) {
+          if (sel_c[i].value == resc) {
+             sel_c[i].selected = true;
+          }
+        }
+
+        document.getElementById(f).value = 0;
+        document.getElementById(c).value = 0;
+    }
+
+    function elimina_valores(f,c){
+
+        var fila = document.getElementById(f);
+        if (fila.length > 0) {
+            fila.remove(fila.length-1);
+        }
+
+        var columna = document.getElementById(c);
+        if (columna.length > 0) {
+            columna.remove(columna.length-1);
+        }
+    }
+
+    function agrega_opcion(opcion){
+        var res = document.getElementById(id).value ;
+        if(res == 99){
+            document.getElementById("div_otra_opcion").show();
+            document.getElementById("otra_opcion").focus()	;
+        }else{
+            document.getElementById("div_otra_opcion").hide();
+        }
+
+    }
+
+    </script>
+
+</body>
+
+</html>
