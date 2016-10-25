@@ -2,8 +2,12 @@ package com.sgeer.encuestas;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -11,10 +15,12 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.Toast;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
@@ -76,6 +82,37 @@ public class MainActivity extends Activity{
 
             IngresaRespuestas(cadena);
         }
+
+        @JavascriptInterface
+        public void salir(){
+
+
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
+            alertDialogBuilder.setTitle("Salir SGE V1.1?");
+            alertDialogBuilder
+                    .setCancelable(false)
+                    .setPositiveButton("Si",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    moveTaskToBack(true);
+                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    System.exit(1);
+                                }
+                            })
+
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
+
+
+        }
+
     }
 
     private void IngresaRespuestas(String cadena){
@@ -93,6 +130,8 @@ public class MainActivity extends Activity{
             Log.e("logGPSData", "Error");
         }
     }
+
+
 
     public class MiLocationListener implements LocationListener{
         public void onLocationChanged(Location loc){
