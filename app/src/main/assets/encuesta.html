@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +17,7 @@
 
 
     <script type="text/javascript">
-        $(document).on("pagecreate","#page0",function(){
+        $(document).on("pagecreate","#pageone",function(){
 
             // jQuery events go here...
 
@@ -99,7 +98,7 @@
 
         <div data-role="navbar">
             <ul>
-                <li><a href="javascript:salida()" data-iconpos="bottom" data-icon="info">Salir</a></li>
+                <li><a href="#" onClick="salida()" data-iconpos="bottom" data-icon="info">Salir</a></li>
                 <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                 <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
                 <li><a href="#acerca" data-iconpos="bottom" data-icon="star"  data-rel="dialog">Acerca de</a></li>
@@ -113,20 +112,19 @@
 <div data-role="page" id="acerca">
     <div data-role="header">
         <h1>
-            Sgeer-Versión 1.1
+            SGE-V 1.1
         </h1>
-
     </div>
     <div data-role="content" class="ui-content">
-        <p>Guillermo E. Albornoz</p>
+        <p>Autor</p>
         <br>
+        <p>Guillermo Albornoz </p>
         <p>cachoalbornoz@gmail.com</p>
+        <label  class="ui-btn ui-icon-phone ui-btn-icon-left"> 343 4586951 / Paraná E.Rios </label>
     </div>
 
     <div data-role="footer">
-        <h5>
-            Telefono: 343 4586951  - Paraná - E.Rios
-        </h5>
+
     </div>
 
 </div>
@@ -383,12 +381,13 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                6 - ¿VIAJA AL MENOS UNA VEZ POR SEMANA EN COLECTIVO? NO (PASA A 14)                </h4>
+                6 - VIAJA AL MENOS UNA VEZ POR SEMANA EN COLECTIVO? NO (PASA A 14)                </h4>
             <br>
             <select id="6" name="6" size="1" onchange="6" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="45">SI</option>
                 <option value="46">NO</option>
+                <option value="230">NS/NC</option>
             </select>
 
 
@@ -426,13 +425,14 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                7 - ¿ES SU PRINCIPAL MEDIO DE TRANSPORTE PARA IR A TRABAJAR, ESTUDIAR Y/O REALIZAR SUS PRINCIPALES ACTIVIDADES COTIDIANAS?                </h4>
+                7 - ES SU PRINCIPAL MEDIO DE TRANSPORTE PARA IR A TRABAJAR, ESTUDIAR Y/O REALIZAR SUS PRINCIPALES ACTIVIDADES COTIDIANAS?                </h4>
             <br>
             <select id="7" name="7" size="1" onchange="7" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="47">SI</option>
                 <option value="48">NO</option>
                 <option value="49">-</option>
+                <option value="231" selected="selected">NS/NC</option>
             </select>
 
 
@@ -484,6 +484,7 @@
                 <option value="57">8</option>
                 <option value="58">9</option>
                 <option value="59">10</option>
+                <option value="232" selected="selected">NS/NC</option>
             </select>
 
 
@@ -535,6 +536,7 @@
                 <option value="67">8</option>
                 <option value="68">9</option>
                 <option value="69">10</option>
+                <option value="233" selected="selected">NS/NC</option>
             </select>
 
 
@@ -586,6 +588,7 @@
                 <option value="77">8</option>
                 <option value="78">9</option>
                 <option value="79">10</option>
+                <option value="234" selected="selected">NS/NC</option>
             </select>
 
 
@@ -637,6 +640,7 @@
                 <option value="87">8</option>
                 <option value="88">9</option>
                 <option value="89">10</option>
+                <option value="235" selected="selected">NS/NC</option>
             </select>
 
 
@@ -674,7 +678,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                12 - ¿CUALES SON LAS PRINCIPALES LINEAS QUE UTILIZA?                </h4>
+                12 - CUALES SON LAS PRINCIPALES LINEAS QUE UTILIZA?                </h4>
             <br>
             <input id="12" name="12" type="text" value="-" data-clear-btn="true"/>
 
@@ -712,7 +716,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                13 - ¿CUALES SON LAS PRINCIPALES LINEAS QUE UTILIZA?                </h4>
+                13 - CUALES SON LAS PRINCIPALES LINEAS QUE UTILIZA?                </h4>
             <br>
             <input id="13" name="13" type="text" value="-" data-clear-btn="true"/>
 
@@ -750,7 +754,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                14 - ¿ALGUNO DE LOS MIEMBROS DEL HOGAR ES PROPIETARIO DE UN AUTO Y/O MOTO?                </h4>
+                14 - ALGUNO DE LOS MIEMBROS DEL HOGAR ES PROPIETARIO DE UN AUTO Y/O MOTO?                </h4>
             <br>
             <select id="14" name="14" size="1" onchange="14" data-native-menu="false">
                 <option value="0">...</option>
@@ -794,7 +798,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                15 - ¿CUAL FUE LA ULTIMA GRAN OBRA DE INFRAESTRUCTURA REALIZADA EN EL BARRIO?                </h4>
+                15 - CUAL FUE LA ULTIMA GRAN OBRA DE INFRAESTRUCTURA REALIZADA EN EL BARRIO?                </h4>
             <br>
             <input id="15" name="15" type="text" value="-" data-clear-btn="true"/>
 
@@ -832,7 +836,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                16 - ¿CUAL CREE QUE ES LA PRINCIPAL CARENCIA DEL BARRIO EN OBRA PUBLICA Y/O SERVICIOS PUBLICOS?                </h4>
+                16 - CUAL CREE QUE ES LA PRINCIPAL CARENCIA DEL BARRIO EN OBRA PUBLICA Y/O SERVICIOS PUBLICOS?                </h4>
             <br>
             <input id="16" name="16" type="text" value="-" data-clear-btn="true"/>
 
@@ -870,7 +874,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                17 - ¿CREE QUE EL VECINO DEBE INVOLUCRARSE EN EL SEGUIMIENTO DE ESA OBRA? ¿LO HARIA?                </h4>
+                17 - CREE QUE EL VECINO DEBE INVOLUCRARSE EN EL SEGUIMIENTO DE ESA OBRA? LO HARIA?                </h4>
             <br>
             <select id="17" name="17" size="1" onchange="17" data-native-menu="false">
                 <option value="0">...</option>
@@ -1395,7 +1399,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                28 - ¿SABE USTED SI LA PROVINCIA DE SANTA FE TIENE UNA LEY PROVINCIAL DE EDUCACION?                </h4>
+                28 - SABE USTED SI LA PROVINCIA DE SANTA FE TIENE UNA LEY PROVINCIAL DE EDUCACION?                </h4>
             <br>
             <select id="28" name="28" size="1" onchange="28" data-native-menu="false">
                 <option value="0">...</option>
@@ -1440,7 +1444,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                29 - NO LA TIENE, PERO EN LOS ULTIMOS MESES SE COMENZO A TRABAJAR EN EL TEMA Y HAY VARIOS PROYECTOS. ¿CONOCE ALGUNO DE ELLOS?                </h4>
+                29 - NO LA TIENE, PERO EN LOS ULTIMOS MESES SE COMENZO A TRABAJAR EN EL TEMA Y HAY VARIOS PROYECTOS. CONOCE ALGUNO DE ELLOS?                </h4>
             <br>
             <select id="29" name="29" size="1" onchange="29" data-native-menu="false">
                 <option value="0">...</option>
@@ -1484,12 +1488,13 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                30 - ¿CONSIDERA QUE ES ESTE UN MOMENTO PROPICIO PARA TRABAJAR SOBRE ESTE TIPO DE LEYES?                </h4>
+                30 - CONSIDERA QUE ES ESTE UN MOMENTO PROPICIO PARA TRABAJAR SOBRE ESTE TIPO DE LEYES?                </h4>
             <br>
             <select id="30" name="30" size="1" onchange="30" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="104">SI</option>
                 <option value="105">NO</option>
+                <option value="236">NS/NC</option>
             </select>
 
 
@@ -1527,13 +1532,14 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                31 - ¿CREE QUE LA EXISTENCIA DE LA LEY PUEDE MEJORAR EN ALGO EL SISTEMA EDUCATIVO PROVINCIAL ACTUAL?                </h4>
+                31 - CREE QUE LA EXISTENCIA DE LA LEY PUEDE MEJORAR EN ALGO EL SISTEMA EDUCATIVO PROVINCIAL ACTUAL?                </h4>
             <br>
             <select id="31" name="31" size="1" onchange="31" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="107">SI, MUCHO</option>
                 <option value="108">SI, POCO</option>
                 <option value="109">NO, NADA</option>
+                <option value="237">NS/NC</option>
             </select>
 
 
@@ -1571,7 +1577,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                32 - ¿COMO CALIFICA EL ESTADO ACTUAL DE LA EDUCACION EN GENERAL (EN SUS TRES NIVELES)?                </h4>
+                32 - COMO CALIFICA EL ESTADO ACTUAL DE LA EDUCACION EN GENERAL (EN SUS TRES NIVELES)?                </h4>
             <br>
             <select id="32" name="32" size="1" data-native-menu="false">
                 <option value="0">...</option>
@@ -1626,6 +1632,7 @@
                 <option value="110">APORTA POSITIVAMENTE</option>
                 <option value="111">APORTA NEGATIVAMENTE</option>
                 <option value="112">NO APORTA EN NINGUN SENTIDO</option>
+                <option value="238">NS/NC</option>
             </select>
 
 
@@ -1670,6 +1677,7 @@
                 <option value="113">APORTA POSITIVAMENTE</option>
                 <option value="114">APORTA NEGATIVAMENTE</option>
                 <option value="115">NO APORTA EN NINGUN SENTIDO</option>
+                <option value="239">NS/NC</option>
             </select>
 
 
@@ -1714,6 +1722,7 @@
                 <option value="116">APORTA POSITIVAMENTE</option>
                 <option value="117">APORTA NEGATIVAMENTE</option>
                 <option value="118">NO APORTA EN NINGUN SENTIDO</option>
+                <option value="240">NS/NC</option>
             </select>
 
 
@@ -1751,13 +1760,14 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                36 - ¿CREE QUE EL NUEVO GOBIERNO NACIONAL PRODUJO CAMBIOS A LA EDUCACION?                </h4>
+                36 - CREE QUE EL NUEVO GOBIERNO NACIONAL PRODUJO CAMBIOS A LA EDUCACION?                </h4>
             <br>
             <select id="36" name="36" size="1" onchange="36" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="119">SI, CAMBIOS POSITIVOS </option>
                 <option value="120">SI, CAMBIOS NEGATIVOS</option>
                 <option value="121">NINGUN CAMBIO AUN</option>
+                <option value="241">NS/NC</option>
             </select>
 
 
@@ -2131,14 +2141,14 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                44 - PARA LOS QUE SI CONOCEN A LORENA: ¿SABE QUE CARGO OCUPA?                </h4>
+                44 - PARA LOS QUE SI CONOCEN A LORENA: SABE QUE CARGO OCUPA?                </h4>
             <br>
             <select id="44" name="44" size="1" onchange="44" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="122">SI, Y LO DICE BIEN</option>
                 <option value="123">SI, Y LO DICE MAL </option>
                 <option value="124">NO</option>
-                <option value="125">NS/NC</option>
+                <option value="125" selected="selected">NS/NC</option>
             </select>
 
 
@@ -2176,13 +2186,13 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                45 - ¿LA VIO EN LA TELE?                 </h4>
+                45 - LA VIO EN LA TELE?                 </h4>
             <br>
             <select id="45" name="45" size="1" onchange="45" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="126">SI</option>
                 <option value="127">NO</option>
-                <option value="128">NS/NC</option>
+                <option value="128" selected="selected">NS/NC</option>
             </select>
 
 
@@ -2220,13 +2230,13 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                46 - ¿LA ESCUCHA EN LA RADIO?                </h4>
+                46 - LA ESCUCHA EN LA RADIO?                </h4>
             <br>
             <select id="46" name="46" size="1" onchange="46" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="129">SI</option>
                 <option value="130">NO</option>
-                <option value="131">NS/NC</option>
+                <option value="131" selected="selected">NS/NC</option>
             </select>
 
 
@@ -2264,13 +2274,13 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                47 - ¿LA VIO EN EL DIARIO?                 </h4>
+                47 - LA VIO EN EL DIARIO?                 </h4>
             <br>
             <select id="47" name="47" size="1" onchange="47" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="132">SI</option>
                 <option value="133">NO</option>
-                <option value="134">NS/NC</option>
+                <option value="134" selected="selected">NS/NC</option>
             </select>
 
 
@@ -2308,13 +2318,13 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                48 - ¿SIGUE SU TRABAJO POR REDES SOCIALES?                </h4>
+                48 - SIGUE SU TRABAJO POR REDES SOCIALES?                </h4>
             <br>
             <select id="48" name="48" size="1" onchange="48" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="135">SI</option>
                 <option value="136">NO</option>
-                <option value="137">NS/NC</option>
+                <option value="137" selected="selected">NS/NC</option>
             </select>
 
 
@@ -2352,13 +2362,13 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                49 - ¿POR UNA INTERVENCION PARTICULAR EN EL BARRIO?                </h4>
+                49 - POR UNA INTERVENCION PARTICULAR EN EL BARRIO?                </h4>
             <br>
             <select id="49" name="49" size="1" onchange="49" data-native-menu="false">
                 <option value="0">...</option>
                 <option value="138">SI</option>
                 <option value="139">NO</option>
-                <option value="140">NS/NC</option>
+                <option value="140" selected="selected">NS/NC</option>
             </select>
 
 
@@ -2396,7 +2406,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                50 - ¿CUALES CREE SON LAS 3 PRINCIPALES CAUSAS DE LA INSEGURIDAD? (ABIERTA, ESPONTANEA)                </h4>
+                50 - CUALES CREE SON LAS 3 PRINCIPALES CAUSAS DE LA INSEGURIDAD? (ABIERTA, ESPONTANEA)                </h4>
             <br>
             <input id="50" name="50" type="text" value="-" data-clear-btn="true"/>
 
@@ -2510,7 +2520,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                53 - ¿HA NOTADO UN CAMBIO POSITIVO DESDE LA ULTIMA INTERVENCION DE GENDARMERIA EN SU BARRIO?                </h4>
+                53 - HA NOTADO UN CAMBIO POSITIVO DESDE LA ULTIMA INTERVENCION DE GENDARMERIA EN SU BARRIO?                </h4>
             <br>
             <select id="53" name="53" size="1" onchange="53" data-native-menu="false">
                 <option value="0">...</option>
@@ -2562,6 +2572,7 @@
                 <option value="145">CASOS AISLADOS DE CORRUPCION</option>
                 <option value="146">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
                 <option value="147">TOTALMENTE CORROMPIDA</option>
+                <option value="242">NS/NC</option>
             </select>
 
 
@@ -2607,6 +2618,7 @@
                 <option value="149">CASOS AISLADOS DE CORRUPCION</option>
                 <option value="150">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
                 <option value="151">TOTALMENTE CORROMPIDA</option>
+                <option value="243">NS/NC</option>
             </select>
 
 
@@ -2652,6 +2664,7 @@
                 <option value="153">CASOS AISLADOS DE CORRUPCION</option>
                 <option value="154">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
                 <option value="155">TOTALMENTE CORROMPIDA</option>
+                <option value="244">NS/NC</option>
             </select>
 
 
@@ -2697,6 +2710,7 @@
                 <option value="157">CASOS AISLADOS DE CORRUPCION</option>
                 <option value="158">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
                 <option value="159">TOTALMENTE CORROMPIDA</option>
+                <option value="245">NS/NC</option>
             </select>
 
 
@@ -2742,6 +2756,7 @@
                 <option value="161">CASOS AISLADOS DE CORRUPCION</option>
                 <option value="162">EXISTE UNA CORRUPCION CASI GENERALIZADA</option>
                 <option value="163">TOTALMENTE CORROMPIDA</option>
+                <option value="246">NS/NC</option>
             </select>
 
 
@@ -2779,7 +2794,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                59 - SIENDO 1 ABSOLUTAMENTE EN DESACUERDO Y 10 TOTALMENTE DE ACUERDO, CALIFIQUE LAS SIGUIENTES FRASES RELACIONADAS CON COMO CREE QUE DEBERIA SER EL ACCIONAR DE UN CONCEJAL EN RELACION A LOS PROBLEMAS DE SEGURIDAD: INVOLUCRARSE MAS CON LA JUSTICIA SIGUIEND                </h4>
+                59 - SIENDO 1 ABSOLUTAMENTE EN DESACUERDO Y 10 TOTALMENTE DE ACUERDO, CALIFIQUE LAS SIGUIENTES FRASES SOBRE COMO DEBERIA COMPORTARSE UN CONCEJAL SOBRE LA INSEGURIDAD: INVOLUCRARSE MAS CON LA JUSTICIA SIGUIENDO EL ESTADO DE LAS DISTINTAS CAUSAS                 </h4>
             <br>
             <select id="59" name="59" size="1" onchange="59" data-native-menu="false">
                 <option value="0">...</option>
@@ -2793,6 +2808,7 @@
                 <option value="171">8</option>
                 <option value="172">9</option>
                 <option value="173">10</option>
+                <option value="247">NS/NC</option>
             </select>
 
 
@@ -2844,6 +2860,7 @@
                 <option value="181">8</option>
                 <option value="182">9</option>
                 <option value="183">10</option>
+                <option value="248">NS/NC</option>
             </select>
 
 
@@ -2895,6 +2912,7 @@
                 <option value="191">8</option>
                 <option value="192">9</option>
                 <option value="193">10</option>
+                <option value="249">NS/NC</option>
             </select>
 
 
@@ -2946,6 +2964,7 @@
                 <option value="201">8</option>
                 <option value="202">9</option>
                 <option value="203">10</option>
+                <option value="250">NS/NC</option>
             </select>
 
 
@@ -3271,7 +3290,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                69 - ¿COMO CONSIDERA SU SITUACION ECONOMICA HOY EN RELACION AL MISMO DIA DEL AñO ANTERIOR?                </h4>
+                69 - COMO CONSIDERA SU SITUACION ECONOMICA HOY EN RELACION AL MISMO DIA DEL ANIO ANTERIOR?                </h4>
             <br>
             <select id="69" name="69" size="1" onchange="69" data-native-menu="false">
                 <option value="0">...</option>
@@ -3318,7 +3337,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                70 - ¿Y LA SITUACION ECONOMICA DEL PAIS (TAMBIEN COMPARADA CON EL AñO ANTERIOR)?                </h4>
+                70 - Y LA SITUACION ECONOMICA DEL PAIS (TAMBIEN COMPARADA CON EL ANIO ANTERIOR)?                </h4>
             <br>
             <select id="70" name="70" size="1" onchange="70" data-native-menu="false">
                 <option value="0">...</option>
@@ -3365,7 +3384,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                71 - ¿COMO PIENSA, CREE Y PROYECTA QUE SERA LA SITUACION ECONOMICA DEL PAIS EL AñO PROXIMO?                </h4>
+                71 - COMO PIENSA, CREE Y PROYECTA QUE SERA LA SITUACION ECONOMICA DEL PAIS EL ANIO PROXIMO?                </h4>
             <br>
             <select id="71" name="71" size="1" onchange="71" data-native-menu="false">
                 <option value="0">...</option>
@@ -3412,7 +3431,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                72 - ¿COMO CALIFICARIA LA GESTION DEL GOBIERNO MUNICIPAL?                </h4>
+                72 - COMO CALIFICARIA LA GESTION DEL GOBIERNO MUNICIPAL?                </h4>
             <br>
             <select id="72" name="72" size="1" data-native-menu="false">
                 <option value="0">...</option>
@@ -3460,7 +3479,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                73 - ¿COMO CALIFICARIA LA GESTION DEL GOBIERNO PROVINCIAL?                </h4>
+                73 - COMO CALIFICARIA LA GESTION DEL GOBIERNO PROVINCIAL?                </h4>
             <br>
             <select id="73" name="73" size="1" data-native-menu="false">
                 <option value="0">...</option>
@@ -3508,7 +3527,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                74 - ¿COMO CALIFICARIA LA GESTION DEL GOBIERNO NACIONAL?                </h4>
+                74 - COMO CALIFICARIA LA GESTION DEL GOBIERNO NACIONAL?                </h4>
             <br>
             <select id="74" name="74" size="1" data-native-menu="false">
                 <option value="0">...</option>
@@ -3748,7 +3767,7 @@
     <div data-role="main">
         <div class="ui-content">
             <h4>
-                79 - EN UNA PROXIMA ELECCION LOCAL Y NACIONAL DEL PROXIMO AñO, USTED CREE QUE TIENE MAS POSIBILIDADES DE ELEGIR A UN CANDIDATO DE (ACLARAR QUE PUEDE ELEGIR MAS DE UNA, Y LUEGO LEER TODAS; ANOTAR HASTA 3 DISTINTOS)                </h4>
+                79 - EN UNA PROXIMA ELECCION LOCAL Y NACIONAL DEL PROXIMO ANIO, AUN SIN SABERSE LOS CANDIDATOS A LOS DISTINTOS CARGOS, USTED CREE QUE TIENE MAS POSIBILIDADES DE ELEGIR A UN CANDIDATO DE:                </h4>
             <br>
             <select id="79" name="79" size="1" onchange="79" data-native-menu="false">
                 <option value="0">...</option>
@@ -3846,6 +3865,7 @@
                 <li><a href="#pagina0" data-iconpos="bottom" data-icon="home">Home</a></li>
                 <li><a href="#pagina79" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                 <li><a href="#" onClick="no_vacio(80)" data-iconpos="bottom" data-icon="check">Guardar</a></li>
+                <li><a href="#" onClick="salida()" data-iconpos="bottom" data-icon="info">Salir</a></li>
             </ul>
         </div>
 
@@ -3863,11 +3883,10 @@
         location.href="#pagina0";
     }
 
-    function salida(){
-
+    function salida() {
         Android.salir();
-
     }
+
 
     function obtenerDatos(cant_preg) {
         var cadena = '';
@@ -4011,4 +4030,3 @@
 </body>
 
 </html>
-

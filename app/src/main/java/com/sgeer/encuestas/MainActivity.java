@@ -1,30 +1,29 @@
 package com.sgeer.encuestas;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
+
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
+public class MainActivity extends Activity {
 
-public class MainActivity extends Activity{
+
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -34,7 +33,7 @@ public class MainActivity extends Activity{
 
         milocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, milocListener);
 
-        WebView webview = (WebView)findViewById(R.id.webView);
+        WebView webview = (WebView) findViewById(R.id.webView);
         webview.setWebChromeClient(new WebChromeClient());
 
         WebSettings webSettings = webview.getSettings();
@@ -43,7 +42,9 @@ public class MainActivity extends Activity{
 
         webview.addJavascriptInterface(new WebAppInterface(this), "Android");
         webview.loadUrl("file:///android_asset/encuesta.html");
+
     }
+
 
     public class WebAppInterface {
         Context mContext;
@@ -51,27 +52,27 @@ public class MainActivity extends Activity{
 
         WebAppInterface(Context c) {
             mContext = c;
-        };
+        }
 
         @JavascriptInterface
         public void guardar(String texto) {
 
             String bestProvider;
-            LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+            LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             Criteria criteria = new Criteria();
-            bestProvider = lm.getBestProvider(criteria,false);
+            bestProvider = lm.getBestProvider(criteria, false);
 
             Location location = lm.getLastKnownLocation(bestProvider);
 
-            if(location == null){
-                Toast.makeText(getApplicationContext(), "Guardando respuesta",Toast.LENGTH_LONG ).show();
+            if (location == null) {
+                Toast.makeText(getApplicationContext(), "Guardando respuesta", Toast.LENGTH_LONG).show();
                 coordenadas = "0;0;";
 
-            }else{
-                Toast.makeText( getApplicationContext(),"Guardando posicion y respuesta", Toast.LENGTH_LONG ).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "Guardando posicion y respuesta", Toast.LENGTH_LONG).show();
                 location.getLatitude();
                 location.getLongitude();
-                coordenadas = location.getLatitude()+ ";" + location.getLongitude() + ";";
+                coordenadas = location.getLatitude() + ";" + location.getLongitude() + ";";
             }
 
             String cadena = coordenadas + texto + '\n';
@@ -80,7 +81,8 @@ public class MainActivity extends Activity{
         }
 
         @JavascriptInterface
-        public void salir(){
+        public void salir() {
+
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
             alertDialogBuilder.setTitle("Salir SGE V1.1?");
             alertDialogBuilder
@@ -103,16 +105,18 @@ public class MainActivity extends Activity{
 
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
+
+
         }
 
     }
 
-    private void IngresaRespuestas(String cadena){
+    private void IngresaRespuestas(String cadena) {
 
         String nombre_archivo = "respuestas.txt";
 
         try {
-            FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo,true);
+            FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo, true);
             OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
             myOutWriter.append(cadena);
             myOutWriter.close();
@@ -123,17 +127,19 @@ public class MainActivity extends Activity{
         }
     }
 
-    public class MiLocationListener implements LocationListener{
-        public void onLocationChanged(Location loc){
+    public class MiLocationListener implements LocationListener {
+        public void onLocationChanged(Location loc) {
         }
 
-        public void onProviderDisabled(String provider){
-            Toast.makeText( getApplicationContext(),"Active GPS por favor !", Toast.LENGTH_LONG ).show();
+        public void onProviderDisabled(String provider) {
+            Toast.makeText(getApplicationContext(), "Active GPS por favor !", Toast.LENGTH_LONG).show();
         }
 
-        public void onProviderEnabled(String provider){
-            Toast.makeText( getApplicationContext(),"Gps Activo", Toast.LENGTH_SHORT ).show();
+        public void onProviderEnabled(String provider) {
+            Toast.makeText(getApplicationContext(), "Gps Activo", Toast.LENGTH_SHORT).show();
         }
-        public void onStatusChanged(String provider, int status, Bundle extras){}
+
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+        }
     }
 }
