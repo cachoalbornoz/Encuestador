@@ -5,9 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -15,12 +13,10 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.Toast;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
@@ -85,8 +81,6 @@ public class MainActivity extends Activity{
 
         @JavascriptInterface
         public void salir(){
-
-
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
             alertDialogBuilder.setTitle("Salir SGE V1.1?");
             alertDialogBuilder
@@ -109,8 +103,6 @@ public class MainActivity extends Activity{
 
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
-
-
         }
 
     }
@@ -130,8 +122,6 @@ public class MainActivity extends Activity{
             Log.e("logGPSData", "Error");
         }
     }
-
-
 
     public class MiLocationListener implements LocationListener{
         public void onLocationChanged(Location loc){
