@@ -5,8 +5,4 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.Sphinx" parent="@android:style/Theme.Holo">
-        <item name="android:actionBarStyle">@style/Widget.Sphinx.ActionBar.Solid</item>
-    </style>
-
 </resources>
