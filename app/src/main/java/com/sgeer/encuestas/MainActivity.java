@@ -58,9 +58,6 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void guardar(String texto) {
 
-            Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-            v.vibrate(100);
-
             String bestProvider;
             LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             Criteria criteria = new Criteria();
@@ -74,7 +71,11 @@ public class MainActivity extends Activity {
 
             } else {
 
+                Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(400);
+
                 Toast.makeText(getApplicationContext(), "Guardando posicion y respuesta", Toast.LENGTH_LONG).show();
+
                 location.getLatitude();
                 location.getLongitude();
                 coordenadas = location.getLatitude() + ";" + location.getLongitude() + ";";
