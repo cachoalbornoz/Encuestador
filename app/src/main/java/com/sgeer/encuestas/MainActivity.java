@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
@@ -57,6 +58,9 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void guardar(String texto) {
 
+            Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(100);
+
             String bestProvider;
             LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             Criteria criteria = new Criteria();
@@ -69,6 +73,7 @@ public class MainActivity extends Activity {
                 coordenadas = "0;0;";
 
             } else {
+
                 Toast.makeText(getApplicationContext(), "Guardando posicion y respuesta", Toast.LENGTH_LONG).show();
                 location.getLatitude();
                 location.getLongitude();
@@ -83,25 +88,31 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void salir() {
 
+            Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(200);
+
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
             alertDialogBuilder.setTitle("Salir SGE V1.1?");
+
+            mContext.setTheme(R.style.BotonSalir);
+
             alertDialogBuilder
-                    .setCancelable(false)
-                    .setPositiveButton("Si",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    moveTaskToBack(true);
-                                    android.os.Process.killProcess(android.os.Process.myPid());
-                                    System.exit(1);
-                                }
-                            })
-
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setCancelable(false)
+                .setPositiveButton("Si",
+                    new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-
-                            dialog.cancel();
+                            moveTaskToBack(true);
+                            android.os.Process.killProcess(android.os.Process.myPid());
+                            System.exit(1);
                         }
-                    });
+                    })
+
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        dialog.cancel();
+                    }
+                });
 
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
@@ -128,10 +139,14 @@ public class MainActivity extends Activity {
     }
 
     public class MiLocationListener implements LocationListener {
+
+
+
         public void onLocationChanged(Location loc) {
         }
 
         public void onProviderDisabled(String provider) {
+
             Toast.makeText(getApplicationContext(), "Active GPS por favor !", Toast.LENGTH_LONG).show();
         }
 

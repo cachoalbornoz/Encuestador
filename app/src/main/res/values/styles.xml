@@ -5,16 +5,23 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <color name="transparent_color">#00000000</color>
-
-    <style name="ThemeDialogCustom">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:windowBackground">@color/transparent_color</item>
-        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
+    <style name="MyAlertDialogTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:background">#000000</item>
     </style>
+
+    <style name="BotonSalir" parent="ThemeOverlay.AppCompat.Dark">
+
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#000000</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#006dcc</item>
+        <!-- Used for the background -->
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:windowTitleStyle">@style/MyAlertDialogTitle</item>
+
+    </style>
+
 
 </resources>
