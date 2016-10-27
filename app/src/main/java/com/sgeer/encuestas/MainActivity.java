@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
         public void salir() {
 
             Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-            v.vibrate(200);
+            v.vibrate(100);
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
             alertDialogBuilder.setTitle("Salir SGE V1.1?");
