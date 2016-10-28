@@ -58,6 +58,11 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void guardar(String texto) {
 
+            String string   = texto;
+            String[] parts  = string.split(";");
+            String usuario  = parts[1];
+
+
             String bestProvider;
             LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             Criteria criteria = new Criteria();
@@ -83,7 +88,7 @@ public class MainActivity extends Activity {
 
             String cadena = coordenadas + texto + '\n';
 
-            IngresaRespuestas(cadena);
+            IngresaRespuestas(cadena, usuario);
         }
 
         @JavascriptInterface
@@ -123,9 +128,9 @@ public class MainActivity extends Activity {
 
     }
 
-    private void IngresaRespuestas(String cadena) {
+    private void IngresaRespuestas(String cadena, String usuario) {
 
-        String nombre_archivo = "respuestas.txt";
+        String nombre_archivo = usuario + "_respuestas.txt";
 
         try {
             FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo, true);
