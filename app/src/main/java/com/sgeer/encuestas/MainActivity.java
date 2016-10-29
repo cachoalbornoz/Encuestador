@@ -9,10 +9,11 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
-import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -53,8 +54,6 @@ public class MainActivity extends Activity {
         super.onConfigurationChanged(newConfig);
     }
 
-
-
     public class WebAppInterface {
         Context mContext;
         String coordenadas = "";
@@ -79,7 +78,23 @@ public class MainActivity extends Activity {
             Location location = lm.getLastKnownLocation(bestProvider);
 
             if (location == null) {
-                Toast.makeText(getApplicationContext(), "Guardando respuesta", Toast.LENGTH_LONG).show();
+
+                MediaPlayer mp;
+                mp = MediaPlayer.create(mContext, R.raw.hangouts_message);
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        // TODO Auto-generated method stub
+                        mp.reset();
+                        mp.release();
+                        mp=null;
+                    }
+
+                });
+                mp.start();
+
+                Toast.makeText(getApplicationContext(), "Guardando respuesta sin coordenadas", Toast.LENGTH_LONG).show();
                 coordenadas = "0;0;";
 
             } else {
@@ -98,6 +113,7 @@ public class MainActivity extends Activity {
 
             IngresaRespuestas(cadena, usuario);
         }
+
 
         @JavascriptInterface
         public void salir() {
