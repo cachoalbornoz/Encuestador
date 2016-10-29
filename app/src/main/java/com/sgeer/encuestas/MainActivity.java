@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -11,6 +12,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -45,6 +47,12 @@ public class MainActivity extends Activity {
         webview.loadUrl("file:///android_asset/encuesta.html");
 
     }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig){
+        super.onConfigurationChanged(newConfig);
+    }
+
 
 
     public class WebAppInterface {
@@ -144,9 +152,8 @@ public class MainActivity extends Activity {
         }
     }
 
+
     public class MiLocationListener implements LocationListener {
-
-
 
         public void onLocationChanged(Location loc) {
         }
