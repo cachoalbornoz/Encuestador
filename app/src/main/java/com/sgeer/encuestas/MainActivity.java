@@ -13,7 +13,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
-import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -69,6 +68,10 @@ public class MainActivity extends Activity {
             String[] parts  = string.split(";");
             String usuario  = parts[1];
 
+            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.hangouts_message);
+            mp.start();
+            Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(400);
 
             String bestProvider;
             LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -79,28 +82,10 @@ public class MainActivity extends Activity {
 
             if (location == null) {
 
-                MediaPlayer mp;
-                mp = MediaPlayer.create(mContext, R.raw.hangouts_message);
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        // TODO Auto-generated method stub
-                        mp.reset();
-                        mp.release();
-                        mp=null;
-                    }
-
-                });
-                mp.start();
-
                 Toast.makeText(getApplicationContext(), "Guardando respuesta sin coordenadas", Toast.LENGTH_LONG).show();
                 coordenadas = "0;0;";
 
             } else {
-
-                Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-                v.vibrate(400);
 
                 Toast.makeText(getApplicationContext(), "Guardando posicion y respuesta", Toast.LENGTH_LONG).show();
 
@@ -120,6 +105,7 @@ public class MainActivity extends Activity {
 
             Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(100);
+            PonerSonido();
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
             alertDialogBuilder.setTitle("Salir SGE V1.1?");
@@ -147,10 +133,15 @@ public class MainActivity extends Activity {
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
 
-
         }
 
     }
+
+    public void PonerSonido() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.hangouts_message);
+        mp.start();
+    }
+
 
     private void IngresaRespuestas(String cadena, String usuario) {
 
