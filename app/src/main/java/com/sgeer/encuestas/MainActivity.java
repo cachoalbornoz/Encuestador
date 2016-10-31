@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
             String[] parts  = string.split(";");
             String usuario  = parts[1];
 
-            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.hangouts_message);
+            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.twinkle);
             mp.start();
             Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(400);
