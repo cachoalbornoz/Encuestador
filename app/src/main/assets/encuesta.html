@@ -15,12 +15,23 @@
             $.mobile.changePage.defaults.changeHash = false;
             $.mobile.hashListeningEnabled = false;
             $.mobile.pushStateEnabled = false;
+            $.mobile.selectmenu.prototype.options.nativeMenu = false;
         });
-
     </script>
 
     <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
     <script src="jquery.mobile-1.4.5.js" type="text/javascript"></script>
+
+    <link href="select2.css" rel="stylesheet" type="text/css"/>
+    <script src="select2.js" type="text/javascript"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $(".js-example-basic-single").select2();
+        });
+
+    </script>
 
     <style>
         .ui-page { -webkit-backface-visibility: hidden; }
@@ -39,8 +50,10 @@
         </div>
         <div data-role="content">
             <div class="ui-content">
+
                 <label for="0"><b>Responsable encuesta </b></label>
-                <select id="0" name="0" class="exclude" data-native-menu="false">
+
+                <select id="0" name="0" class="exclude">
                     ﻿                <option value=15 >ANABELS</option>
                     <option value=8 >ARDILESE</option>
                     <option value=5 >BUSTAMANTEO</option>
@@ -55,6 +68,7 @@
                     <option value=9 >TOMASOSORIO</option>
 
                 </select>
+
             </div>
         </div>
         <div data-role="footer" data-position="fixed">
@@ -108,8 +122,8 @@
 
         <div data-role="main">
             <div class="ui-content">
-                Proyecto a Relevar
-                <select id="1" tabindex="1" data-native-menu="false">
+                <label for="1"><b>Proyecto a Relevar</b></label>
+                <select id="1" class="js-example-basic-single" data-role="none" style="width:100%">
                     <option value=122>ABIRAD , MARCIO EZEQUIEL(20357177252) CITRICOLA</option>
                     <option value=32>ABREU, AUGUSTO(20362195498) VACUNOS</option>
                     <option value=474>ABREU, AUGUSTO(20362195498) CRIA/OTRO</option>
@@ -216,8 +230,8 @@
                     <option value=73>CARABALLO, ALEJANDRO MARTIN ANTONIO(20291694641) APICOLA</option>
                     <option value=64>CARDOZO, ANA ESTHER(27259273728) AVICOLA</option>
                     <option value=602>Cardozo, MARIANA (0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
-                    <option value=14>CARLAZARA, LEONARDO GUSTAVO(20298565626) HORTICOLA</option>
                     <option value=470>CARLAZARA, LEONARDO GUSTAVO(20298565626) HORTICOLA</option>
+                    <option value=14>CARLAZARA, LEONARDO GUSTAVO(20298565626) HORTICOLA</option>
                     <option value=535>CARNERO, PABLO(23341769299) FORESTACION</option>
                     <option value=560>Carreño , Francisco Agustin(0) IMPRESION, SERIGRAFIA Y GRABACIONES</option>
                     <option value=591>Castaño, MARÍA ALEJANDRA(0) FABRICACION DE PRENDAS DE VESTIR Y TEÑIDO DE PIELE</option>
@@ -355,8 +369,8 @@
                     <option value=333>GIMENEZ, EMILIANO GASTON(23341643279) APICOLA</option>
                     <option value=140>GIMENEZ BELSUN, LUCRECIA CATALINA(27357139614) APICOLA</option>
                     <option value=398>GIRARD MARINO, MARIA JESUS(27354444211) AVICOLA</option>
-                    <option value=471>GODOY, ANGEL RAMON ANDRES(20317062711) APICOLA</option>
                     <option value=49>GODOY, ANGEL RAMON ANDRES(20317062711) APICOLA</option>
+                    <option value=471>GODOY, ANGEL RAMON ANDRES(20317062711) APICOLA</option>
                     <option value=205>GOMEZ, DIEGO ALBERTO(20321050647) VACUNOS</option>
                     <option value=372>GOMEZ, RAMIRO IVAN(20281366492) APICOLA</option>
                     <option value=585>GÓMEZ, Silvia (0) ELABORACION PRODUCTOS ALIMENTICIOS Y BEBIDAS</option>
@@ -705,19 +719,20 @@
                     <option value=90>ZEBALLOS, HECTOR FACUNDO(20298408040) PORCINOS</option>
 
                 </select>
-
-                Situación Actual
-                <select id="2" tabindex="2" onChange="ver_funcionamiento(this.value)" data-native-menu="false">
+                <br>
+                <br>
+                <label for="2"><b>Situación Actual</b></label>
+                <select id="2" onChange="ver_funcionamiento(this.value)" >
                     <option value="-1" disabled selected>Funciona actualmente ?</option>
                     <option value="1">SI</option>
                     <option value="0">NO</option>
                 </select>
-
+                <br>
                 <div id="div_abandona" style="display:none">
 
-                    <input type="text" id="3" tabindex="3" placeholder="Mencione porqué abandonó el mismo ?">
+                    <input type="text" id="3" placeholder="Mencione porqué abandonó el mismo ?">
 
-                    <select id="4" tabindex="4" data-native-menu="false">
+                    <select id="4">
                         <option value="-1" disabled selected>Volverá a funcionar ?</option>
                         <option value="1">SI</option>
                         <option value="0">NO</option>
@@ -727,16 +742,16 @@
 
                 <div id="div_continua" style="display:none">
                     Producción
-                    <input type="text" id="5" tabindex="5" placeholder="PRODUCTO/SERVICIO creado?">
-                    <input type="text" id="6" tabindex="6" placeholder="CANTIDAD producida">
+                    <input type="text" id="5" placeholder="PRODUCTO/SERVICIO creado?">
+                    <input type="text" id="6" placeholder="CANTIDAD producida">
 
                     <hr>
                     Comercialización
-                    <input type="text" id="7" tabindex="7" placeholder="MERCADO donde ubica su producción (Local, regional, provincial, nacional)">
+                    <input type="text" id="7" placeholder="MERCADO donde ubica su producción (Local, regional, provincial, nacional)">
 
-                    <input type="text" id="8" tabindex="8" placeholder="PRINCIPAL COMPRADOR?">
+                    <input type="text" id="8" placeholder="PRINCIPAL COMPRADOR?">
 
-                    <select id="9" tabindex="9" onChange="ver_comercializacion(this.value)" data-native-menu="false">
+                    <select id="9" onChange="ver_comercializacion(this.value)" >
                         <option value="-1" disabled selected>Forma de Comercialización</option>
                         <option value="0">Directa</option>
                         <option value="1">Indirecta</option>
@@ -744,26 +759,26 @@
                     </select>
 
                     <div id="div_comercializacion" style="display:none">
-                        <input type="text" id="10" class="form-control" tabindex="10" placeholder="Otro tipo comercialización">
+                        <input type="text" id="10" class="form-control" placeholder="Otro tipo comercialización">
                     </div>
 
-                    <select id="11" tabindex="11" data-native-menu="false">
+                    <select id="11">
                         <option value="-1" disabled selected>Tiene INTERES en Exportar ?</option>
                         <option value="0">NO</option>
                         <option value="1">SI</option>
                     </select>
 
-                    <input type="text" id="12" tabindex="12" placeholder="Porqué ?">
+                    <input type="text" id="12" placeholder="Porqué ?">
 
 
 
-                    <select id="13" tabindex="13" data-native-menu="false">
+                    <select id="13">
                         <option value="-1" disabled selected>Conoce los REQUISITOS para exportar ?</option>
                         <option value="0">NO</option>
                         <option value="1">SI</option>
                     </select>
 
-                    <select id="14" tabindex="14" data-native-menu="false">
+                    <select id="14">
                         <option value="-1" disabled selected>Desea CAPACITARSE para exportar y formas de hacerlo ?</option>
                         <option value="0">NO</option>
                         <option value="1">SI</option>
@@ -772,7 +787,7 @@
                     Empleo
 
 
-                    <select id="15" tabindex="15" data-native-menu="false">
+                    <select id="15">
                         <option value="-1" disabled selected>Cuántos EMPLEADOS posee ?</option>
 
                         <option value="0">0</option>
@@ -819,7 +834,7 @@
                         <option value="21">más</option>
                     </select>
 
-                    <select id="16" tabindex="16" data-native-menu="false">
+                    <select id="16">
                         <option value="-1" disabled selected>Cuántas pertenecen FAMILIA ?</option>
 
                         <option value="0">0</option>
@@ -868,7 +883,7 @@
 
 
 
-                    <select id="17" tabindex="17" onChange="ver_trabajo(this.value)" data-native-menu="false">
+                    <select id="17" onChange="ver_trabajo(this.value)" >
                         <option value="-1" disabled selected>Cuántas personas están INSCRIPTAS en Relación Dependencia ?</option>
 
                         <option value="0">0</option>
@@ -916,17 +931,17 @@
                     </select>
 
                     <div id="div_trabajo" style="display:none">
-                        <input type="text" id="18" tabindex="18" placeholder="Porqué motivo no posee personal registrado ?">
+                        <input type="text" id="18" placeholder="Porqué motivo no posee personal registrado ?">
                     </div>
 
 
                     <hr>
                     Capacitación / Asesoramiento
-                    <input type="text" id="19" tabindex="19" placeholder="Cree que necesita CAPACITACION o ASESORAMIENTO en algún area o tema particular ?">
+                    <input type="text" id="19" placeholder="Cree que necesita CAPACITACION o ASESORAMIENTO en algún area o tema particular ?">
 
                     <hr>
                     Forma Jurídica
-                    <select id="20" tabindex="20" data-native-menu="false">
+                    <select id="20">
                         <option value="-1" disabled selected>FORMA JURIDICA?</option>
                         <option value="1">No Inscripto</option>
                         <option value="13">Responsable Inscripto</option>
