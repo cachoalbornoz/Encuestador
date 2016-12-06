@@ -166,7 +166,7 @@ public class MainActivity extends Activity {
 
         public void onProviderDisabled(String provider) {
 
-            Toast.makeText(getApplicationContext(), "Active GPS por favor !", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Active GPS por favor ...", Toast.LENGTH_LONG).show();
         }
 
         public void onProviderEnabled(String provider) {
