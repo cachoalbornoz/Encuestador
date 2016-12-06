@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
             String[] parts  = string.split(";");
             String usuario  = parts[1];
 
-            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.twinkle);
+            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.hangouts_message);
             mp.start();
             Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(400);
@@ -125,7 +125,6 @@ public class MainActivity extends Activity {
 
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
                         dialog.cancel();
                     }
                 });
@@ -145,7 +144,7 @@ public class MainActivity extends Activity {
 
     private void IngresaRespuestas(String cadena, String usuario) {
 
-        String nombre_archivo = usuario + "_respuestas.txt";
+        String nombre_archivo = "respuestas.txt";
 
         try {
             FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo, true);
