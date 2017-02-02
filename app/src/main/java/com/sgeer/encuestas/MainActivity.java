@@ -144,7 +144,7 @@ public class MainActivity extends Activity {
 
     private void IngresaRespuestas(String cadena, String usuario) {
 
-        String nombre_archivo = "respuestas.txt";
+        String nombre_archivo = usuario + "_respuestas.txt";
 
         try {
             FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo, true);
