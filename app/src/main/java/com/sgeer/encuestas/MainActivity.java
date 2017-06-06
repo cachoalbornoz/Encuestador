@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
         WebSettings webSettings = webview.getSettings();
 
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setDefaultTextEncodingName("utf-8");
 
         webview.addJavascriptInterface(new WebAppInterface(this), "Android");
         webview.loadUrl("file:///android_asset/encuesta.html");
