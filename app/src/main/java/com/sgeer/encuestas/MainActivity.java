@@ -1,6 +1,6 @@
 package com.sgeer.encuestas;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,8 +22,7 @@ import android.widget.Toast;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
-public class MainActivity extends Activity {
-
+public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +47,7 @@ public class MainActivity extends Activity {
         webview.loadUrl("file:///android_asset/encuesta.html");
 
     }
+
 
     @Override
     public void onConfigurationChanged(Configuration newConfig){
@@ -177,4 +177,7 @@ public class MainActivity extends Activity {
         public void onStatusChanged(String provider, int status, Bundle extras) {
         }
     }
+
+
 }
+
