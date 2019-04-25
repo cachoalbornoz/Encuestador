@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
             v.vibrate(100);
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
-            alertDialogBuilder.setTitle("Salir SGE V1.1?");
+            alertDialogBuilder.setTitle("Confirma salir");
 
             mContext.setTheme(R.style.BotonSalir);
 
