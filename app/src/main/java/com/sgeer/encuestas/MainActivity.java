@@ -62,9 +62,7 @@ public class MainActivity extends AppCompatActivity {
     public void LoadWeb(){
 
         webview = (WebView) findViewById(R.id.webview);
-        webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setAppCacheEnabled(true);
-
         webview.setWebChromeClient(new WebChromeClient());
 
         WebSettings webSettings = webview.getSettings();
@@ -118,10 +116,6 @@ public class MainActivity extends AppCompatActivity {
         @JavascriptInterface
         public void guardar(String texto) {
 
-            String string   = texto;
-            String[] parts  = string.split(";");
-            String usuario  = parts[1];
-
             Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(400);
 
@@ -148,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
             String cadena = coordenadas + texto + '\n';
 
-            IngresaRespuestas(cadena, usuario);
+            IngresaRespuestas(cadena);
         }
 
 
@@ -193,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void IngresaRespuestas(String cadena, String usuario) {
+    private void IngresaRespuestas(String cadena) {
 
         String archivo = "respuestas.txt";
 
