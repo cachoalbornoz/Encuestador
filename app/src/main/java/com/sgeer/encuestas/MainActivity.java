@@ -1,5 +1,7 @@
 package com.sgeer.encuestas;
 
+import android.os.Environment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -13,16 +15,24 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.Log;
+import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.Toast;
-
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 
 public class MainActivity extends AppCompatActivity {
+
+    WebView webview;
+    SwipeRefreshLayout swipe;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,17 +45,60 @@ public class MainActivity extends AppCompatActivity {
 
         milocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, milocListener);
 
-        WebView webview = (WebView) findViewById(R.id.webView);
+        swipe = (SwipeRefreshLayout) findViewById(R.id.swipe);
+        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                LoadWeb();
+            }
+        });
+
+        LoadWeb();
+
+
+    }
+
+    public void LoadWeb(){
+
+        webview = (WebView) findViewById(R.id.webview);
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.getSettings().setAppCacheEnabled(true);
+
         webview.setWebChromeClient(new WebChromeClient());
 
         WebSettings webSettings = webview.getSettings();
-
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDefaultTextEncodingName("utf-8");
 
         webview.addJavascriptInterface(new WebAppInterface(this), "Android");
         webview.loadUrl("file:///android_asset/encuesta.html");
+        swipe.setRefreshing(true);
 
+        webview.setWebViewClient(new WebViewClient(){
+
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+
+                webview.loadUrl("file:///android_asset/error.html");
+            }
+
+            public  void  onPageFinished(WebView view, String url){
+
+                swipe.setRefreshing(false);
+            }
+
+        });
+    }
+
+
+    @Override
+    public void onBackPressed(){
+
+        if (webview.canGoBack()){
+            webview.goBack();
+        }else {
+            finish();
+        }
     }
 
 
@@ -69,8 +122,6 @@ public class MainActivity extends AppCompatActivity {
             String[] parts  = string.split(";");
             String usuario  = parts[1];
 
-            MediaPlayer mp = MediaPlayer.create(mContext, R.raw.hangouts_message);
-            mp.start();
             Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(400);
 
@@ -106,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
 
             Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(100);
-            PonerSonido();
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mContext);
             alertDialogBuilder.setTitle("Salir SGE V1.1?");
@@ -145,18 +195,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void IngresaRespuestas(String cadena, String usuario) {
 
-        String nombre_archivo = "respuestas.txt";
+        String archivo = "respuestas.txt";
+
+        File appDirectory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) + "/");
+        appDirectory.mkdirs();
+        File saveFilePath = new File(appDirectory, archivo);
 
         try {
-            FileOutputStream fOut = new FileOutputStream("/sdcard/Download/" + nombre_archivo, true);
-            OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
-            myOutWriter.append(cadena);
-            myOutWriter.close();
-            fOut.close();
-
-        } catch (Exception e) {
-            Log.e("logGPSData", "Error");
+            FileOutputStream fos = new FileOutputStream(saveFilePath);
+            OutputStreamWriter file = new OutputStreamWriter(fos);
+            file.write(cadena);
+            file.flush();
+            file.close();
+        } catch (FileNotFoundException e) {
+            Log.i("Agenda",e.toString());
+        } catch (IOException e) {
+            Log.i("Agenda",e.toString());
         }
+
     }
 
 
