@@ -35,7 +35,7 @@
     <div data-role="page" id="pagina0">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 0 de 47</label>
+            <label>Pregunta 0 de 12</label>
         </div>
         <div data-role="main">
             <div class="ui-content">
@@ -49,7 +49,7 @@
                     <input type="number" pattern="[0-9]" name="totales" id="totales" value="0" class="exclude" readonly="readonly" />
                 </div>
 
-                <input type="hidden" name="id_encuesta" id="id_encuesta" value="31" class="exclude"/>
+                <input type="hidden" name="id_encuesta" id="id_encuesta" value="32" class="exclude"/>
             </div>
         </div>
         <div data-role="footer" data-position="fixed">
@@ -103,13 +103,46 @@
     <div data-role="page" id="pagina1">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 1 de 47</label>
+            <label>Pregunta 1 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="1">1- EDAD</label>
+                <label for="1">1- SEXO</label>
                 <select id="1" name="1" data-native-menu="false">
+                    <option value="0">...</option>
+                    <option value="1">MASCULINO</option>
+                    <option value="2">FEMENINO</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
+                    <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                    <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div data-role="page" id="pagina2">
+        <div data-role="header" style="text-align: center">
+            <h5>&COPY; SGE-V 1.1</h5>
+            <label>Pregunta 2 de 12</label>
+        </div>
+
+        <div data-role="main">
+            <div class="ui-content">
+                <label for="2">2- EDAD</label>
+                <select id="2" name="2" data-native-menu="false">
                     <option value="0">...</option>
                     <option value="16">16</option>
                     <option value="17">17</option>
@@ -186,42 +219,9 @@
             <div data-role="navbar">
                 <ul>
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina2">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 2 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="2">2- SEXO</label>
-                <select id="2" name="2" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MASCULINO</option>
-                    <option value="2">FEMENINO</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina3" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -232,7 +232,7 @@
     <div data-role="page" id="pagina3">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 3 de 47</label>
+            <label>Pregunta 3 de 12</label>
         </div>
 
         <div data-role="main">
@@ -261,7 +261,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina4" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -272,7 +272,7 @@
     <div data-role="page" id="pagina4">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 4 de 47</label>
+            <label>Pregunta 4 de 12</label>
         </div>
 
         <div data-role="main">
@@ -300,7 +300,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina3" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina5" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -311,20 +311,20 @@
     <div data-role="page" id="pagina5">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 5 de 47</label>
+            <label>Pregunta 5 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="5">5- COMPARADO CON EL AñO PASADO ¿COMO ENCUENTRA LA SITUACION GENERAL DEL PAIS?</label>
+                <label for="5">5- COMPARADO CON EL AñO PASADO ¿COMO ENCUENTRA USTED LA SITUACIóN GENERAL DEL PAíS?</label>
 
                 <select id="5" name="5" data-native-menu="false">
                     <option value="0">...</option>
                     <option value="1">MEJOR</option>
-                    <option value="2">IGUAL DE BIEN </option>
+                    <option value="2">IGUAL DE BIEN</option>
                     <option value="3">IGUAL DE MAL</option>
                     <option value="4">PEOR</option>
-                    <option value="10">NS/NC</option>
+                    <option value="5">NS/NC</option>
                 </select>
 
 
@@ -338,7 +338,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina4" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina6" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -349,20 +349,20 @@
     <div data-role="page" id="pagina6">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 6 de 47</label>
+            <label>Pregunta 6 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="6">6- Y DENTRO DE UN AñO ¿CUAL CONSIDERA USTED QUE SERA LA SITUACIóN GRAL DEL PAíS?</label>
+                <label for="6">6- Y DENTRO DE UN AñO ¿COMO CREE USTED QUE SERá LA SITUACIóN GENERAL DEL PAíS?</label>
 
                 <select id="6" name="6" data-native-menu="false">
                     <option value="0">...</option>
-                    <option value="5">VA A MEJORAR</option>
-                    <option value="6">SEGUIRA IGUAL DE BIEN</option>
-                    <option value="7">SEGUIRA IGUAL DE MAL</option>
-                    <option value="8">VA A EMPEORAR</option>
-                    <option value="9">NS/NC</option>
+                    <option value="6">VA A MEJORAR</option>
+                    <option value="7">SEGUIRá IGUAL DE BIEN</option>
+                    <option value="8">SEGUIRá IGUAL DE MAL</option>
+                    <option value="9">VA A EMPEORAR</option>
+                    <option value="10">NS/NC</option>
                 </select>
 
 
@@ -376,7 +376,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina5" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina7" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -387,13 +387,23 @@
     <div data-role="page" id="pagina7">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 7 de 47</label>
+            <label>Pregunta 7 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="7">7- ¿CUAL CONSIDERA USTED QUE ES EL PRINCIPAL PROBLEMA QUE TIENE EL PAIS?</label>
-                <input id="7" name="7" type="text" value="-" data-clear-btn="true"/>
+                <label for="7">7- ¿QUE IMAGEN TIENE DE LA GESTIóN DE MAURICIO MACRI?</label>
+                <select id="7" name="7" data-native-menu="false">
+                    <option value="0">...</option>
+                    <option value="1">MUY BUENA</option>
+                    <option value="2">BUENA</option>
+                    <option value="3">REGULAR BUENA</option>
+                    <option value="4">REGULAR MALA</option>
+                    <option value="5">MALA</option>
+                    <option value="6">MUY MALA</option>
+                    <option value="7">NO EVALUA</option>
+                    <option value="99">NS/NC</option>
+                </select>
 
             </div>
 
@@ -405,7 +415,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina6" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina8" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -416,13 +426,23 @@
     <div data-role="page" id="pagina8">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 8 de 47</label>
+            <label>Pregunta 8 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="8">8- Y EN LA CIUDAD DE VICTORIA ¿CUAL CONSIDERA USTED QUE ES EL PRINCIPAL PROBLEMA EN LA ACTUALIDAD?</label>
-                <input id="8" name="8" type="text" value="-" data-clear-btn="true"/>
+                <label for="8">8- ¿QUE IMAGEN TIENE DE LA GESTIóN DE GUSTAVO BORDET?</label>
+                <select id="8" name="8" data-native-menu="false">
+                    <option value="0">...</option>
+                    <option value="1">MUY BUENA</option>
+                    <option value="2">BUENA</option>
+                    <option value="3">REGULAR BUENA</option>
+                    <option value="4">REGULAR MALA</option>
+                    <option value="5">MALA</option>
+                    <option value="6">MUY MALA</option>
+                    <option value="7">NO EVALUA</option>
+                    <option value="99">NS/NC</option>
+                </select>
 
             </div>
 
@@ -434,7 +454,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina7" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina9" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -445,23 +465,22 @@
     <div data-role="page" id="pagina9">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 9 de 47</label>
+            <label>Pregunta 9 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="9">9- ¿QUE IMAGEN TIENE DE CESAR GARCILAZO?</label>
-                <select id="9" name="9" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
+                <label for="9">9- ¿COMO EVALúA LA GESTIóN DE MAURICIO MACRI?</label>
+                <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                    <input type="radio" id="911" name="opcion9" value="11" onclick="asignar(9,11)"/>
+                    <label for="911">APRUEBA</label>
+                    <input type="radio" id="912" name="opcion9" value="12" onclick="asignar(9,12)"/>
+                    <label for="912">NO APRUEBA</label>
+                    <input type="radio" id="913" name="opcion9" value="13" onclick="asignar(9,13)"/>
+                    <label for="913">NS/NC</label>
+
+                </fieldset>
+                <input type="hidden" id="9" value="0">
 
             </div>
 
@@ -473,7 +492,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina8" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina10" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -484,23 +503,22 @@
     <div data-role="page" id="pagina10">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 10 de 47</label>
+            <label>Pregunta 10 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="10">10- ¿QUE IMAGEN TIENE DE DOMINGO MAIOCCO?</label>
-                <select id="10" name="10" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
+                <label for="10">10- ¿COMO EVALúA LA GESTIóN DE GUSTAVO BORDET?</label>
+                <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                    <input type="radio" id="1014" name="opcion10" value="14" onclick="asignar(10,14)"/>
+                    <label for="1014">APRUEBA</label>
+                    <input type="radio" id="1015" name="opcion10" value="15" onclick="asignar(10,15)"/>
+                    <label for="1015">NO APRUEBA</label>
+                    <input type="radio" id="1016" name="opcion10" value="16" onclick="asignar(10,16)"/>
+                    <label for="1016">NS/NC</label>
+
+                </fieldset>
+                <input type="hidden" id="10" value="0">
 
             </div>
 
@@ -512,7 +530,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina9" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina11" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -523,23 +541,24 @@
     <div data-role="page" id="pagina11">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 11 de 47</label>
+            <label>Pregunta 11 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="11">11- ¿QUE IMAGEN TIENE DE GASTON BAGNAT?</label>
+                <label for="11">11- EN CASO DE QUE LAS ELECCIONES NACIONALES FUESEN EL DOMINGO. ¿A CUáL DE ESTAS LISTAS ELEGIRíA?</label>
+
                 <select id="11" name="11" data-native-menu="false">
                     <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
+                    <option value="17">ALBERTO FERNANDEZ PRESIDENTE - CRISTINA F. DE KIRCHNER VICE - SERGIO URRIBARRI SENADOR (PJ-UNIDAD CIUDADANA)</option>
+                    <option value="18">MAURICIO MACRI PRESIDENTE - ERNESTO SANZ VICE - ALFREDO DE ANGELI SENADOR (CAMBIEMOS)</option>
+                    <option value="19">ROBERTO LAVAGNA PRESIDENTE - JUAN JOSé BAHILO SENADOR</option>
+                    <option value="20">LA LISTA DE JOSé LUIS ESPERT PRESIDENTE</option>
+                    <option value="21">OTRO</option>
+                    <option value="22">BLANCO</option>
+                    <option value="23">NS/NC</option>
                 </select>
+
 
             </div>
 
@@ -551,7 +570,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina10" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina12" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -562,23 +581,24 @@
     <div data-role="page" id="pagina12">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 12 de 47</label>
+            <label>Pregunta 12 de 12</label>
         </div>
 
         <div data-role="main">
             <div class="ui-content">
-                <label for="12">12- ¿QUE IMAGEN TIENE DE ADRIáN DíAZ?</label>
+                <label for="12">12- EN LAS úLTIMAS ELECCIONES A GOBERNADOR EN ENTRE RíOS UD. VOTó POR...</label>
+
                 <select id="12" name="12" data-native-menu="false">
                     <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
+                    <option value="24">PERONISMO (FRENTE CREER)</option>
+                    <option value="25">CAMBIEMOS</option>
+                    <option value="26">SOCIALISMO</option>
+                    <option value="27">MST - NUEVA IZQUIERDA</option>
+                    <option value="28">OTROS</option>
+                    <option value="29">NO VOTó</option>
+                    <option value="30">NS/NC</option>
                 </select>
+
 
             </div>
 
@@ -590,7 +610,7 @@
                     <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
                     <li><a href="#pagina11" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
                     <li><a href="#pagina13" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
+                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
                 </ul>
             </div>
         </div>
@@ -599,1336 +619,6 @@
 
 
     <div data-role="page" id="pagina13">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 13 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="13">13- ¿QUE IMAGEN TIENE DE SERGIO NAVONI?</label>
-                <select id="13" name="13" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina12" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina14" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina14">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 14 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="14">14- ¿QUE IMAGEN TIENE DE CESAR ETCHART?</label>
-                <select id="14" name="14" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina13" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina15" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina15">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 15 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="15">15- ¿QUE IMAGEN TIENE DE ROQUE FERRARI?</label>
-                <select id="15" name="15" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina14" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina16" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina16">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 16 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="16">16- ¿QUE IMAGEN TIENE DE FEDERICO ALMADA?</label>
-                <select id="16" name="16" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina15" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina17" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina17">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 17 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="17">17- ¿QUE IMAGEN TIENE DE ALEJANDRO REES?</label>
-                <select id="17" name="17" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina16" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina18" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina18">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 18 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="18">18- ¿QUE IMAGEN TIENE DE FIDEL CULLEN?</label>
-                <select id="18" name="18" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina17" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina19" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina19">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 19 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="19">19- ¿QUE IMAGEN TIENE DE PEDRO MANSILLA?</label>
-                <select id="19" name="19" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina18" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina20" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina20">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 20 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="20">20- ¿QUE IMAGEN TIENE DE GRACIELA BAR?</label>
-                <select id="20" name="20" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina19" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina21" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina21">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 21 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="21">21- ¿QUE IMAGEN TIENE DE ISA CASTAGNINO?</label>
-                <select id="21" name="21" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina20" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina22" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina22">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 22 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="22">22- ¿QUE IMAGEN TIENE DE LAURA STRATTA?</label>
-                <select id="22" name="22" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina21" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina23" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina23">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 23 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="23">23- ¿PORQUE TIENE ESA IMAGEN DE LAURA STRATTA?</label>
-                <input id="23" name="23" type="text" value="-" data-clear-btn="true"/>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina22" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina24" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina24">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 24 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="24">24- ¿COMO EVALúA LA GESTIóN DE MAURICIO MACRI?</label>
-                <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
-                    <input type="radio" id="2492" name="opcion24" value="92" onclick="asignar(24,92)"/>
-                    <label for="2492">APRUEBA</label>
-                    <input type="radio" id="2493" name="opcion24" value="93" onclick="asignar(24,93)"/>
-                    <label for="2493">NO APRUEBA</label>
-                    <input type="radio" id="2494" name="opcion24" value="94" onclick="asignar(24,94)"/>
-                    <label for="2494">NS/NC</label>
-
-                </fieldset>
-                <input type="hidden" id="24" value="0">
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina23" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina25" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina25">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 25 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="25">25- ¿COMO EVALúA LA GESTIóN DE GUSTAVO BORDET?</label>
-                <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
-                    <input type="radio" id="2595" name="opcion25" value="95" onclick="asignar(25,95)"/>
-                    <label for="2595">APRUEBA</label>
-                    <input type="radio" id="2596" name="opcion25" value="96" onclick="asignar(25,96)"/>
-                    <label for="2596">NO APRUEBA</label>
-                    <input type="radio" id="2597" name="opcion25" value="97" onclick="asignar(25,97)"/>
-                    <label for="2597">NS/NC</label>
-
-                </fieldset>
-                <input type="hidden" id="25" value="0">
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina24" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina26" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina26">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 26 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="26">26- ¿COMO EVALúA LA GESTIóN DE DOMINGO MAIOCCO?</label>
-                <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
-                    <input type="radio" id="2698" name="opcion26" value="98" onclick="asignar(26,98)"/>
-                    <label for="2698">APRUEBA</label>
-                    <input type="radio" id="2699" name="opcion26" value="99" onclick="asignar(26,99)"/>
-                    <label for="2699">NO APRUEBA</label>
-                    <input type="radio" id="26100" name="opcion26" value="100" onclick="asignar(26,100)"/>
-                    <label for="26100">NS/NC</label>
-
-                </fieldset>
-                <input type="hidden" id="26" value="0">
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina25" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina27" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina27">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 27 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="27">27- PARA UD. CON LA GESTIóN DEL GOB. BORDET, LA PROVINCIA DE ENTRE RíOS ...</label>
-
-                <select id="27" name="27" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="101">HA MEJORADO MUCHO</option>
-                    <option value="102">HA MEJORADO</option>
-                    <option value="103">HA EMPEORADO</option>
-                    <option value="104">HA EMPEORADO MUCHO</option>
-                    <option value="105">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina26" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina28" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina28">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 28 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="28">28- PARA UD. CON LA GESTIóN DEL INTENDENTE DE VICTORIA, LA CIUDAD ...</label>
-
-                <select id="28" name="28" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="106">HA MEJORADO MUCHO</option>
-                    <option value="107">HA MEJORADO</option>
-                    <option value="108">HA EMPEORADO</option>
-                    <option value="109">HA EMPEORADO MUCHO</option>
-                    <option value="110">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina27" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina29" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina29">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 29 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="29">29- ¿A TRAVéS DE QUE MEDIOS SE INFORMA HABITUALMENTE POR TEMAS NACIONALES?</label>
-
-                <select id="29" name="29" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="111">RADIO</option>
-                    <option value="112">TV</option>
-                    <option value="113">REDES SOCIALES</option>
-                    <option value="114">DIARIOS</option>
-                    <option value="115">OTROS</option>
-                    <option value="116">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina28" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina30" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina30">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 30 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="30">30- ¿Y EN TEMAS REFERIDOS A LA CIUDAD DE VICTORIA?</label>
-
-                <select id="30" name="30" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="117">RADIO</option>
-                    <option value="118">TV</option>
-                    <option value="119">REDES SOCIALES</option>
-                    <option value="120">DIARIOS</option>
-                    <option value="121">OTROS</option>
-                    <option value="122">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina29" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina31" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina31">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 31 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="31">31- DE LOS QUE VE HABITUALMENTE, ¿QUE PERIODISTA LE RESULTA MAS CREíBLE/CONFIABLE?</label>
-                <input id="31" name="31" type="text" value="-" data-clear-btn="true"/>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina30" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina32" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina32">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 32 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="32">32- ¿QUE IMAGEN TIENE DE JORGE BUSTI?</label>
-                <select id="32" name="32" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina31" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina33" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina33">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 33 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="33">33- ¿QUE IMAGEN TIENE DE ALFREDO DE ANGELI?</label>
-                <select id="33" name="33" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina32" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina34" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina34">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 34 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="34">34- ¿QUE IMAGEN TIENE DE SERGIO URRIBARRI?</label>
-                <select id="34" name="34" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina33" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina35" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina35">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 35 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="35">35- ¿QUE IMAGEN TIENE DE ATILIO BENEDETTI?</label>
-                <select id="35" name="35" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina34" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina36" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina36">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 36 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="36">36- ¿QUE IMAGEN TIENE DE ADáN BAHL?</label>
-                <select id="36" name="36" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina35" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina37" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina37">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 37 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="37">37- ¿QUE IMAGEN TIENE DE JULIO SOLANAS?</label>
-                <select id="37" name="37" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina36" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina38" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina38">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 38 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="38">38- ¿QUE IMAGEN TIENE DE C.F KIRCHNER?</label>
-                <select id="38" name="38" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina37" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina39" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina39">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 39 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="39">39- ¿QUE IMAGEN TIENE DE MAURICIO MACRI?</label>
-                <select id="39" name="39" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina38" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina40" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina40">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 40 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="40">40- ¿QUE IMAGEN TIENE DE ROGELIO FRIGERIO?</label>
-                <select id="40" name="40" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina39" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina41" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina41">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 41 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="41">41- ¿QUE IMAGEN TIENE DE SERGIO MASSA?</label>
-                <select id="41" name="41" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina40" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina42" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina42">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 42 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="42">42- ¿QUE IMAGEN TIENE DE GUSTAVO BORDET?</label>
-                <select id="42" name="42" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="1">MUY BUENA</option>
-                    <option value="2">BUENA</option>
-                    <option value="3">REGULAR BUENA</option>
-                    <option value="4">REGULAR MALA</option>
-                    <option value="5">MALA</option>
-                    <option value="6">MUY MALA</option>
-                    <option value="7">NO EVALUA</option>
-                    <option value="99">NS/NC</option>
-                </select>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina41" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina43" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina43">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 43 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="43">43- ¿PORQUE TIENE ESA IMAGEN DE GUSTAVO BORDET?</label>
-                <input id="43" name="43" type="text" value="-" data-clear-btn="true"/>
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina42" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina44" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina44">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 44 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="44">44- EN CASO DE QUE ESTE DOMINGO FUESEN LAS ELECCIONES A GOBERNADOR ¿QUE LISTA ELEGIRíA?</label>
-
-                <select id="44" name="44" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="123">EL CANDIDATO DE C. F. KIRCHNER/URRIBARRI</option>
-                    <option value="124">EL CANDIDATO DE BORDET</option>
-                    <option value="125">EL CANDIDATO DE MACRI</option>
-                    <option value="126">OTRO</option>
-                    <option value="127">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina43" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina45" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina45">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 45 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="45">45- EN CASO DE QUE ESTE DOMINGO FUESEN LAS ELECCIONES A GOBERNADOR ¿QUE CANDIDATO ELEGIRIA?</label>
-
-                <select id="45" name="45" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="128">LAURA STRATTA</option>
-                    <option value="129">ALEJANDRO REES</option>
-                    <option value="130">GASTON BAGNAT</option>
-                    <option value="131">FEDERICO ALMADA</option>
-                    <option value="132">ADRIAN DIAZ</option>
-                    <option value="133">CESAR ETCHART</option>
-                    <option value="134">D. MAIOCCO</option>
-                    <option value="135">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina44" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina46" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina46">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 46 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="46">46- EN CASO DE QUE ESTE DOMINGO FUESEN LAS ELECCIONES A PRESIDENTE ¿QUE CANDIDATO ELEGIRIA?</label>
-
-                <select id="46" name="46" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="136">MAURICIO MACRI</option>
-                    <option value="137">CRISTINA F. KIRCHNER</option>
-                    <option value="138">SERGIO MASSA</option>
-                    <option value="139">JUAN MANUEL URTUBEY</option>
-                    <option value="140">OTRO</option>
-                    <option value="141">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina45" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina47" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina47">
-        <div data-role="header" style="text-align: center">
-            <h5>&COPY; SGE-V 1.1</h5>
-            <label>Pregunta 47 de 47</label>
-        </div>
-
-        <div data-role="main">
-            <div class="ui-content">
-                <label for="47">47- EN LAS úLTIMAS ELECCIONES UD. VOTO POR ...</label>
-
-                <select id="47" name="47" data-native-menu="false">
-                    <option value="0">...</option>
-                    <option value="142">CAMBIEMOS</option>
-                    <option value="143">PJ-FPV (PERONISMO)</option>
-                    <option value="144">FPCVS (SOCIALISMO)</option>
-                    <option value="145">IZQUIERDA UNIDA</option>
-                    <option value="146">NS/NC</option>
-                </select>
-
-
-            </div>
-
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><input value="Limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="top" data-icon="refresh"></li>
-                    <li><a href="#pagina46" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="arrow-r">Adelante</a></li>
-                    <li><a href="#pagina48" data-iconpos="bottom" data-icon="check">Finalizar</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="pagina48">
         <div data-role="header" style="text-align: center">
             <h5>&COPY; SGE-V 1.1</h5>
             <label>Fin de la Encuesta</label>
@@ -1943,8 +633,8 @@
             <div data-role="navbar">
                 <ul>
                     <li><button id="limpiar" type="reset" form="encuesta" data-exclude-selector=".exclude" onclick="initiateReset()" data-iconpos="bottom" data-icon="refresh">Limpiar</button></li>
-                    <li><a href="#pagina46" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
-                    <li><a href="#" data-iconpos="bottom" data-icon="check" onclick="no_vacio(47)">Guardar</a></li>
+                    <li><a href="#pagina11" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                    <li><a href="#" data-iconpos="bottom" data-icon="check" onclick="no_vacio(12)">Guardar</a></li>
                     <li><a href="#" onClick="salida()" data-iconpos="bottom" data-icon="power">Salir</a></li>
                 </ul>
             </div>
