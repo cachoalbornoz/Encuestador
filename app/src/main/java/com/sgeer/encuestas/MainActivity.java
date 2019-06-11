@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
         File saveFilePath = new File(appDirectory, archivo);
 
         try {
-            FileOutputStream fos = new FileOutputStream(saveFilePath);
+            FileOutputStream fos = new FileOutputStream(saveFilePath, true);
             OutputStreamWriter file = new OutputStreamWriter(fos);
             file.write(cadena);
             file.flush();
